@@ -55,7 +55,7 @@ public class dashboard extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 930, 614);
 		contentPane = new JPanel();
-		contentPane.setFont(new Font("Tahoma", Font.BOLD, 10));
+		contentPane.setFont(new Font("Poppins", Font.BOLD, 10));
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -95,7 +95,7 @@ public class dashboard extends JFrame {
 		
 		contentPane_1 = new JPanel();
 		contentPane_1.setLayout(null);
-		contentPane_1.setFont(new Font("Tahoma", Font.BOLD, 10));
+		contentPane_1.setFont(new Font("Poppins", Font.BOLD, 10));
 		contentPane_1.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane_1.setBackground(Color.WHITE);
 		contentPane_1.setBounds(0, 0, 916, 577);
@@ -140,32 +140,32 @@ public class dashboard extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(dashboard.class.getResource("/images/SmallSize.png")));
 		
 		lblNewLabel_2 = new JLabel("Life");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel_2.setFont(new Font("Poppins", Font.BOLD, 30));
 		lblNewLabel_2.setBounds(112, 421, 59, 24);
 		contentPane_1.add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("Health");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel_3.setFont(new Font("Poppins", Font.BOLD, 30));
 		lblNewLabel_3.setBounds(300, 405, 101, 56);
 		contentPane_1.add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("Education");
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel_4.setFont(new Font("Poppins", Font.BOLD, 30));
 		lblNewLabel_4.setBounds(472, 416, 155, 35);
 		contentPane_1.add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("Retirement");
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel_5.setFont(new Font("Poppins", Font.BOLD, 30));
 		lblNewLabel_5.setBounds(663, 416, 183, 35);
 		contentPane_1.add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("What type of insurance plan are you going to avail?");
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.BOLD, 25));
-		lblNewLabel_6.setBounds(127, 136, 677, 55);
+		lblNewLabel_6.setFont(new Font("Poppins", Font.BOLD, 25));
+		lblNewLabel_6.setBounds(138, 136, 677, 55);
 		contentPane_1.add(lblNewLabel_6);
 		lblNewLabel_7.setForeground(new Color(128, 128, 128));
-		lblNewLabel_7.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel_7.setBounds(167, 496, 585, 36);
+		lblNewLabel_7.setFont(new Font("Poppins", Font.BOLD, 24));
+		lblNewLabel_7.setBounds(182, 495, 585, 36);
 		contentPane_1.add(lblNewLabel_7);
 		
 		btnNewButton_4 = new JButton("");
