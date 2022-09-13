@@ -16,12 +16,6 @@ import javax.swing.JLabel;
 public class dashboard extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtLife;
-	private JTextField txtH;
-	private JTextField txtEducation;
-	private JTextField txtRetirement;
-	private JTextField txtWhatTypeOf;
-	private JTextField txtyouCanOnly;
 	private JButton btnNewButton_4;
 	private JLabel lblNewLabel;
 	private JPanel contentPane_1;
@@ -29,15 +23,14 @@ public class dashboard extends JFrame {
 	private JButton btnNewButton_6;
 	private JButton btnNewButton_7;
 	private JButton btnNewButton_8;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JButton btnNewButton_9;
 	private JLabel lblNewLabel_1;
 	private JPanel panel;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JLabel lblNewLabel_5;
+	private JLabel lblNewLabel_6;
+	private final JLabel lblNewLabel_7 = new JLabel("(You can only choose one for this transaction)");
 
 	/**
 	 * Launch the application.
@@ -100,62 +93,6 @@ public class dashboard extends JFrame {
 		btnNewButton_3.setIcon(new ImageIcon(dashboard.class.getResource("/images/4.png")));
 		contentPane.add(btnNewButton_3);
 		
-		txtLife = new JTextField();
-		txtLife.setBounds(110, 409, 85, 43);
-		txtLife.setBorder(null);
-		txtLife.setFont(new Font("Tahoma", Font.BOLD, 37));
-		txtLife.setText("Life");
-		contentPane.add(txtLife);
-		txtLife.setColumns(10);
-		
-		txtH = new JTextField();
-		txtH.setBounds(290, 404, 136, 55);
-		txtH.setFont(new Font("Tahoma", Font.BOLD, 34));
-		txtH.setBorder(null);
-		txtH.setText("Health");
-		contentPane.add(txtH);
-		txtH.setColumns(10);
-		
-		txtEducation = new JTextField();
-		txtEducation.setBounds(462, 404, 182, 55);
-		txtEducation.setFont(new Font("Tahoma", Font.BOLD, 35));
-		txtEducation.setBorder(null);
-		txtEducation.setText("Education");
-		contentPane.add(txtEducation);
-		txtEducation.setColumns(10);
-		
-		txtRetirement = new JTextField();
-		txtRetirement.setBounds(673, 412, 182, 43);
-		txtRetirement.setFont(new Font("Tahoma", Font.BOLD, 30));
-		txtRetirement.setBorder(null);
-		txtRetirement.setText("Retirement");
-		contentPane.add(txtRetirement);
-		txtRetirement.setColumns(10);
-		
-		txtWhatTypeOf = new JTextField();
-		txtWhatTypeOf.setBounds(128, 142, 678, 55);
-		txtWhatTypeOf.setBorder(null);
-		txtWhatTypeOf.setFont(new Font("Tahoma", Font.BOLD, 25));
-		txtWhatTypeOf.setText("What type of insurance plan are you going to avail?");
-		contentPane.add(txtWhatTypeOf);
-		txtWhatTypeOf.setColumns(10);
-		
-		txtyouCanOnly = new JTextField();
-		txtyouCanOnly.setBounds(178, 501, 561, 35);
-		txtyouCanOnly.setBorder(null);
-		txtyouCanOnly.setForeground(new Color(192, 192, 192));
-		txtyouCanOnly.setFont(new Font("Tahoma", Font.BOLD, 24));
-		txtyouCanOnly.setText("(You can only choose one for this transaction)");
-		contentPane.add(txtyouCanOnly);
-		txtyouCanOnly.setColumns(10);
-		
-		btnNewButton_4 = new JButton("");
-		btnNewButton_4.setBounds(10, 104, 62, 55);
-		btnNewButton_4.setBackground(new Color(255, 255, 255));
-		btnNewButton_4.setBorder(null);
-		btnNewButton_4.setIcon(new ImageIcon(dashboard.class.getResource("/images/backbutton.png")));
-		contentPane.add(btnNewButton_4);
-		
 		contentPane_1 = new JPanel();
 		contentPane_1.setLayout(null);
 		contentPane_1.setFont(new Font("Tahoma", Font.BOLD, 10));
@@ -187,61 +124,6 @@ public class dashboard extends JFrame {
 		btnNewButton_8.setBounds(663, 228, 191, 171);
 		contentPane_1.add(btnNewButton_8);
 		
-		textField = new JTextField();
-		textField.setText("Life");
-		textField.setFont(new Font("Tahoma", Font.BOLD, 37));
-		textField.setColumns(10);
-		textField.setBorder(null);
-		textField.setBounds(110, 409, 85, 43);
-		contentPane_1.add(textField);
-		
-		textField_1 = new JTextField();
-		textField_1.setText("Health");
-		textField_1.setFont(new Font("Tahoma", Font.BOLD, 34));
-		textField_1.setColumns(10);
-		textField_1.setBorder(null);
-		textField_1.setBounds(290, 404, 136, 55);
-		contentPane_1.add(textField_1);
-		
-		textField_2 = new JTextField();
-		textField_2.setText("Education");
-		textField_2.setFont(new Font("Tahoma", Font.BOLD, 35));
-		textField_2.setColumns(10);
-		textField_2.setBorder(null);
-		textField_2.setBounds(462, 404, 182, 55);
-		contentPane_1.add(textField_2);
-		
-		textField_3 = new JTextField();
-		textField_3.setText("Retirement");
-		textField_3.setFont(new Font("Tahoma", Font.BOLD, 30));
-		textField_3.setColumns(10);
-		textField_3.setBorder(null);
-		textField_3.setBounds(673, 412, 182, 43);
-		contentPane_1.add(textField_3);
-		
-		textField_4 = new JTextField();
-		textField_4.setText("What type of insurance plan are you going to avail?");
-		textField_4.setFont(new Font("Tahoma", Font.BOLD, 25));
-		textField_4.setColumns(10);
-		textField_4.setBorder(null);
-		textField_4.setBounds(128, 142, 678, 55);
-		contentPane_1.add(textField_4);
-		
-		textField_5 = new JTextField();
-		textField_5.setText("(You can only choose one for this transaction)");
-		textField_5.setForeground(Color.GRAY);
-		textField_5.setFont(new Font("Tahoma", Font.BOLD, 24));
-		textField_5.setColumns(10);
-		textField_5.setBorder(null);
-		textField_5.setBounds(178, 501, 561, 35);
-		contentPane_1.add(textField_5);
-		
-		btnNewButton_9 = new JButton("New button");
-		btnNewButton_9.setBorder(null);
-		btnNewButton_9.setBackground(Color.WHITE);
-		btnNewButton_9.setBounds(10, 104, 69, 55);
-		contentPane_1.add(btnNewButton_9);
-		
 		lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(-228, -28, 69, 66);
 		contentPane_1.add(lblNewLabel_1);
@@ -256,5 +138,41 @@ public class dashboard extends JFrame {
 		lblNewLabel.setBounds(10, 5, 72, 79);
 		panel.add(lblNewLabel);
 		lblNewLabel.setIcon(new ImageIcon(dashboard.class.getResource("/images/SmallSize.png")));
+		
+		lblNewLabel_2 = new JLabel("Life");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel_2.setBounds(112, 421, 59, 24);
+		contentPane_1.add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("Health");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel_3.setBounds(300, 405, 101, 56);
+		contentPane_1.add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("Education");
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel_4.setBounds(472, 416, 155, 35);
+		contentPane_1.add(lblNewLabel_4);
+		
+		lblNewLabel_5 = new JLabel("Retirement");
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 30));
+		lblNewLabel_5.setBounds(663, 416, 183, 35);
+		contentPane_1.add(lblNewLabel_5);
+		
+		lblNewLabel_6 = new JLabel("What type of insurance plan are you going to avail?");
+		lblNewLabel_6.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblNewLabel_6.setBounds(127, 136, 677, 55);
+		contentPane_1.add(lblNewLabel_6);
+		lblNewLabel_7.setForeground(new Color(128, 128, 128));
+		lblNewLabel_7.setFont(new Font("Tahoma", Font.BOLD, 24));
+		lblNewLabel_7.setBounds(167, 496, 585, 36);
+		contentPane_1.add(lblNewLabel_7);
+		
+		btnNewButton_4 = new JButton("");
+		btnNewButton_4.setBounds(10, 104, 62, 55);
+		contentPane_1.add(btnNewButton_4);
+		btnNewButton_4.setBackground(new Color(255, 255, 255));
+		btnNewButton_4.setBorder(null);
+		btnNewButton_4.setIcon(new ImageIcon(dashboard.class.getResource("/images/backbutton.png")));
 	}
 }
