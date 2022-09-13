@@ -33,8 +33,6 @@ public class LoginFrame extends JFrame {
 	
 
 	private JPanel contentPane;
-	private JTextField txtUsername;
-	private JTextField txtPassword;
 
 	/**
 	 * Launch the application.
@@ -187,16 +185,6 @@ public class LoginFrame extends JFrame {
 		panel_1_1.setBorder(new LineBorder(new Color(128, 128, 128), 1, true));
 		panel_1.setLayout(null);
 		
-		txtUsername = new JTextField();
-		txtUsername.setBorder(null);
-		txtUsername.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtUsername.setForeground(Color.GRAY);
-		txtUsername.setText("Username");
-		txtUsername.setBackground(Color.WHITE);
-		txtUsername.setBounds(51, 11, 228, 22);
-		panel_1.add(txtUsername);
-		txtUsername.setColumns(10);
-		
 		JLabel lblUsernameIcon = new JLabel("");
 		lblUsernameIcon.setHorizontalAlignment(SwingConstants.CENTER);
 		lblUsernameIcon.setIcon(new ImageIcon(LoginFrame.class.getResource("/images/UserLogo.png")));
@@ -205,19 +193,6 @@ public class LoginFrame extends JFrame {
 		contentPane.add(panel_1_1);
 		SpringLayout sl_panel_1_1 = new SpringLayout();
 		panel_1_1.setLayout(sl_panel_1_1);
-		
-		txtPassword = new JTextField();
-		txtPassword.setForeground(Color.GRAY);
-		txtPassword.setBorder(null);
-		txtPassword.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtPassword.setText("Password");
-		sl_panel_1_1.putConstraint(SpringLayout.NORTH, txtPassword, 11, SpringLayout.NORTH, panel_1_1);
-		sl_panel_1_1.putConstraint(SpringLayout.WEST, txtPassword, 53, SpringLayout.WEST, panel_1_1);
-		sl_panel_1_1.putConstraint(SpringLayout.SOUTH, txtPassword, 33, SpringLayout.NORTH, panel_1_1);
-		sl_panel_1_1.putConstraint(SpringLayout.EAST, txtPassword, 282, SpringLayout.WEST, panel_1_1);
-		txtPassword.setColumns(10);
-		txtPassword.setBackground(Color.WHITE);
-		panel_1_1.add(txtPassword);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		sl_panel_1_1.putConstraint(SpringLayout.NORTH, lblNewLabel_4, 0, SpringLayout.NORTH, panel_1_1);
