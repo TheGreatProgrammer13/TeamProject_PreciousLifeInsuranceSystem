@@ -199,6 +199,12 @@ public class Dashboard extends JFrame {
 		btnNewButton_4 = new JButton("");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				{
+					MainDashboard t = new MainDashboard();
+					t.show();
+					dispose();
+
+				}
 			}
 		});
 		btnNewButton_4.setBounds(10, 104, 62, 55);
