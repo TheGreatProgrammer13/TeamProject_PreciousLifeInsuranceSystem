@@ -1,3 +1,4 @@
+package Precious_Life_Insurance_Management_System_Project;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,7 +14,7 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JLabel;
 
-public class dashboard extends JFrame {
+public class Dashboard extends JFrame {
 
 	private JPanel contentPane;
 	private JButton btnNewButton_4;
@@ -39,7 +40,7 @@ public class dashboard extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					dashboard frame = new dashboard();
+					Dashboard frame = new Dashboard();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -51,7 +52,7 @@ public class dashboard extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public dashboard() {
+	public Dashboard() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 930, 614);
 		contentPane = new JPanel();
@@ -68,7 +69,7 @@ public class dashboard extends JFrame {
 		btnNewButton.setBorder(null);
 		btnNewButton.setBackground(new Color(255, 255, 255));
 		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setIcon(new ImageIcon(dashboard.class.getResource("/images/2.png")));
+		btnNewButton.setIcon(new ImageIcon(Dashboard.class.getResource("/images/2.png")));
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("New button");
@@ -78,19 +79,19 @@ public class dashboard extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton_1.setIcon(new ImageIcon(dashboard.class.getResource("/images/1.png")));
+		btnNewButton_1.setIcon(new ImageIcon(Dashboard.class.getResource("/images/1.png")));
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("New button");
 		btnNewButton_2.setBounds(462, 228, 191, 171);
 		btnNewButton_2.setBorder(null);
-		btnNewButton_2.setIcon(new ImageIcon(dashboard.class.getResource("/images/3.png")));
+		btnNewButton_2.setIcon(new ImageIcon(Dashboard.class.getResource("/images/3.png")));
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("New button");
 		btnNewButton_3.setBounds(663, 228, 191, 171);
 		btnNewButton_3.setBorder(null);
-		btnNewButton_3.setIcon(new ImageIcon(dashboard.class.getResource("/images/4.png")));
+		btnNewButton_3.setIcon(new ImageIcon(Dashboard.class.getResource("/images/4.png")));
 		contentPane.add(btnNewButton_3);
 		
 		contentPane_1 = new JPanel();
@@ -137,7 +138,7 @@ public class dashboard extends JFrame {
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(10, 5, 72, 79);
 		panel.add(lblNewLabel);
-		lblNewLabel.setIcon(new ImageIcon(dashboard.class.getResource("/images/SmallSize.png")));
+		lblNewLabel.setIcon(new ImageIcon(Dashboard.class.getResource("/images/SmallSize.png")));
 		
 		lblNewLabel_2 = new JLabel("Life");
 		lblNewLabel_2.setFont(new Font("Poppins", Font.BOLD, 30));
@@ -169,10 +170,14 @@ public class dashboard extends JFrame {
 		contentPane_1.add(lblNewLabel_7);
 		
 		btnNewButton_4 = new JButton("");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_4.setBounds(10, 104, 62, 55);
 		contentPane_1.add(btnNewButton_4);
 		btnNewButton_4.setBackground(new Color(255, 255, 255));
 		btnNewButton_4.setBorder(null);
-		btnNewButton_4.setIcon(new ImageIcon(dashboard.class.getResource("/images/backbutton.png")));
+		btnNewButton_4.setIcon(new ImageIcon(Dashboard.class.getResource("/images/backbutton.png")));
 	}
 }
