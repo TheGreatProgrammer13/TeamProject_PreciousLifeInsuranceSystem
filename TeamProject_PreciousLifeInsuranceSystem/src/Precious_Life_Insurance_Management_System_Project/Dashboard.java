@@ -13,6 +13,11 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.border.LineBorder;
 
 public class Dashboard extends JFrame {
 
@@ -53,6 +58,7 @@ public class Dashboard extends JFrame {
 	 * Create the frame.
 	 */
 	public Dashboard() {
+		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 930, 614);
 		contentPane = new JPanel();
@@ -99,7 +105,7 @@ public class Dashboard extends JFrame {
 		contentPane_1.setFont(new Font("Poppins", Font.BOLD, 10));
 		contentPane_1.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane_1.setBackground(Color.WHITE);
-		contentPane_1.setBounds(0, 0, 916, 577);
+		contentPane_1.setBounds(0, 0, 930, 577);
 		contentPane.add(contentPane_1);
 		
 		btnNewButton_5 = new JButton("New button");
@@ -131,7 +137,7 @@ public class Dashboard extends JFrame {
 		
 		panel = new JPanel();
 		panel.setBackground(new Color(0, 45, 105));
-		panel.setBounds(0, 0, 916, 94);
+		panel.setBounds(0, 0, 930, 94);
 		contentPane_1.add(panel);
 		panel.setLayout(null);
 		
@@ -139,6 +145,27 @@ public class Dashboard extends JFrame {
 		lblNewLabel.setBounds(10, 5, 72, 79);
 		panel.add(lblNewLabel);
 		lblNewLabel.setIcon(new ImageIcon(Dashboard.class.getResource("/images/SmallSize.png")));
+		
+		JLabel lblX = new JLabel("X");
+		lblX.setBorder(new LineBorder(new Color(0, 0, 0)));
+		lblX.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to close this application?","Confirmation", JOptionPane.YES_NO_OPTION) == 0 ) {
+					Dashboard.this.dispose();
+				}
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				lblX.setForeground(Color.red);
+			}
+		});
+		lblX.setBackground(new Color(240, 240, 240));
+		lblX.setForeground(new Color(255, 255, 255));
+		lblX.setHorizontalAlignment(SwingConstants.CENTER);
+		lblX.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblX.setBounds(902, 10, 18, 28);
+		panel.add(lblX);
 		
 		lblNewLabel_2 = new JLabel("Life");
 		lblNewLabel_2.setFont(new Font("Poppins", Font.BOLD, 30));
