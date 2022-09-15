@@ -163,7 +163,7 @@ public class Dashboard extends JFrame {
 		lblX.setBackground(new Color(240, 240, 240));
 		lblX.setForeground(new Color(255, 255, 255));
 		lblX.setHorizontalAlignment(SwingConstants.CENTER);
-		lblX.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblX.setFont(new Font("Poppins", Font.BOLD, 14));
 		lblX.setBounds(902, 10, 18, 28);
 		panel.add(lblX);
 		
@@ -199,6 +199,12 @@ public class Dashboard extends JFrame {
 		btnNewButton_4 = new JButton("");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				{
+					MainDashboard t = new MainDashboard();
+					t.show();
+					dispose();
+
+				}
 			}
 		});
 		btnNewButton_4.setBounds(10, 104, 62, 55);

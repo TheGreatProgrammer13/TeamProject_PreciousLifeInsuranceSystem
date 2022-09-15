@@ -1,5 +1,5 @@
 package Precious_Life_Insurance_Management_System_Project;
-
+import java.sql.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -35,8 +35,12 @@ import java.beans.PropertyChangeEvent;
 
 public class LoginFrame extends JFrame {
 	
-	
 
+	private void sysout() {
+		// TODO Auto-generated method stub
+
+	}
+	
 	private JPanel contentPane;
 	private JTextField txtUsername;
 	private JPasswordField pwdPassword;
@@ -49,7 +53,7 @@ public class LoginFrame extends JFrame {
 			public void run() {
 				try {
 					LoginFrame frame = new LoginFrame();
-					frame.setVisible(true);
+					frame.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
