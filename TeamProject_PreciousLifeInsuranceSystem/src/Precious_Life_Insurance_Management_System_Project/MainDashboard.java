@@ -67,7 +67,7 @@ public class MainDashboard extends JFrame {
 		DashboardMainLogOut.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(JOptionPane.showConfirmDialog(null, "are you sure you want to Log out?","Confirmation", JOptionPane.YES_NO_OPTION) == 0 ) {
+				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to Log out?","Confirmation", JOptionPane.YES_NO_OPTION) == 0 ) {
 					MainDashboard.this.dispose();
 				}
 			}
