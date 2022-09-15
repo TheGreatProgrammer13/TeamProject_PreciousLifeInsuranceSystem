@@ -18,6 +18,8 @@ import javax.swing.JOptionPane;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.border.LineBorder;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 public class Dashboard extends JFrame {
 
@@ -70,6 +72,14 @@ public class Dashboard extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				t.show();
+				dispose();
+			}
+		});
 		btnNewButton.setBounds(60, 228, 191, 171);
 		btnNewButton.setAlignmentY(0.0f);
 		btnNewButton.setBorder(null);
@@ -83,6 +93,9 @@ public class Dashboard extends JFrame {
 		btnNewButton_1.setBorder(null);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				HealthInsurancePolicy t = new HealthInsurancePolicy();
+				t.show();
+				dispose();
 			}
 		});
 		btnNewButton_1.setIcon(new ImageIcon(Dashboard.class.getResource("/images/1.png")));

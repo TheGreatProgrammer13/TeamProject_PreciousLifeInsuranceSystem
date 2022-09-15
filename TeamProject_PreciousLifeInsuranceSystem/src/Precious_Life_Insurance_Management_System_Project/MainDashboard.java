@@ -41,6 +41,7 @@ public class MainDashboard extends JFrame {
 	 * Create the frame.
 	 */
 	public MainDashboard() {
+		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 977, 643);
 		contentPane = new JPanel();
@@ -119,6 +120,12 @@ public class MainDashboard extends JFrame {
 		DashboardMainAboutUsButton.setBackground(new Color(255, 255, 255));
 		DashboardMainAboutUsButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				{
+					AboutUS t = new AboutUS();
+					t.show();
+					dispose();
+
+				}
 			}
 		});
 		DashboardMainAboutUsButton.setBorder(null);
