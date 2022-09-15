@@ -118,7 +118,7 @@ public class HealthInsurancePolicy extends JFrame {
 		btnNewButton_4.setBounds(558, 739, 62, 55);
 		contentPane.add(btnNewButton_4);
 		
-		JLabel lblNewLabel_1 = new JLabel("Health insurance plans for your health protection needs");
+		JLabel lblNewLabel_1 = new JLabel("Health insurance plans for your health protection needs!");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		lblNewLabel_1.setBounds(286, 193, 623, 25);
 		contentPane.add(lblNewLabel_1);
