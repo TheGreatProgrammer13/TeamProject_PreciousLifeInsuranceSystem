@@ -4,15 +4,12 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
-import javax.swing.SpringLayout;
 import javax.swing.JTextField;
-import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
@@ -21,8 +18,17 @@ import javax.swing.ImageIcon;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import javax.swing.border.LineBorder;
+
 import javax.swing.JPasswordField;
 import java.beans.VetoableChangeListener;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.beans.PropertyChangeEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.event.MouseEvent;
@@ -31,14 +37,16 @@ import java.awt.event.MouseAdapter;
 public class Registration extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtLastNameFirst;
-	private JTextField txtEmailAddress;
-	private JTextField textField;
-	private JTextField txtMmddyyyy;
-	private JTextField textField_5;
-	private JTextField textField_1;
-	private JPasswordField pwdPasswordReg;
-	private JTextField textField_2;
+	private JTextField tpEmail;
+	private JTextField tpBday;
+	private JTextField tpName;
+	private JTextField tpPass;
+	
+	
+	Connection con;
+	PreparedStatement pst;
+	ResultSet rs;
+	
 
 	/**
 	 * Launch the application.
@@ -106,113 +114,64 @@ public class Registration extends JFrame {
 		lblNewLabel_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		contentPane.add(lblNewLabel_1_1_1_1_1);
 		
-		txtLastNameFirst = new JTextField();
-		txtLastNameFirst.setBounds(394, 197, 221, 22);
-		txtLastNameFirst.addFocusListener(new FocusAdapter() {
-			@Override
-			public void focusGained(FocusEvent e) {
-				if(txtLastNameFirst.getText().equals("Name")) {
-					txtLastNameFirst.setText("");
-				}
-				else {
-					txtLastNameFirst.selectAll();
-				}
-			}
-			@Override
-			public void focusLost(FocusEvent e) {
-				if(txtLastNameFirst.getText().equals(""))
-					txtLastNameFirst.setText("Name");
-			}
-		});
-		txtLastNameFirst.setHorizontalAlignment(SwingConstants.LEFT);
-		txtLastNameFirst.setText("Name");
-		txtLastNameFirst.setForeground(Color.GRAY);
-		txtLastNameFirst.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtLastNameFirst.setColumns(10);
-		txtLastNameFirst.setBorder(null);
-		txtLastNameFirst.setBackground(Color.WHITE);
-		contentPane.add(txtLastNameFirst);
+		tpEmail = new JTextField();
+		tpEmail.setBounds(382, 251, 250, 40);
+		tpEmail.setText("");
+		tpEmail.setColumns(10);
+		contentPane.add(tpEmail);
 		
-		txtEmailAddress = new JTextField();
-		txtEmailAddress.setBounds(394, 263, 221, 22);
-		txtEmailAddress.addFocusListener(new FocusAdapter() {
-			@Override
-			public void focusGained(FocusEvent e) {
-				if(txtEmailAddress.getText().equals("Email Address")) {
-					txtEmailAddress.setText("");
-				}
-				else {
-					txtEmailAddress.selectAll();
-				}
-			}
-			@Override
-			public void focusLost(FocusEvent e) {
-				if(txtEmailAddress.getText().equals(""))
-					txtEmailAddress.setText("Email Address");
-			}
-		});
-		txtEmailAddress.setText("Email Address");
-		txtEmailAddress.setForeground(Color.GRAY);
-		txtEmailAddress.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtEmailAddress.setColumns(10);
-		txtEmailAddress.setBorder(null);
-		txtEmailAddress.setBackground(Color.WHITE);
-		contentPane.add(txtEmailAddress);
+		tpBday = new JTextField();
+		tpBday.setBounds(382, 373, 250, 40);
+		tpBday.setText("");
+		tpBday.setColumns(10);
+		contentPane.add(tpBday);
 		
-		textField = new JTextField();
-		textField.setBounds(382, 251, 250, 40);
-		textField.setText("   ");
-		textField.setColumns(10);
-		contentPane.add(textField);
-		
-		txtMmddyyyy = new JTextField();
-		txtMmddyyyy.setBounds(394, 384, 221, 22);
-		txtMmddyyyy.addFocusListener(new FocusAdapter() {
-			@Override
-			public void focusGained(FocusEvent e) {
-				if(txtMmddyyyy.getText().equals("MM/DD/YYYY")) {
-					txtMmddyyyy.setText("");
-				}
-				else {
-					txtMmddyyyy.selectAll();
-				}
-			}
-			@Override
-			public void focusLost(FocusEvent e) {
-				if(txtMmddyyyy.getText().equals(""))
-					txtMmddyyyy.setText("MM/DD/YYYY");
-			}
-		});
-		txtMmddyyyy.setText("MM/DD/YYYY");
-		txtMmddyyyy.setForeground(Color.GRAY);
-		txtMmddyyyy.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtMmddyyyy.setColumns(10);
-		txtMmddyyyy.setBorder(null);
-		txtMmddyyyy.setBackground(Color.WHITE);
-		contentPane.add(txtMmddyyyy);
-		
-		textField_5 = new JTextField();
-		textField_5.setBounds(382, 373, 250, 40);
-		textField_5.setText("   ");
-		textField_5.setColumns(10);
-		contentPane.add(textField_5);
-		
-		Button button = new Button("Submit");
-		button.setBounds(382, 484, 132, 40);
-		button.addActionListener(new ActionListener() {
+		Button btnSubmit = new Button("Submit");
+		btnSubmit.setBounds(382, 484, 132, 40);
+		btnSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		button.setForeground(new Color(234, 218, 128));
-		button.setFont(new Font("Dialog", Font.BOLD, 20));
-		button.setBackground(new Color(0, 45, 105));
-		contentPane.add(button);
+				
+				if (tpName.getText().isEmpty() || tpEmail.getText().isEmpty() || tpPass.getText().isEmpty() || tpBday.getText().isEmpty()) {
+						
+						JOptionPane.showMessageDialog(null,"Please complete the details.");
+				}
+				
+					else {
+						
+				try {
+							Class.forName("com.mysql.cj.jdbc.Driver");
+							con = DriverManager.getConnection("jdbc:mysql://localhost:3306/loginaccount", "root", "");
+							String query = "INSERT INTO registration (Name, Email, Password, Birthday) VALUES (?, ?, ?, ?)";	
+							pst=con.prepareStatement(query);
+							pst.setString(1, tpName.getText());
+							pst.setString(2, tpEmail.getText());
+							pst.setString(3, tpPass.getText());
+							pst.setString(4, tpBday.getText());
+							pst.executeUpdate();
+							
+							JOptionPane.showMessageDialog(null,"Successfully Registered!");
+						
+							
+								} catch (SQLException e1) {
+									Logger.getLogger(Registration.class.getName()).log(Level.SEVERE, null, e1);
+								} catch (ClassNotFoundException e1) {
+									Logger.getLogger(Registration.class.getName()).log(Level.SEVERE, null, e1);
+								}
+						}
+					}
+			});
+			
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(384, 187, 248, 40);
-		textField_1.setText("   ");
-		textField_1.setColumns(10);
-		contentPane.add(textField_1);
+		btnSubmit.setForeground(new Color(234, 218, 128));
+		btnSubmit.setFont(new Font("Dialog", Font.BOLD, 20));
+		btnSubmit.setBackground(new Color(0, 45, 105));
+		contentPane.add(btnSubmit);
+		
+		tpName = new JTextField();
+		tpName.setBounds(384, 187, 248, 40);
+		tpName.setText("");
+		tpName.setColumns(10);
+		contentPane.add(tpName);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(734, 1, 187, 614);
@@ -250,45 +209,15 @@ public class Registration extends JFrame {
 		lblX.setHorizontalAlignment(SwingConstants.CENTER);
 		lblX.setFont(new Font("Tahoma", Font.BOLD, 14));
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setBounds(192, 5, 72, 83);
-		lblNewLabel_2.setIcon(new ImageIcon(Registration.class.getResource("/images/SmallSize.png")));
-		contentPane.add(lblNewLabel_2);
+		JLabel lblLogo = new JLabel("");
+		lblLogo.setBounds(192, 5, 72, 83);
+		lblLogo.setIcon(new ImageIcon(Registration.class.getResource("/images/logoPng.png")));
+		contentPane.add(lblLogo);
 		
-		pwdPasswordReg = new JPasswordField();
-		pwdPasswordReg.setBounds(394, 321, 221, 22);
-		pwdPasswordReg.setForeground(Color.GRAY);
-		pwdPasswordReg.setSelectedTextColor(Color.WHITE);
-		pwdPasswordReg.addFocusListener(new FocusAdapter() {
-			
-			@Override
-			public void focusGained(FocusEvent e) {
-				if(pwdPasswordReg.getText().equals("Password")) {
-					pwdPasswordReg.setEchoChar('●');
-					pwdPasswordReg.setText("");
-					
-				}
-				else {
-					pwdPasswordReg.selectAll();
-				}
-			}
-			@Override
-			public void focusLost(FocusEvent e) {
-				if(pwdPasswordReg.getText().equals("")) {
-					pwdPasswordReg.setText("Password");
-					pwdPasswordReg.setEchoChar((char)0);
-					
-				}
-			}
-		});
-		pwdPasswordReg.setBorder(null);
-		pwdPasswordReg.setText("  Password");
-		contentPane.add(pwdPasswordReg);
-		
-		textField_2 = new JTextField();
-		textField_2.setBounds(381, 312, 251, 40);
-		textField_2.setText("   ");
-		textField_2.setColumns(10);
-		contentPane.add(textField_2);
+		tpPass = new JTextField();
+		tpPass.setBounds(381, 312, 251, 40);
+		tpPass.setText("");
+		tpPass.setColumns(10);
+		contentPane.add(tpPass);
 	}
 }
