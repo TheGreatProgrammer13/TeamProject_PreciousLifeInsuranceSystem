@@ -176,7 +176,7 @@ public class Dashboard extends JFrame {
 		lblX.setBackground(new Color(240, 240, 240));
 		lblX.setForeground(new Color(255, 255, 255));
 		lblX.setHorizontalAlignment(SwingConstants.CENTER);
-		lblX.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblX.setFont(new Font("Poppins", Font.BOLD, 14));
 		lblX.setBounds(902, 10, 18, 28);
 		panel.add(lblX);
 		

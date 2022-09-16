@@ -29,7 +29,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 
 public class Registration extends JFrame {
-
+	
 	private JPanel contentPane;
 	private JTextField txtLastNameFirst;
 	private JTextField txtEmailAddress;
@@ -78,32 +78,32 @@ public class Registration extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Precious Life Insurance");
 		lblNewLabel.setBounds(304, 39, 341, 30);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 28));
+		lblNewLabel.setFont(new Font("Poppins", Font.BOLD, 28));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Registration Form");
 		lblNewLabel_1.setBounds(367, 93, 187, 27);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblNewLabel_1.setFont(new Font("Poppins", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Name:");
 		lblNewLabel_1_1.setBounds(262, 191, 83, 27);
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblNewLabel_1_1.setFont(new Font("Poppins", Font.PLAIN, 23));
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_1_1_1 = new JLabel("Email:");
 		lblNewLabel_1_1_1.setBounds(261, 258, 72, 27);
-		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblNewLabel_1_1_1.setFont(new Font("Poppins", Font.PLAIN, 23));
 		contentPane.add(lblNewLabel_1_1_1);
 		
 		JLabel lblNewLabel_1_1_1_1 = new JLabel("Password:");
 		lblNewLabel_1_1_1_1.setBounds(262, 312, 110, 30);
-		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblNewLabel_1_1_1_1.setFont(new Font("Poppins", Font.PLAIN, 23));
 		contentPane.add(lblNewLabel_1_1_1_1);
 		
 		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("Birthday:");
 		lblNewLabel_1_1_1_1_1.setBounds(262, 378, 100, 27);
-		lblNewLabel_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblNewLabel_1_1_1_1_1.setFont(new Font("Poppins", Font.PLAIN, 23));
 		contentPane.add(lblNewLabel_1_1_1_1_1);
 		
 		txtLastNameFirst = new JTextField();
@@ -127,7 +127,7 @@ public class Registration extends JFrame {
 		txtLastNameFirst.setHorizontalAlignment(SwingConstants.LEFT);
 		txtLastNameFirst.setText("Name");
 		txtLastNameFirst.setForeground(Color.GRAY);
-		txtLastNameFirst.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtLastNameFirst.setFont(new Font("Poppins", Font.PLAIN, 15));
 		txtLastNameFirst.setColumns(10);
 		txtLastNameFirst.setBorder(null);
 		txtLastNameFirst.setBackground(Color.WHITE);
@@ -153,7 +153,7 @@ public class Registration extends JFrame {
 		});
 		txtEmailAddress.setText("Email Address");
 		txtEmailAddress.setForeground(Color.GRAY);
-		txtEmailAddress.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtEmailAddress.setFont(new Font("Poppins", Font.PLAIN, 15));
 		txtEmailAddress.setColumns(10);
 		txtEmailAddress.setBorder(null);
 		txtEmailAddress.setBackground(Color.WHITE);
@@ -185,7 +185,7 @@ public class Registration extends JFrame {
 		});
 		txtMmddyyyy.setText("MM/DD/YYYY");
 		txtMmddyyyy.setForeground(Color.GRAY);
-		txtMmddyyyy.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtMmddyyyy.setFont(new Font("Poppins", Font.PLAIN, 15));
 		txtMmddyyyy.setColumns(10);
 		txtMmddyyyy.setBorder(null);
 		txtMmddyyyy.setBackground(Color.WHITE);
@@ -248,7 +248,7 @@ public class Registration extends JFrame {
 		lblX.setBounds(155, 11, 10, 17);
 		panel_1.add(lblX);
 		lblX.setHorizontalAlignment(SwingConstants.CENTER);
-		lblX.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblX.setFont(new Font("Poppins", Font.BOLD, 14));
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setBounds(192, 5, 72, 83);
@@ -256,6 +256,7 @@ public class Registration extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		pwdPasswordReg = new JPasswordField();
+		pwdPasswordReg.setFont(new Font("Poppins", Font.PLAIN, 11));
 		pwdPasswordReg.setBounds(394, 321, 221, 22);
 		pwdPasswordReg.setForeground(Color.GRAY);
 		pwdPasswordReg.setSelectedTextColor(Color.WHITE);
