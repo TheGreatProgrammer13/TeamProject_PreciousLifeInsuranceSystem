@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 public class LifeInsurancePolicy extends JFrame {
 
@@ -57,18 +59,43 @@ public class LifeInsurancePolicy extends JFrame {
 		contentPane.add(lblNewLabel_3);
 		
 		JButton Serene = new JButton("New button");
+		Serene.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PLSerene t = new PLSerene();
+				t.show();
+				dispose();
+			}
+		});
 		Serene.setBounds(45, 247, 334, 472);
 		Serene.setBorder(null);
 		Serene.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/Serene88.png")));
 		contentPane.add(Serene);
 		
 		JButton Serendipity = new JButton("New button");
+		Serendipity.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				PLSerendipity t = new PLSerendipity();
+				t.show();
+				dispose();
+				
+			}
+		});
 		Serendipity.setBounds(423, 247, 329, 472);
 		Serendipity.setBorder(null);
 		Serendipity.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/Serendipity90.png")));
 		contentPane.add(Serendipity);
 		
 		JButton Hiraya = new JButton("New button");
+		Hiraya.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				PLHiraya t = new PLHiraya ();
+				t.show();
+				dispose();
+				
+			}
+		});
 		Hiraya.setBounds(794, 247, 334, 472);
 		Hiraya.setBorder(null);
 		Hiraya.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/Hiraya100.png")));
