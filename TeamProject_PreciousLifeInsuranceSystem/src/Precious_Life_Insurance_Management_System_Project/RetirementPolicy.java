@@ -1,3 +1,4 @@
+package Precious_Life_Insurance_Management_System_Project;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -12,8 +13,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import Precious_Life_Insurance_Management_System_Project.Dashboard;
-import Precious_Life_Insurance_Management_System_Project.LifeInsurancePolicy;
 import java.beans.VetoableChangeListener;
 import java.beans.PropertyChangeEvent;
 
