@@ -229,5 +229,17 @@ public class PLHiraya extends JFrame {
 		lblNewLabel_5_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel_5_5.setBounds(263, 733, 18, 13);
 		contentPane.add(lblNewLabel_5_5);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setLayout(null);
+		panel_2.setBackground(new Color(235, 200, 1));
+		panel_2.setBounds(248, 237, 129, 32);
+		contentPane.add(panel_2);
+		
+		JLabel lblPremium = new JLabel("PREMIUM");
+		lblPremium.setForeground(Color.WHITE);
+		lblPremium.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblPremium.setBounds(18, 0, 101, 32);
+		panel_2.add(lblPremium);
 	}
 }
