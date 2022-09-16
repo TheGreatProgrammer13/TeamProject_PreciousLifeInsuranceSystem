@@ -31,14 +31,14 @@ import java.awt.event.MouseAdapter;
 public class Registration extends JFrame {
 	
 	private JPanel contentPane;
-	private JTextField txtLastNameFirst;
-	private JTextField txtEmailAddress;
-	private JTextField textField;
-	private JTextField txtMmddyyyy;
-	private JTextField textField_5;
-	private JTextField textField_1;
+	private JTextField txtLastName;
+	private JTextField txtEmailAddressReg;
+	private JTextField txtMonth;
 	private JPasswordField pwdPasswordReg;
-	private JTextField textField_2;
+	private JTextField txtFirstName;
+	private JTextField txtMiddleName;
+	private JTextField txtYear;
+	private JTextField txtDay;
 
 	/**
 	 * Launch the application.
@@ -76,143 +76,113 @@ public class Registration extends JFrame {
 		panel.setBackground(new Color(0,45,105));
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel = new JLabel("Precious Life Insurance");
-		lblNewLabel.setBounds(304, 39, 341, 30);
-		lblNewLabel.setFont(new Font("Poppins", Font.BOLD, 28));
-		contentPane.add(lblNewLabel);
+		JLabel labelPreciousLifeInsuranceReg = new JLabel("Precious Life Insurance");
+		labelPreciousLifeInsuranceReg.setBounds(304, 39, 341, 30);
+		labelPreciousLifeInsuranceReg.setFont(new Font("Poppins", Font.BOLD, 28));
+		contentPane.add(labelPreciousLifeInsuranceReg);
 		
-		JLabel lblNewLabel_1 = new JLabel("Registration Form");
-		lblNewLabel_1.setBounds(367, 93, 187, 27);
-		lblNewLabel_1.setFont(new Font("Poppins", Font.PLAIN, 22));
-		contentPane.add(lblNewLabel_1);
+		JLabel labelRegistrationForm = new JLabel("Registration Form");
+		labelRegistrationForm.setBounds(367, 93, 187, 27);
+		labelRegistrationForm.setFont(new Font("Poppins", Font.PLAIN, 22));
+		contentPane.add(labelRegistrationForm);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Name:");
-		lblNewLabel_1_1.setBounds(262, 191, 83, 27);
-		lblNewLabel_1_1.setFont(new Font("Poppins", Font.PLAIN, 23));
-		contentPane.add(lblNewLabel_1_1);
+		JLabel labelLastName = new JLabel("Last Name:");
+		labelLastName.setBounds(237, 191, 124, 27);
+		labelLastName.setFont(new Font("Poppins", Font.PLAIN, 23));
+		contentPane.add(labelLastName);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Email:");
-		lblNewLabel_1_1_1.setBounds(261, 258, 72, 27);
-		lblNewLabel_1_1_1.setFont(new Font("Poppins", Font.PLAIN, 23));
-		contentPane.add(lblNewLabel_1_1_1);
+		JLabel labelEmailAddress = new JLabel("Email Address:");
+		labelEmailAddress.setBounds(237, 342, 161, 27);
+		labelEmailAddress.setFont(new Font("Poppins", Font.PLAIN, 23));
+		contentPane.add(labelEmailAddress);
 		
-		JLabel lblNewLabel_1_1_1_1 = new JLabel("Password:");
-		lblNewLabel_1_1_1_1.setBounds(262, 312, 110, 30);
-		lblNewLabel_1_1_1_1.setFont(new Font("Poppins", Font.PLAIN, 23));
-		contentPane.add(lblNewLabel_1_1_1_1);
+		JLabel labelPassword = new JLabel("Password:");
+		labelPassword.setBounds(237, 387, 110, 30);
+		labelPassword.setFont(new Font("Poppins", Font.PLAIN, 23));
+		contentPane.add(labelPassword);
 		
-		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("Birthday:");
-		lblNewLabel_1_1_1_1_1.setBounds(262, 378, 100, 27);
-		lblNewLabel_1_1_1_1_1.setFont(new Font("Poppins", Font.PLAIN, 23));
-		contentPane.add(lblNewLabel_1_1_1_1_1);
+		JLabel labelBirthday = new JLabel("Birthday:");
+		labelBirthday.setBounds(237, 441, 100, 27);
+		labelBirthday.setFont(new Font("Poppins", Font.PLAIN, 23));
+		contentPane.add(labelBirthday);
 		
-		txtLastNameFirst = new JTextField();
-		txtLastNameFirst.setBounds(394, 197, 221, 22);
-		txtLastNameFirst.addFocusListener(new FocusAdapter() {
+		txtLastName = new JTextField();
+		txtLastName.setBounds(406, 187, 250, 40);
+		txtLastName.addFocusListener(new FocusAdapter() {
+			
+		});
+		txtLastName.setHorizontalAlignment(SwingConstants.LEFT);
+		txtLastName.setForeground(Color.GRAY);
+		txtLastName.setFont(new Font("Poppins", Font.PLAIN, 15));
+		txtLastName.setColumns(10);
+		txtLastName.setBackground(Color.WHITE);
+		contentPane.add(txtLastName);
+		
+		txtEmailAddressReg = new JTextField();
+		txtEmailAddressReg.setBounds(406, 338, 250, 40);
+		txtEmailAddressReg.addFocusListener(new FocusAdapter() {
+			
+		});
+		txtEmailAddressReg.setForeground(Color.GRAY);
+		txtEmailAddressReg.setFont(new Font("Poppins", Font.PLAIN, 15));
+		txtEmailAddressReg.setColumns(10);
+		txtEmailAddressReg.setBackground(Color.WHITE);
+		contentPane.add(txtEmailAddressReg);
+		
+		txtMonth = new JTextField();
+		txtMonth.setBounds(406, 437, 72, 40);
+		txtMonth.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(txtLastNameFirst.getText().equals("Name")) {
-					txtLastNameFirst.setText("");
+				if(txtMonth.getText().equals("Month")) {
+					txtMonth.setText("");
 				}
 				else {
-					txtLastNameFirst.selectAll();
+					txtMonth.selectAll();
 				}
 			}
 			@Override
 			public void focusLost(FocusEvent e) {
-				if(txtLastNameFirst.getText().equals(""))
-					txtLastNameFirst.setText("Name");
+				if(txtMonth.getText().equals(""))
+					txtMonth.setText("Month");
 			}
 		});
-		txtLastNameFirst.setHorizontalAlignment(SwingConstants.LEFT);
-		txtLastNameFirst.setText("Name");
-		txtLastNameFirst.setForeground(Color.GRAY);
-		txtLastNameFirst.setFont(new Font("Poppins", Font.PLAIN, 15));
-		txtLastNameFirst.setColumns(10);
-		txtLastNameFirst.setBorder(null);
-		txtLastNameFirst.setBackground(Color.WHITE);
-		contentPane.add(txtLastNameFirst);
+		txtMonth.setText("Month");
+		txtMonth.setForeground(Color.GRAY);
+		txtMonth.setFont(new Font("Poppins", Font.PLAIN, 15));
+		txtMonth.setColumns(10);
+		txtMonth.setBackground(Color.WHITE);
+		contentPane.add(txtMonth);
 		
-		txtEmailAddress = new JTextField();
-		txtEmailAddress.setBounds(394, 263, 221, 22);
-		txtEmailAddress.addFocusListener(new FocusAdapter() {
+		Button Submitbutton = new Button("Submit");
+		Submitbutton.setBounds(377, 547, 132, 40);
+		Submitbutton.addMouseListener(new MouseAdapter() {
 			@Override
-			public void focusGained(FocusEvent e) {
-				if(txtEmailAddress.getText().equals("Email Address")) {
-					txtEmailAddress.setText("");
-				}
-				else {
-					txtEmailAddress.selectAll();
-				}
+			public void mouseEntered(MouseEvent e) {
+				Submitbutton.setForeground(new Color(189,151,87));
+			}
+			
+			@Override
+			public void mouseExited(MouseEvent e) {
+				Submitbutton.setForeground(new Color(205,196,125));
 			}
 			@Override
-			public void focusLost(FocusEvent e) {
-				if(txtEmailAddress.getText().equals(""))
-					txtEmailAddress.setText("Email Address");
-			}
-		});
-		txtEmailAddress.setText("Email Address");
-		txtEmailAddress.setForeground(Color.GRAY);
-		txtEmailAddress.setFont(new Font("Poppins", Font.PLAIN, 15));
-		txtEmailAddress.setColumns(10);
-		txtEmailAddress.setBorder(null);
-		txtEmailAddress.setBackground(Color.WHITE);
-		contentPane.add(txtEmailAddress);
-		
-		textField = new JTextField();
-		textField.setBounds(382, 251, 250, 40);
-		textField.setText("   ");
-		textField.setColumns(10);
-		contentPane.add(textField);
-		
-		txtMmddyyyy = new JTextField();
-		txtMmddyyyy.setBounds(394, 384, 221, 22);
-		txtMmddyyyy.addFocusListener(new FocusAdapter() {
-			@Override
-			public void focusGained(FocusEvent e) {
-				if(txtMmddyyyy.getText().equals("MM/DD/YYYY")) {
-					txtMmddyyyy.setText("");
-				}
-				else {
-					txtMmddyyyy.selectAll();
-				}
+			public void mousePressed(MouseEvent e) {
+				Submitbutton.setForeground(new Color(146,102,44));
 			}
 			@Override
-			public void focusLost(FocusEvent e) {
-				if(txtMmddyyyy.getText().equals(""))
-					txtMmddyyyy.setText("MM/DD/YYYY");
+			public void mouseReleased(MouseEvent e) {
+				Submitbutton.setForeground(new Color(205,196,125));
 			}
 		});
-		txtMmddyyyy.setText("MM/DD/YYYY");
-		txtMmddyyyy.setForeground(Color.GRAY);
-		txtMmddyyyy.setFont(new Font("Poppins", Font.PLAIN, 15));
-		txtMmddyyyy.setColumns(10);
-		txtMmddyyyy.setBorder(null);
-		txtMmddyyyy.setBackground(Color.WHITE);
-		contentPane.add(txtMmddyyyy);
-		
-		textField_5 = new JTextField();
-		textField_5.setBounds(382, 373, 250, 40);
-		textField_5.setText("   ");
-		textField_5.setColumns(10);
-		contentPane.add(textField_5);
-		
-		Button button = new Button("Submit");
-		button.setBounds(382, 484, 132, 40);
-		button.addActionListener(new ActionListener() {
+		Submitbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		button.setForeground(new Color(234, 218, 128));
-		button.setFont(new Font("Dialog", Font.BOLD, 20));
-		button.setBackground(new Color(0, 45, 105));
-		contentPane.add(button);
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(384, 187, 248, 40);
-		textField_1.setText("   ");
-		textField_1.setColumns(10);
-		contentPane.add(textField_1);
+		Submitbutton.setForeground(new Color(234, 218, 128));
+		Submitbutton.setFont(new Font("Dialog", Font.BOLD, 20));
+		Submitbutton.setBackground(new Color(0, 45, 105));
+		contentPane.add(Submitbutton);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(734, 1, 187, 614);
@@ -250,46 +220,100 @@ public class Registration extends JFrame {
 		lblX.setHorizontalAlignment(SwingConstants.CENTER);
 		lblX.setFont(new Font("Poppins", Font.BOLD, 14));
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setBounds(192, 5, 72, 83);
-		lblNewLabel_2.setIcon(new ImageIcon(Registration.class.getResource("/images/SmallSize.png")));
-		contentPane.add(lblNewLabel_2);
+		JLabel labelRegLogo = new JLabel("");
+		labelRegLogo.setBounds(192, 5, 72, 83);
+		labelRegLogo.setIcon(new ImageIcon(Registration.class.getResource("/images/SmallSize.png")));
+		contentPane.add(labelRegLogo);
 		
 		pwdPasswordReg = new JPasswordField();
+		pwdPasswordReg.setBounds(406, 387, 250, 39);
 		pwdPasswordReg.setFont(new Font("Poppins", Font.PLAIN, 11));
-		pwdPasswordReg.setBounds(394, 321, 221, 22);
 		pwdPasswordReg.setForeground(Color.GRAY);
 		pwdPasswordReg.setSelectedTextColor(Color.WHITE);
 		pwdPasswordReg.addFocusListener(new FocusAdapter() {
 			
+			
+		});
+		contentPane.add(pwdPasswordReg);
+		
+		JLabel FirstNameLabel = new JLabel("First Name:");
+		FirstNameLabel.setBounds(237, 242, 124, 27);
+		FirstNameLabel.setFont(new Font("Dialog", Font.PLAIN, 23));
+		contentPane.add(FirstNameLabel);
+		
+		txtFirstName = new JTextField();
+		txtFirstName.setBounds(406, 238, 250, 40);
+		txtFirstName.setHorizontalAlignment(SwingConstants.LEFT);
+		txtFirstName.setForeground(Color.GRAY);
+		txtFirstName.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txtFirstName.setColumns(10);
+		txtFirstName.setBackground(Color.WHITE);
+		contentPane.add(txtFirstName);
+		
+		JLabel MiddleNameLabel = new JLabel("Middle Name:");
+		MiddleNameLabel.setBounds(237, 291, 149, 27);
+		MiddleNameLabel.setFont(new Font("Dialog", Font.PLAIN, 23));
+		contentPane.add(MiddleNameLabel);
+		
+		txtMiddleName = new JTextField();
+		txtMiddleName.setBounds(406, 287, 250, 40);
+		txtMiddleName.setHorizontalAlignment(SwingConstants.LEFT);
+		txtMiddleName.setForeground(Color.GRAY);
+		txtMiddleName.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txtMiddleName.setColumns(10);
+		txtMiddleName.setBackground(Color.WHITE);
+		contentPane.add(txtMiddleName);
+		
+		txtYear = new JTextField();
+		txtYear.setBounds(570, 437, 86, 40);
+		txtYear.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(pwdPasswordReg.getText().equals("Password")) {
-					pwdPasswordReg.setEchoChar('●');
-					pwdPasswordReg.setText("");
-					
+				if(txtYear.getText().equals("Year")) {
+					txtYear.setText("");
 				}
 				else {
-					pwdPasswordReg.selectAll();
+					txtYear.selectAll();
 				}
 			}
 			@Override
 			public void focusLost(FocusEvent e) {
-				if(pwdPasswordReg.getText().equals("")) {
-					pwdPasswordReg.setText("Password");
-					pwdPasswordReg.setEchoChar((char)0);
-					
-				}
+				if(txtYear.getText().equals(""))
+					txtYear.setText("Year");
 			}
 		});
-		pwdPasswordReg.setBorder(null);
-		pwdPasswordReg.setText("  Password");
-		contentPane.add(pwdPasswordReg);
+		txtYear.setText("Year");
+		txtYear.setForeground(Color.GRAY);
+		txtYear.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txtYear.setColumns(10);
+		txtYear.setBackground(Color.WHITE);
+		contentPane.add(txtYear);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(381, 312, 251, 40);
-		textField_2.setText("   ");
-		textField_2.setColumns(10);
-		contentPane.add(textField_2);
+		txtDay = new JTextField();
+		txtDay.setBounds(488, 437, 72, 40);
+		txtDay.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				if(txtDay.getText().equals("Day")) {
+					txtDay.setText("");
+				}
+				else {
+					txtDay.selectAll();
+				}
+			}
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(txtDay.getText().equals(""))
+					txtDay.setText("Day");
+			}
+		});
+		txtDay.addMouseListener(new MouseAdapter() {
+		});
+		txtDay.setText("Day");
+		txtDay.setForeground(Color.GRAY);
+		txtDay.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txtDay.setColumns(10);
+		txtDay.setBackground(Color.WHITE);
+		contentPane.add(txtDay);
 	}
 }

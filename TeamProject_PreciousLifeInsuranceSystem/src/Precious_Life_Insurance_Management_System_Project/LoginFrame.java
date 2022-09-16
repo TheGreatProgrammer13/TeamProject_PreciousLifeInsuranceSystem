@@ -42,8 +42,8 @@ public class LoginFrame extends JFrame {
 	}
 	
 	private JPanel contentPane;
-	private JTextField txtUsername;
-	private JPasswordField pwdPassword;
+	private JTextField txtEmailAddressLogin;
+	private JPasswordField pwdPasswordLogin;
 
 	/**
 	 * Launch the application.
@@ -146,25 +146,25 @@ public class LoginFrame extends JFrame {
 		button_1.setBackground(new Color(0, 128, 0));
 		contentPane.add(button_1);
 
-		JLabel lblNewLabel = new JLabel("Username:");
-		lblNewLabel.setBounds(569, 191, 104, 26);
-		lblNewLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
-		contentPane.add(lblNewLabel);
+		JLabel labelEmail = new JLabel("Email:");
+		labelEmail.setBounds(569, 191, 104, 26);
+		labelEmail.setFont(new Font("Poppins", Font.PLAIN, 20));
+		contentPane.add(labelEmail);
 
-		JLabel lblPassword = new JLabel("Password:");
-		lblPassword.setBounds(569, 286, 116, 26);
-		lblPassword.setFont(new Font("Poppins", Font.PLAIN, 20));
-		contentPane.add(lblPassword);
+		JLabel labelPassword = new JLabel("Password:");
+		labelPassword.setBounds(569, 286, 116, 26);
+		labelPassword.setFont(new Font("Poppins", Font.PLAIN, 20));
+		contentPane.add(labelPassword);
 
-		JLabel lblNewLabel_1 = new JLabel("Sign In");
-		lblNewLabel_1.setBounds(680, 38, 97, 35);
-		lblNewLabel_1.setFont(new Font("Poppins", Font.BOLD, 25));
-		contentPane.add(lblNewLabel_1);
+		JLabel labelSignIn = new JLabel("Sign In");
+		labelSignIn.setBounds(680, 38, 97, 35);
+		labelSignIn.setFont(new Font("Poppins", Font.BOLD, 25));
+		contentPane.add(labelSignIn);
 
-		JLabel lblNewLabel_2 = new JLabel("Precious Life Insurance");
-		lblNewLabel_2.setBounds(605, 111, 238, 29);
-		lblNewLabel_2.setFont(new Font("Dialog", Font.PLAIN, 22));
-		contentPane.add(lblNewLabel_2);
+		JLabel labelPreciousLifeInsurance = new JLabel("Precious Life Insurance");
+		labelPreciousLifeInsurance.setBounds(605, 111, 238, 29);
+		labelPreciousLifeInsurance.setFont(new Font("Dialog", Font.PLAIN, 22));
+		contentPane.add(labelPreciousLifeInsurance);
 
 		JSeparator separator = new JSeparator();
 		separator.setBorder(null);
@@ -177,9 +177,9 @@ public class LoginFrame extends JFrame {
 		lblIconLogo.setIcon(new ImageIcon(LoginFrame.class.getResource("/images/logoPng.png")));
 		contentPane.add(separator);
 
-		JLabel lblX = new JLabel("X");
-		lblX.setBounds(927, 1, 12, 28);
-		lblX.addMouseListener(new MouseAdapter() {
+		JLabel labelX = new JLabel("X");
+		labelX.setBounds(927, 1, 12, 28);
+		labelX.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to close this application?","Confirmation", JOptionPane.YES_NO_OPTION) == 0 ) {
@@ -188,111 +188,111 @@ public class LoginFrame extends JFrame {
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				lblX.setForeground(Color.red);
+				labelX.setForeground(Color.red);
 			}
 			
 			public void mouseExited(MouseEvent e) {
-				lblX.setForeground(Color.black);
+				labelX.setForeground(Color.black);
 			}
 		});
-		lblX.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblX.setHorizontalAlignment(SwingConstants.CENTER);
-		contentPane.add(lblX);
+		labelX.setFont(new Font("Tahoma", Font.BOLD, 14));
+		labelX.setHorizontalAlignment(SwingConstants.CENTER);
+		contentPane.add(labelX);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(571, 227, 305, 44);
-		panel_1.setBackground(Color.WHITE);
-		panel_1.setBorder(new LineBorder(new Color(128, 128, 128), 1, true));
-		contentPane.add(panel_1);
+		JPanel panelEmail = new JPanel();
+		panelEmail.setBounds(571, 227, 305, 44);
+		panelEmail.setBackground(Color.WHITE);
+		panelEmail.setBorder(new LineBorder(new Color(128, 128, 128), 1, true));
+		contentPane.add(panelEmail);
 		
-		JPanel panel_1_1 = new JPanel();
-		panel_1_1.setBounds(569, 324, 307, 44);
-		panel_1_1.setBackground(Color.WHITE);
-		panel_1_1.setBorder(new LineBorder(new Color(128, 128, 128), 1, true));
-		panel_1.setLayout(null);
+		JPanel panelPassword = new JPanel();
+		panelPassword.setBounds(569, 324, 307, 44);
+		panelPassword.setBackground(Color.WHITE);
+		panelPassword.setBorder(new LineBorder(new Color(128, 128, 128), 1, true));
+		panelEmail.setLayout(null);
 		
-		txtUsername = new JTextField();
-		txtUsername.addVetoableChangeListener(new VetoableChangeListener() {
+		txtEmailAddressLogin = new JTextField();
+		txtEmailAddressLogin.addVetoableChangeListener(new VetoableChangeListener() {
 			public void vetoableChange(PropertyChangeEvent evt) {
 			}
 		});
-		txtUsername.setForeground(Color.GRAY);
-		txtUsername.addFocusListener(new FocusAdapter() {
+		txtEmailAddressLogin.setForeground(Color.GRAY);
+		txtEmailAddressLogin.addFocusListener(new FocusAdapter() {
 		
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(txtUsername.getText().equals("Username")) {
-					txtUsername.setText("");
+				if(txtEmailAddressLogin.getText().equals("Email Address")) {
+					txtEmailAddressLogin.setText("");
 				}
 				else {
-					txtUsername.selectAll();
+					txtEmailAddressLogin.selectAll();
 				}
 			}
 			@Override
 			public void focusLost(FocusEvent e) {
-				if(txtUsername.getText().equals(""))
-					txtUsername.setText("Username");
+				if(txtEmailAddressLogin.getText().equals(""))
+					txtEmailAddressLogin.setText("Email Adress");
 			}
 		});
-		txtUsername.setBorder(null);
-		txtUsername.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtUsername.setForeground(Color.GRAY);
-		txtUsername.setText("Username");
-		txtUsername.setBackground(Color.WHITE);
-		txtUsername.setBounds(51, 11, 228, 22);
-		panel_1.add(txtUsername);
-		txtUsername.setColumns(10);
+		txtEmailAddressLogin.setBorder(null);
+		txtEmailAddressLogin.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtEmailAddressLogin.setForeground(Color.GRAY);
+		txtEmailAddressLogin.setText("Email Address");
+		txtEmailAddressLogin.setBackground(Color.WHITE);
+		txtEmailAddressLogin.setBounds(51, 11, 228, 22);
+		panelEmail.add(txtEmailAddressLogin);
+		txtEmailAddressLogin.setColumns(10);
 		
-		JLabel lblUsernameIcon = new JLabel("");
-		lblUsernameIcon.setHorizontalAlignment(SwingConstants.CENTER);
-		lblUsernameIcon.setIcon(new ImageIcon(LoginFrame.class.getResource("/images/UserLogo.png")));
-		lblUsernameIcon.setBounds(4, 0, 43, 44);
-		panel_1.add(lblUsernameIcon);
-		contentPane.add(panel_1_1);
-		SpringLayout sl_panel_1_1 = new SpringLayout();
-		panel_1_1.setLayout(sl_panel_1_1);
+		JLabel labelEmailIcon = new JLabel("");
+		labelEmailIcon.setHorizontalAlignment(SwingConstants.CENTER);
+		labelEmailIcon.setIcon(new ImageIcon(LoginFrame.class.getResource("/images/UserLogo.png")));
+		labelEmailIcon.setBounds(4, 0, 43, 44);
+		panelEmail.add(labelEmailIcon);
+		contentPane.add(panelPassword);
+		SpringLayout sl_panelPassword = new SpringLayout();
+		panelPassword.setLayout(sl_panelPassword);
 		
-		JLabel lblNewLabel_4 = new JLabel("");
-		sl_panel_1_1.putConstraint(SpringLayout.NORTH, lblNewLabel_4, 0, SpringLayout.NORTH, panel_1_1);
-		sl_panel_1_1.putConstraint(SpringLayout.WEST, lblNewLabel_4, 0, SpringLayout.WEST, panel_1_1);
-		sl_panel_1_1.putConstraint(SpringLayout.SOUTH, lblNewLabel_4, 39, SpringLayout.NORTH, panel_1_1);
-		sl_panel_1_1.putConstraint(SpringLayout.EAST, lblNewLabel_4, 52, SpringLayout.WEST, panel_1_1);
-		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_4.setIcon(new ImageIcon(LoginFrame.class.getResource("/images/PassLogo.png")));
-		panel_1_1.add(lblNewLabel_4);
+		JLabel labelPasswordIcon = new JLabel("");
+		sl_panelPassword.putConstraint(SpringLayout.NORTH, labelPasswordIcon, 0, SpringLayout.NORTH, panelPassword);
+		sl_panelPassword.putConstraint(SpringLayout.WEST, labelPasswordIcon, 0, SpringLayout.WEST, panelPassword);
+		sl_panelPassword.putConstraint(SpringLayout.SOUTH, labelPasswordIcon, 39, SpringLayout.NORTH, panelPassword);
+		sl_panelPassword.putConstraint(SpringLayout.EAST, labelPasswordIcon, 52, SpringLayout.WEST, panelPassword);
+		labelPasswordIcon.setHorizontalAlignment(SwingConstants.CENTER);
+		labelPasswordIcon.setIcon(new ImageIcon(LoginFrame.class.getResource("/images/PassLogo.png")));
+		panelPassword.add(labelPasswordIcon);
 		
-		pwdPassword = new JPasswordField();
-		sl_panel_1_1.putConstraint(SpringLayout.NORTH, pwdPassword, 10, SpringLayout.NORTH, panel_1_1);
-		sl_panel_1_1.putConstraint(SpringLayout.WEST, pwdPassword, 5, SpringLayout.EAST, lblNewLabel_4);
-		sl_panel_1_1.putConstraint(SpringLayout.SOUTH, pwdPassword, -7, SpringLayout.SOUTH, lblNewLabel_4);
-		sl_panel_1_1.putConstraint(SpringLayout.EAST, pwdPassword, 241, SpringLayout.EAST, lblNewLabel_4);
-		pwdPassword.setFont(new Font("Poppins", Font.PLAIN, 15));
-		pwdPassword.setForeground(Color.GRAY);
-		pwdPassword.setEchoChar((char)0);
-		pwdPassword.addFocusListener(new FocusAdapter() {
+		pwdPasswordLogin = new JPasswordField();
+		sl_panelPassword.putConstraint(SpringLayout.NORTH, pwdPasswordLogin, 10, SpringLayout.NORTH, panelPassword);
+		sl_panelPassword.putConstraint(SpringLayout.WEST, pwdPasswordLogin, 5, SpringLayout.EAST, labelPasswordIcon);
+		sl_panelPassword.putConstraint(SpringLayout.SOUTH, pwdPasswordLogin, -7, SpringLayout.SOUTH, labelPasswordIcon);
+		sl_panelPassword.putConstraint(SpringLayout.EAST, pwdPasswordLogin, 241, SpringLayout.EAST, labelPasswordIcon);
+		pwdPasswordLogin.setFont(new Font("Poppins", Font.PLAIN, 15));
+		pwdPasswordLogin.setForeground(Color.GRAY);
+		pwdPasswordLogin.setEchoChar((char)0);
+		pwdPasswordLogin.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(pwdPassword.getText().equals("Password")) {
-					pwdPassword.setEchoChar('●');
-					pwdPassword.setText("");
+				if(pwdPasswordLogin.getText().equals("Password")) {
+					pwdPasswordLogin.setEchoChar('●');
+					pwdPasswordLogin.setText("");
 					
 				}
 				else {
-					pwdPassword.selectAll();
+					pwdPasswordLogin.selectAll();
 				}
 			}
 			@Override
 			public void focusLost(FocusEvent e) {
-				if(pwdPassword.getText().equals("")) {
-					pwdPassword.setText("Password");
-					pwdPassword.setEchoChar((char)0);
+				if(pwdPasswordLogin.getText().equals("")) {
+					pwdPasswordLogin.setText("Password");
+					pwdPasswordLogin.setEchoChar((char)0);
 					
 				}
 			}
 		});
-		pwdPassword.setText("Password");
-		pwdPassword.setBorder(null);
-		panel_1_1.add(pwdPassword);
+		pwdPasswordLogin.setText("Password");
+		pwdPasswordLogin.setBorder(null);
+		panelPassword.add(pwdPasswordLogin);
 		
 		JSeparator separator_1 = new JSeparator();
 		separator_1.setBorder(null);
