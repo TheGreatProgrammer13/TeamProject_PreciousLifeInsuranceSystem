@@ -55,7 +55,7 @@ public class MainDashboard extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 45, 105));
 		panel.setForeground(new Color(0, 0, 255));
-		panel.setBounds(-14, 0, 977, 75);
+
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -68,7 +68,7 @@ public class MainDashboard extends JFrame {
 		DashboardMainLogOut.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to Log out?","Confirmation", JOptionPane.YES_NO_OPTION) == 0 ) {
+
 					MainDashboard.this.dispose();
 				}
 			}
@@ -84,12 +84,7 @@ public class MainDashboard extends JFrame {
 		DashboardMainLogOut.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
-				{
-					LoginFrame t = new LoginFrame();
-					t.show();
-					dispose();
 
-				}
 				
 			}
 			
