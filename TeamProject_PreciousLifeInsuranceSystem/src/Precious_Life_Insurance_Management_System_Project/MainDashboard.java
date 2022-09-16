@@ -1,5 +1,5 @@
 package Precious_Life_Insurance_Management_System_Project;
-import java.sql.*;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -55,7 +55,7 @@ public class MainDashboard extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 45, 105));
 		panel.setForeground(new Color(0, 0, 255));
-		panel.setBounds(-14, 0, 991, 75);
+
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -68,7 +68,7 @@ public class MainDashboard extends JFrame {
 		DashboardMainLogOut.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(JOptionPane.showConfirmDialog(null, "are you sure you want to Log out?","Confirmation", JOptionPane.YES_NO_OPTION) == 0 ) {
+
 					MainDashboard.this.dispose();
 				}
 			}
@@ -84,7 +84,7 @@ public class MainDashboard extends JFrame {
 		DashboardMainLogOut.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
-				
+
 				
 			}
 			
@@ -107,7 +107,7 @@ public class MainDashboard extends JFrame {
 		});
 		DashboardMainAvailUsButton.setBorder(null);
 		DashboardMainAvailUsButton.setForeground(Color.WHITE);
-		DashboardMainAvailUsButton.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/Avail-removebg-preview.png")));
+		DashboardMainAvailUsButton.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/Avail.png")));
 		DashboardMainAvailUsButton.setBounds(125, 226, 284, 257);
 		contentPane.add(DashboardMainAvailUsButton);
 		
@@ -115,10 +115,16 @@ public class MainDashboard extends JFrame {
 		DashboardMainAboutUsButton.setBackground(new Color(255, 255, 255));
 		DashboardMainAboutUsButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				{
+					AboutUS t = new AboutUS();
+					t.show();
+					dispose();
+
+				}
 			}
 		});
 		DashboardMainAboutUsButton.setBorder(null);
-		DashboardMainAboutUsButton.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/About_Us-removebg-preview.png")));
+		DashboardMainAboutUsButton.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/About_Us.png")));
 		DashboardMainAboutUsButton.setForeground(Color.WHITE);
 		DashboardMainAboutUsButton.setBounds(568, 226, 274, 257);
 		contentPane.add(DashboardMainAboutUsButton);
