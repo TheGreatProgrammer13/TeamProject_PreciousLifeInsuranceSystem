@@ -285,6 +285,13 @@ public class PLSerene extends JFrame {
 		contentPane.add(lblNewLabel_8_1_1_1_1);
 		
 		JButton btnNewButton = new JButton("Click for more info!");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SereneBenefit t = new SereneBenefit();
+				t.show();
+				dispose();
+			}
+		});
 		btnNewButton.setForeground(new Color(128, 128, 128));
 		btnNewButton.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
 		btnNewButton.setBackground(new Color(255, 255, 255));
