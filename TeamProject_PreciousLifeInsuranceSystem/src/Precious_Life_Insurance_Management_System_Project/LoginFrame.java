@@ -266,7 +266,7 @@ public class LoginFrame extends JFrame {
 		sl_panelPassword.putConstraint(SpringLayout.WEST, pwdPasswordLogin, 5, SpringLayout.EAST, lblNewLabel_4);
 		sl_panelPassword.putConstraint(SpringLayout.SOUTH, pwdPasswordLogin, -7, SpringLayout.SOUTH, lblNewLabel_4);
 		sl_panelPassword.putConstraint(SpringLayout.EAST, pwdPasswordLogin, 241, SpringLayout.EAST, lblNewLabel_4);
-		pwdPasswordLogin.setFont(new Font("Poppins", Font.PLAIN, 15));v
+		pwdPasswordLogin.setFont(new Font("Poppins", Font.PLAIN, 15));
 		pwdPasswordLogin.setForeground(Color.GRAY);
 		pwdPasswordLogin.setEchoChar((char)0);
 		pwdPasswordLogin.addFocusListener(new FocusAdapter() {
