@@ -38,9 +38,11 @@ public class PLHiraya extends JFrame {
 	 * Create the frame.
 	 */
 	public PLHiraya() {
+		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1170, 843);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -241,5 +243,33 @@ public class PLHiraya extends JFrame {
 		lblPremium.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblPremium.setBounds(18, 0, 101, 32);
 		panel_2.add(lblPremium);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\HirayaPic3.png"));
+		lblNewLabel_6.setBounds(0, 0, 1156, 257);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\suitablePicture2.png"));
+		lblNewLabel_7.setBounds(771, 559, 292, 131);
+		contentPane.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("Moving Up");
+		lblNewLabel_8.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8.setBounds(795, 702, 86, 32);
+		contentPane.add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_8_1 = new JLabel("Preparing");
+		lblNewLabel_8_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1.setBounds(956, 702, 86, 32);
+		contentPane.add(lblNewLabel_8_1);
+		
+		JLabel lblNewLabel_8_1_1 = new JLabel("Ahead");
+		lblNewLabel_8_1_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1_1.setBounds(966, 733, 57, 32);
+		contentPane.add(lblNewLabel_8_1_1);
 	}
 }

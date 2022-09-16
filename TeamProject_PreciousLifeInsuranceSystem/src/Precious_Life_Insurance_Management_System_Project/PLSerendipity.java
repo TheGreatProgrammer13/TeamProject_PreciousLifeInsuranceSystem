@@ -38,9 +38,11 @@ public class PLSerendipity extends JFrame {
 	 * Create the frame.
 	 */
 	public PLSerendipity() {
+		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1170, 843);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -237,5 +239,45 @@ public class PLSerendipity extends JFrame {
 		lblNewLabel_3_1_1.setFont(new Font("Microsoft YaHei", Font.BOLD, 22));
 		lblNewLabel_3_1_1.setBounds(561, 313, 68, 32);
 		contentPane.add(lblNewLabel_3_1_1);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\SerendipityPic2.png"));
+		lblNewLabel_6.setBounds(189, 0, 988, 257);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon(PLSerendipity.class.getResource("/images/suitablePictue.png")));
+		lblNewLabel_7.setBounds(738, 559, 360, 114);
+		contentPane.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("Moving Up");
+		lblNewLabel_8.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8.setBounds(748, 677, 86, 32);
+		contentPane.add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_8_1 = new JLabel("Preparing");
+		lblNewLabel_8_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1.setBounds(878, 677, 86, 32);
+		contentPane.add(lblNewLabel_8_1);
+		
+		JLabel lblNewLabel_8_1_1 = new JLabel("Ahead");
+		lblNewLabel_8_1_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1_1.setBounds(888, 708, 57, 32);
+		contentPane.add(lblNewLabel_8_1_1);
+		
+		JLabel lblNewLabel_8_1_1_1 = new JLabel("Leaving a");
+		lblNewLabel_8_1_1_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1_1_1.setBounds(998, 677, 86, 32);
+		contentPane.add(lblNewLabel_8_1_1_1);
+		
+		JLabel lblNewLabel_8_1_1_1_1 = new JLabel("Legacy");
+		lblNewLabel_8_1_1_1_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1_1_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1_1_1_1.setBounds(1008, 708, 63, 32);
+		contentPane.add(lblNewLabel_8_1_1_1_1);
 	}
 }
