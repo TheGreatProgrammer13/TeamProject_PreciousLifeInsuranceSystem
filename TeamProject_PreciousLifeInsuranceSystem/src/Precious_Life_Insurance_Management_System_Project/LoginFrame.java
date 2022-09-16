@@ -252,21 +252,21 @@ public class LoginFrame extends JFrame {
 		SpringLayout sl_panelPassword = new SpringLayout();
 		panelPassword.setLayout(sl_panelPassword);
 		
-		JLabel labelPasswordIcon = new JLabel("");
-		sl_panelPassword.putConstraint(SpringLayout.NORTH, labelPasswordIcon, 0, SpringLayout.NORTH, panelPassword);
-		sl_panelPassword.putConstraint(SpringLayout.WEST, labelPasswordIcon, 0, SpringLayout.WEST, panelPassword);
-		sl_panelPassword.putConstraint(SpringLayout.SOUTH, labelPasswordIcon, 39, SpringLayout.NORTH, panelPassword);
-		sl_panelPassword.putConstraint(SpringLayout.EAST, labelPasswordIcon, 52, SpringLayout.WEST, panelPassword);
-		labelPasswordIcon.setHorizontalAlignment(SwingConstants.CENTER);
-		labelPasswordIcon.setIcon(new ImageIcon(LoginFrame.class.getResource("/images/PassLogo.png")));
-		panelPassword.add(labelPasswordIcon);
+		JLabel lblNewLabel_4 = new JLabel("");
+		sl_panelPassword.putConstraint(SpringLayout.NORTH, lblNewLabel_4, 0, SpringLayout.NORTH, panelPassword);
+		sl_panelPassword.putConstraint(SpringLayout.WEST, lblNewLabel_4, 0, SpringLayout.WEST, panelPassword);
+		sl_panelPassword.putConstraint(SpringLayout.SOUTH, lblNewLabel_4, 39, SpringLayout.NORTH, panelPassword);
+		sl_panelPassword.putConstraint(SpringLayout.EAST, lblNewLabel_4, 52, SpringLayout.WEST, panelPassword);
+		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_4.setIcon(new ImageIcon(LoginFrame.class.getResource("/images/PassLogo.png")));
+		panelPassword.add(lblNewLabel_4);
 		
 		pwdPasswordLogin = new JPasswordField();
 		sl_panelPassword.putConstraint(SpringLayout.NORTH, pwdPasswordLogin, 10, SpringLayout.NORTH, panelPassword);
-		sl_panelPassword.putConstraint(SpringLayout.WEST, pwdPasswordLogin, 5, SpringLayout.EAST, labelPasswordIcon);
-		sl_panelPassword.putConstraint(SpringLayout.SOUTH, pwdPasswordLogin, -7, SpringLayout.SOUTH, labelPasswordIcon);
-		sl_panelPassword.putConstraint(SpringLayout.EAST, pwdPasswordLogin, 241, SpringLayout.EAST, labelPasswordIcon);
-		pwdPasswordLogin.setFont(new Font("Poppins", Font.PLAIN, 15));
+		sl_panelPassword.putConstraint(SpringLayout.WEST, pwdPasswordLogin, 5, SpringLayout.EAST, lblNewLabel_4);
+		sl_panelPassword.putConstraint(SpringLayout.SOUTH, pwdPasswordLogin, -7, SpringLayout.SOUTH, lblNewLabel_4);
+		sl_panelPassword.putConstraint(SpringLayout.EAST, pwdPasswordLogin, 241, SpringLayout.EAST, lblNewLabel_4);
+		pwdPasswordLogin.setFont(new Font("Poppins", Font.PLAIN, 15));v
 		pwdPasswordLogin.setForeground(Color.GRAY);
 		pwdPasswordLogin.setEchoChar((char)0);
 		pwdPasswordLogin.addFocusListener(new FocusAdapter() {

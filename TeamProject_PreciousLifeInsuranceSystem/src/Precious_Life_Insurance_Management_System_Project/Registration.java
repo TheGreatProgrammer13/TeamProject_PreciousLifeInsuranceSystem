@@ -175,7 +175,7 @@ public class Registration extends JFrame {
 					txtMonth.setText("Month");
 			}
 		});
-		txtMonth.setText("Month/Day/Year");
+		txtMonth.setText("Month");
 		txtMonth.setForeground(Color.GRAY);
 		txtMonth.setFont(new Font("Poppins", Font.PLAIN, 15));
 		txtMonth.setColumns(10);
