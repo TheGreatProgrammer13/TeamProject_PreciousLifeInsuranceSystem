@@ -25,7 +25,6 @@ public class Dashboard extends JFrame {
 
 	private JPanel contentPane;
 	private JButton btnNewButton_4;
-	private JLabel lblNewLabel;
 	private JPanel contentPane_1;
 	private JButton btnNewButton_5;
 	private JButton btnNewButton_6;
@@ -40,6 +39,7 @@ public class Dashboard extends JFrame {
 	private JLabel lblNewLabel_6;
 	private final JLabel lblNewLabel_7 = new JLabel("(You can only choose one for this transaction)");
 	private JLabel lblNewLabel_8;
+	private JButton btnNewButton;
 
 	/**
 	 * Launch the application.
@@ -172,10 +172,22 @@ public class Dashboard extends JFrame {
 		contentPane_1.add(panel);
 		panel.setLayout(null);
 		
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(10, 5, 72, 79);
-		panel.add(lblNewLabel);
-		lblNewLabel.setIcon(new ImageIcon(Dashboard.class.getResource("/images/SmallSize.png")));
+		btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				{
+					MainDashboard t = new MainDashboard();
+					t.show();
+					dispose();
+
+				}
+			}
+		});
+		btnNewButton.setIcon(new ImageIcon(Dashboard.class.getResource("/images/SmallSize.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 45, 105));
+		btnNewButton.setBounds(10, 10, 78, 74);
+		panel.add(btnNewButton);
 		
 		lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(-228, -28, 69, 66);

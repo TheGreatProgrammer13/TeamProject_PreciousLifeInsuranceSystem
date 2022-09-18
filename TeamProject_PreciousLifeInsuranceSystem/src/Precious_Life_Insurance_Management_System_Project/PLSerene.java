@@ -81,11 +81,6 @@ public class PLSerene extends JFrame {
 		panel.setBackground(new Color(0, 84, 168));
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(PLSerene.class.getResource("/images/logoPng-MIDSIZE.png")));
-		lblNewLabel_1.setBounds(-17, 10, 136, 137);
-		panel.add(lblNewLabel_1);
-		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon(PLSerene.class.getResource("/images/LifeLogo1 (1).png")));
 		lblNewLabel_2.setBounds(10, 157, 98, 86);
@@ -108,6 +103,23 @@ public class PLSerene extends JFrame {
 		btnNewButton_4.setBounds(25, 710, 62, 55);
 		panel.add(btnNewButton_4);
 		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				{
+					MainDashboard t = new MainDashboard();
+					t.show();
+					dispose();
+
+				}
+			}
+		});
+		btnNewButton.setIcon(new ImageIcon(PLSerene.class.getResource("/images/logoPng-MIDSIZE.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 84, 168));
+		btnNewButton.setBounds(25, 21, 98, 115);
+		panel.add(btnNewButton);
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(117, -2, 42, 838);
 		panel_1.setBorder(null);
@@ -121,7 +133,7 @@ public class PLSerene extends JFrame {
 		contentPane.add(panel_1_1);
 		
 		JPanel panel_1_1_1 = new JPanel();
-		panel_1_1_1.setBounds(193, 155, 249, 89);
+		panel_1_1_1.setBounds(198, 155, 244, 89);
 		panel_1_1_1.setBorder(null);
 		panel_1_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1_1);
@@ -298,20 +310,20 @@ public class PLSerene extends JFrame {
 		lblNewLabel_8_1_1_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
 		contentPane.add(lblNewLabel_8_1_1_1_1);
 		
-		JButton btnNewButton = new JButton("Click for more info!");
-		btnNewButton.setBounds(259, 467, 183, 23);
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton clickInfoSerene = new JButton("Click for more info!");
+		clickInfoSerene.setBounds(259, 467, 183, 23);
+		clickInfoSerene.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SereneBenefit t = new SereneBenefit();
 				t.show();
 				dispose();
 			}
 		});
-		btnNewButton.setForeground(new Color(128, 128, 128));
-		btnNewButton.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
-		btnNewButton.setBackground(new Color(255, 255, 255));
-		btnNewButton.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
-		contentPane.add(btnNewButton);
+		clickInfoSerene.setForeground(new Color(128, 128, 128));
+		clickInfoSerene.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		clickInfoSerene.setBackground(new Color(255, 255, 255));
+		clickInfoSerene.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		contentPane.add(clickInfoSerene);
 		
 		JLabel label = new JLabel("New label");
 		label.setBounds(978, 55, 45, 13);

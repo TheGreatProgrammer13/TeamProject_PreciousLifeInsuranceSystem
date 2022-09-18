@@ -1,6 +1,7 @@
 package Precious_Life_Insurance_Management_System_Project;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -11,14 +12,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.UIManager;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.MatteBorder;
-import javax.swing.border.SoftBevelBorder;
 import javax.swing.border.BevelBorder;
-import javax.swing.border.TitledBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.SoftBevelBorder;
 
-public class SereneBenefit extends JFrame {
+public class HirayaBenefits extends JFrame {
 
 	private JPanel contentPane;
 
@@ -29,7 +27,7 @@ public class SereneBenefit extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SereneBenefit frame = new SereneBenefit();
+					HirayaBenefits frame = new HirayaBenefits();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +39,7 @@ public class SereneBenefit extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public SereneBenefit() {
+	public HirayaBenefits() {
 		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1170, 843);
@@ -52,6 +50,25 @@ public class SereneBenefit extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JPanel panel_1_1_1 = new JPanel();
+		panel_1_1_1.setBounds(144, 674, 226, 89);
+		panel_1_1_1.setBorder(null);
+		panel_1_1_1.setBackground(new Color(0, 64, 128));
+		contentPane.add(panel_1_1_1);
+		panel_1_1_1.setLayout(null);
+		
+		JLabel lblSerene = new JLabel("HIRAYA");
+		lblSerene.setBounds(38, 34, 176, 44);
+		lblSerene.setForeground(Color.WHITE);
+		lblSerene.setFont(new Font("Tahoma", Font.BOLD, 42));
+		panel_1_1_1.add(lblSerene);
+		
+		JLabel lblNewLabel = new JLabel("PRECIOUS LIFE");
+		lblNewLabel.setBounds(38, 10, 183, 24);
+		panel_1_1_1.add(lblNewLabel);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
 		lblGetAQuote.setForeground(Color.WHITE);
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
@@ -59,11 +76,12 @@ public class SereneBenefit extends JFrame {
 		contentPane.add(lblGetAQuote);
 		
 		JButton btnNewButton_1 = new JButton("Now");
+		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		btnNewButton_1.setForeground(new Color(0, 64, 128));
 		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 47));
 		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
-		btnNewButton_1.setBounds(885, 728, 168, 56);
+		btnNewButton_1.setBackground(new Color(217, 217, 0));
+		btnNewButton_1.setBounds(885, 728, 172, 56);
 		contentPane.add(btnNewButton_1);
 		
 		JPanel panel = new JPanel();
@@ -78,22 +96,22 @@ public class SereneBenefit extends JFrame {
 		lblNewLabel_2.setBounds(10, 157, 98, 86);
 		panel.add(lblNewLabel_2);
 		
-		JButton backbuttonSerene = new JButton("");
-		backbuttonSerene.addActionListener(new ActionListener() {
+		JButton backbuttonHiraya = new JButton("");
+		backbuttonHiraya.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					PLSerene t = new PLSerene();
+					PLHiraya t = new PLHiraya();
 					t.show();
 					dispose();
 
 				}
 			}
 		});
-		backbuttonSerene.setIcon(new ImageIcon(PLSerene.class.getResource("/images/backbutton.png")));
-		backbuttonSerene.setBorder(null);
-		backbuttonSerene.setBackground(new Color(0, 84, 168));
-		backbuttonSerene.setBounds(25, 710, 62, 55);
-		panel.add(backbuttonSerene);
+		backbuttonHiraya.setIcon(new ImageIcon(PLSerene.class.getResource("/images/backbutton.png")));
+		backbuttonHiraya.setBorder(null);
+		backbuttonHiraya.setBackground(new Color(0, 84, 168));
+		backbuttonHiraya.setBounds(25, 710, 62, 55);
+		panel.add(backbuttonHiraya);
 		
 		JButton btnNewButton = new JButton("");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -106,10 +124,10 @@ public class SereneBenefit extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setIcon(new ImageIcon(SereneBenefit.class.getResource("/images/logoPng-MIDSIZE.png")));
+		btnNewButton.setIcon(new ImageIcon(HirayaBenefits.class.getResource("/images/logoPng-MIDSIZE.png")));
 		btnNewButton.setBorder(null);
 		btnNewButton.setBackground(new Color(0, 84, 168));
-		btnNewButton.setBounds(10, 21, 98, 115);
+		btnNewButton.setBounds(10, 20, 98, 115);
 		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
@@ -123,25 +141,6 @@ public class SereneBenefit extends JFrame {
 		panel_1_1.setBorder(null);
 		panel_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1);
-		
-		JPanel panel_1_1_1 = new JPanel();
-		panel_1_1_1.setBounds(181, 674, 249, 89);
-		panel_1_1_1.setBorder(null);
-		panel_1_1_1.setBackground(new Color(0, 45, 105));
-		contentPane.add(panel_1_1_1);
-		panel_1_1_1.setLayout(null);
-		
-		JLabel lblSerene = new JLabel("SERENE");
-		lblSerene.setBounds(38, 34, 195, 44);
-		lblSerene.setForeground(Color.WHITE);
-		lblSerene.setFont(new Font("Tahoma", Font.BOLD, 42));
-		panel_1_1_1.add(lblSerene);
-		
-		JLabel lblNewLabel = new JLabel("PRECIOUS LIFE");
-		lblNewLabel.setBounds(38, 10, 183, 24);
-		panel_1_1_1.add(lblNewLabel);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
-		lblNewLabel.setForeground(new Color(255, 255, 255));
 		
 		JLabel lblNewLabel_4 = new JLabel("● BENEFITS");
 		lblNewLabel_4.setBounds(216, 30, 318, 72);
@@ -160,10 +159,10 @@ public class SereneBenefit extends JFrame {
 		lblNewLabel_3.setBounds(537, 49, 58, 18);
 		contentPane.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_5 = new JLabel("SERENE:");
+		JLabel lblNewLabel_5 = new JLabel("HIRAYA:");
 		lblNewLabel_5.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 20));
-		lblNewLabel_5.setBounds(537, 72, 83, 18);
+		lblNewLabel_5.setBounds(537, 72, 82, 18);
 		contentPane.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_3_2 = new JLabel("Secure your loved ones' future with guaranteed life");

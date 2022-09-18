@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.UIManager;
 
 public class PLHiraya extends JFrame {
 
@@ -74,14 +75,9 @@ public class PLHiraya extends JFrame {
 		panel.setBounds(0, 0, 108, 806);
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(PLSerene.class.getResource("/images/logoPng-MIDSIZE.png")));
-		lblNewLabel_1.setBounds(-17, 10, 136, 137);
-		panel.add(lblNewLabel_1);
-		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon(PLSerene.class.getResource("/images/LifeLogo1 (1).png")));
-		lblNewLabel_2.setBounds(10, 157, 98, 86);
+		lblNewLabel_2.setBounds(10, 155, 98, 86);
 		panel.add(lblNewLabel_2);
 		
 		JButton btnNewButton_4 = new JButton("");
@@ -100,6 +96,20 @@ public class PLHiraya extends JFrame {
 		btnNewButton_4.setBackground(new Color(0, 84, 168));
 		btnNewButton_4.setBounds(25, 710, 62, 55);
 		panel.add(btnNewButton_4);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainDashboard t = new MainDashboard();
+				t.show();
+				dispose();
+			}
+		});
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 84, 168));
+		btnNewButton.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/logoPng-MIDSIZE.png")));
+		btnNewButton.setBounds(20, 22, 98, 115);
+		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(null);
@@ -271,5 +281,20 @@ public class PLHiraya extends JFrame {
 		lblNewLabel_8_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
 		lblNewLabel_8_1_1.setBounds(966, 733, 57, 32);
 		contentPane.add(lblNewLabel_8_1_1);
+		
+		JButton clickInfoHiraya = new JButton("Click for more info!");
+		clickInfoHiraya.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HirayaBenefits t = new HirayaBenefits();
+				t.show();
+				dispose();
+			}
+		});
+		clickInfoHiraya.setForeground(Color.GRAY);
+		clickInfoHiraya.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		clickInfoHiraya.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		clickInfoHiraya.setBackground(Color.WHITE);
+		clickInfoHiraya.setBounds(237, 463, 183, 23);
+		contentPane.add(clickInfoHiraya);
 	}
 }

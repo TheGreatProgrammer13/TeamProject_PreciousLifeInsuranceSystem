@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.UIManager;
 
 public class PLSerendipity extends JFrame {
 
@@ -74,11 +75,6 @@ public class PLSerendipity extends JFrame {
 		panel.setBackground(new Color(0, 84, 168));
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(PLSerene.class.getResource("/images/logoPng-MIDSIZE.png")));
-		lblNewLabel_1.setBounds(-17, 10, 136, 137);
-		panel.add(lblNewLabel_1);
-		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon(PLSerene.class.getResource("/images/LifeLogo1 (1).png")));
 		lblNewLabel_2.setBounds(10, 157, 98, 86);
@@ -100,6 +96,23 @@ public class PLSerendipity extends JFrame {
 		btnNewButton_4.setBackground(new Color(0, 84, 168));
 		btnNewButton_4.setBounds(25, 710, 62, 55);
 		panel.add(btnNewButton_4);
+		
+		JButton btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				{
+					MainDashboard t = new MainDashboard();
+					t.show();
+					dispose();
+
+				}
+			}
+		});
+		btnNewButton.setIcon(new ImageIcon(PLSerendipity.class.getResource("/images/logoPng-MIDSIZE.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 84, 168));
+		btnNewButton.setBounds(10, 21, 98, 115);
+		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(107, 0, 42, 838);
@@ -279,5 +292,20 @@ public class PLSerendipity extends JFrame {
 		lblNewLabel_8_1_1_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
 		lblNewLabel_8_1_1_1_1.setBounds(1008, 708, 63, 32);
 		contentPane.add(lblNewLabel_8_1_1_1_1);
+		
+		JButton clickInfoSerendipity = new JButton("Click for more info!");
+		clickInfoSerendipity.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SerendipityBenefits t = new SerendipityBenefits();
+				t.show();
+				dispose();
+			}
+		});
+		clickInfoSerendipity.setForeground(Color.GRAY);
+		clickInfoSerendipity.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		clickInfoSerendipity.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		clickInfoSerendipity.setBackground(Color.WHITE);
+		clickInfoSerendipity.setBounds(242, 461, 183, 23);
+		contentPane.add(clickInfoSerendipity);
 	}
 }
