@@ -282,7 +282,7 @@ public class PLHiraya extends JFrame {
 		lblNewLabel_8_1_1.setBounds(966, 733, 57, 32);
 		contentPane.add(lblNewLabel_8_1_1);
 		
-		JButton clickInfoHiraya = new JButton("Click for more info!");
+		JButton clickInfoHiraya = new JButton("Click here for more info!");
 		clickInfoHiraya.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				HirayaBenefits t = new HirayaBenefits();
