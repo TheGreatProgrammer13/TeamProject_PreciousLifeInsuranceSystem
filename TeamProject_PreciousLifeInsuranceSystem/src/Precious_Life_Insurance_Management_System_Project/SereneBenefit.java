@@ -14,6 +14,9 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.TitledBorder;
 
 public class SereneBenefit extends JFrame {
 
@@ -48,6 +51,20 @@ public class SereneBenefit extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(824, 674, 306, 44);
+		contentPane.add(lblGetAQuote);
+		
+		JButton btnNewButton_1 = new JButton(">Now!");
+		btnNewButton_1.setForeground(new Color(0, 64, 128));
+		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 47));
+		btnNewButton_1.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		btnNewButton_1.setBackground(new Color(0, 64, 128));
+		btnNewButton_1.setBounds(881, 740, 200, 56);
+		contentPane.add(btnNewButton_1);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 811);

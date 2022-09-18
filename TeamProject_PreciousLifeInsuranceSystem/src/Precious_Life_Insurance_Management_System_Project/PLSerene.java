@@ -60,8 +60,22 @@ public class PLSerene extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JButton btnNewButton_1 = new JButton(">Now!");
+		btnNewButton_1.setForeground(new Color(0, 64, 128));
+		btnNewButton_1.setBackground(new Color(0, 64, 128));
+		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 54));
+		btnNewButton_1.setBounds(849, 123, 234, 64);
+		contentPane.add(btnNewButton_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(813, 69, 306, 44);
+		contentPane.add(lblGetAQuote);
+		
 		JPanel panel = new JPanel();
-		panel.setBounds(5, 5, 108, 806);
+		panel.setBounds(0, -2, 118, 808);
 		panel.setLayout(null);
 		panel.setBorder(null);
 		panel.setBackground(new Color(0, 84, 168));
@@ -95,13 +109,13 @@ public class PLSerene extends JFrame {
 		panel.add(btnNewButton_4);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(112, 5, 42, 838);
+		panel_1.setBounds(117, -2, 42, 838);
 		panel_1.setBorder(null);
 		panel_1.setBackground(new Color(0, 64, 128));
 		contentPane.add(panel_1);
 		
 		JPanel panel_1_1 = new JPanel();
-		panel_1_1.setBounds(153, 5, 42, 838);
+		panel_1_1.setBounds(158, -2, 42, 838);
 		panel_1_1.setBorder(null);
 		panel_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1);
@@ -245,7 +259,7 @@ public class PLSerene extends JFrame {
 		contentPane.add(lblNewLabel_5_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setBounds(-34, 5, 1195, 262);
+		lblNewLabel_6.setBounds(-29, -2, 1195, 262);
 		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\SerenePic.png"));
 		contentPane.add(lblNewLabel_6);
 		
@@ -285,6 +299,7 @@ public class PLSerene extends JFrame {
 		contentPane.add(lblNewLabel_8_1_1_1_1);
 		
 		JButton btnNewButton = new JButton("Click for more info!");
+		btnNewButton.setBounds(259, 467, 183, 23);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SereneBenefit t = new SereneBenefit();
@@ -296,7 +311,10 @@ public class PLSerene extends JFrame {
 		btnNewButton.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
 		btnNewButton.setBackground(new Color(255, 255, 255));
 		btnNewButton.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
-		btnNewButton.setBounds(259, 467, 183, 23);
 		contentPane.add(btnNewButton);
+		
+		JLabel label = new JLabel("New label");
+		label.setBounds(978, 55, 45, 13);
+		contentPane.add(label);
 	}
 }
