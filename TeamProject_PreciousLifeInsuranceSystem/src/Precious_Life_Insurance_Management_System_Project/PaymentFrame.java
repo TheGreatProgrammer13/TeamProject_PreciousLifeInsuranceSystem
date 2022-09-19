@@ -10,6 +10,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
@@ -27,7 +28,7 @@ public class PaymentFrame extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField_2;
 	private JTextField textField_4;
-	private JTextField textField;
+	private JTextField txt_EmailAddressPayment;
 	private JTextField textField_5;
 
 	/**
@@ -87,11 +88,6 @@ public class PaymentFrame extends JFrame {
 		panel.setBackground(new Color(0, 84, 168));
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon(PLRetirement_Stabalize.class.getResource("/images/Retirement_Logo.png")));
-		lblNewLabel_2.setBounds(10, 157, 98, 86);
-		panel.add(lblNewLabel_2);
-		
 		JButton btnNewButton_4 = new JButton("");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -104,7 +100,6 @@ public class PaymentFrame extends JFrame {
 			}
 		});
 		btnNewButton_4.setIcon(new ImageIcon(PLSerene.class.getResource("/images/backbutton.png")));
-		btnNewButton_4.setBorder(null);
 		btnNewButton_4.setBackground(new Color(0, 84, 168));
 		btnNewButton_4.setBounds(25, 710, 62, 55);
 		panel.add(btnNewButton_4);
@@ -191,23 +186,42 @@ public class PaymentFrame extends JFrame {
 		textField_4.setBackground(Color.WHITE);
 		contentPane.add(textField_4);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(292, 301, 327, 40);
-		comboBox.setFont(new Font("Poppins", Font.PLAIN, 18));
-		comboBox.setMaximumRowCount(10);
-		comboBox.setEditable(true);
-		comboBox.setBackground(Color.WHITE);
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"hello ", "hi", "wazapp"}));
-		contentPane.add(comboBox);
+		JComboBox comboBox_TypeOfInsurance = new JComboBox();
+		comboBox_TypeOfInsurance.setBounds(292, 301, 327, 40);
+		comboBox_TypeOfInsurance.setFont(new Font("Poppins", Font.PLAIN, 18));
+		comboBox_TypeOfInsurance.setMaximumRowCount(20);
+		comboBox_TypeOfInsurance.setBackground(Color.WHITE);
 		
-		textField = new JTextField();
-		textField.setBounds(696, 301, 327, 40);
-		textField.setHorizontalAlignment(SwingConstants.LEFT);
-		textField.setForeground(Color.GRAY);
-		textField.setFont(new Font("Dialog", Font.PLAIN, 15));
-		textField.setColumns(10);
-		textField.setBackground(Color.WHITE);
-		contentPane.add(textField);
+		String A = "Life Insurance - Serene"; //1
+		String B = "Life Insurance - Hiraya"; //2
+		String C = "Health Insurance - Wellbeing"; //3 
+		String D = "Health Insurance - Guarantee"; //4
+		String E = "Health Insurance - Elderly Care"; //5
+		String F = "Education Insurance - Dream Comer"; //6
+		String G = "Education Insurance - Brighter Life"; //7
+		String H = "Education Insurance - Flexible"; //8
+		String I = "Retirement Insurance - Stabilize"; //9 
+		String J = "Retirement Insurance - Brighter Life"; //10
+		String K = "Retirement Insurance - Max Choice"; //11 
+		String L = "Investment - GS fund"; //12
+		String M = "Investment - Dollar Bundle"; //13
+		String N = "Investment - Union Fund"; //14
+		String O = "Retirement Insurance - Stabilize"; //15
+
+		
+		
+		comboBox_TypeOfInsurance.setModel(new DefaultComboBoxModel(new String[] { A, B ,C ,D ,E, F ,G ,H ,I ,J ,K ,L ,M ,N ,O, "Life Insurance - Serene", "Life Insurance - Serendipity", "Life Insurance - Hiraya", "Health Insurance - Wellbeing", "Health Insurance - Guarantee", "Health Insurance - Elderly Care", "Education Insurance - Dream Comer", "Education Insurance - Brighter Life", "Education Insurance - Flexible", "Retirement Insurance - Stabilize", "Retirement Insurance - Brighter Life", "Retirement Insurance - Max Choice", "Investment - GS fund", "Investment - Dollar Bundle", "Investment - Union Fund"}));
+		contentPane.add(comboBox_TypeOfInsurance);
+	
+		
+		txt_EmailAddressPayment = new JTextField();
+		txt_EmailAddressPayment.setBounds(696, 301, 327, 40);
+		txt_EmailAddressPayment.setHorizontalAlignment(SwingConstants.LEFT);
+		txt_EmailAddressPayment.setForeground(Color.GRAY);
+		txt_EmailAddressPayment.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txt_EmailAddressPayment.setColumns(10);
+		txt_EmailAddressPayment.setBackground(Color.WHITE);
+		contentPane.add(txt_EmailAddressPayment);
 		
 		JLabel lblNewLabel_8_2_2 = new JLabel("EMAIL ADDRESS");
 		lblNewLabel_8_2_2.setBounds(699, 258, 182, 32);
@@ -235,21 +249,19 @@ public class PaymentFrame extends JFrame {
 		comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {"MALE ", "FEMALE"}));
 		comboBox_1_1.setMaximumRowCount(10);
 		comboBox_1_1.setFont(new Font("Dialog", Font.PLAIN, 18));
-		comboBox_1_1.setEditable(true);
 		comboBox_1_1.setBackground(Color.WHITE);
 		contentPane.add(comboBox_1_1);
 		
 		JLabel lblNewLabel_8_1 = new JLabel("MODE OF PAYMENT");
 		lblNewLabel_8_1.setForeground(new Color(0, 0, 128));
 		lblNewLabel_8_1.setFont(new Font("Dialog", Font.BOLD, 18));
-		lblNewLabel_8_1.setBounds(298, 587, 273, 32);
+		lblNewLabel_8_1.setBounds(295, 587, 273, 32);
 		contentPane.add(lblNewLabel_8_1);
 		
 		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Debit Card", "Gcash"}));
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Debit Card"}));
 		comboBox_1.setMaximumRowCount(10);
 		comboBox_1.setFont(new Font("Dialog", Font.PLAIN, 18));
-		comboBox_1.setEditable(true);
 		comboBox_1.setBackground(Color.WHITE);
 		comboBox_1.setBounds(295, 630, 327, 40);
 		contentPane.add(comboBox_1);
@@ -258,7 +270,7 @@ public class PaymentFrame extends JFrame {
 		button.setForeground(new Color(234, 218, 128));
 		button.setFont(new Font("Dialog", Font.BOLD, 20));
 		button.setBackground(new Color(0, 45, 105));
-		button.setBounds(814, 754, 260, 40);
+		button.setBounds(814, 745, 260, 49);
 		contentPane.add(button);
 	}
 }
