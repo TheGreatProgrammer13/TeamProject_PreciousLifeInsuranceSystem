@@ -14,6 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.UIManager;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
 
 public class PLHiraya extends JFrame {
 
@@ -48,6 +50,20 @@ public class PLHiraya extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JButton Hiraya = new JButton("Now");
+		Hiraya.setForeground(Color.WHITE);
+		Hiraya.setFont(new Font("Verdana", Font.BOLD, 54));
+		Hiraya.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		Hiraya.setBackground(new Color(0, 64, 128));
+		Hiraya.setBounds(832, 117, 211, 64);
+		contentPane.add(Hiraya);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(784, 63, 306, 44);
+		contentPane.add(lblGetAQuote);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBorder(null);
@@ -255,12 +271,12 @@ public class PLHiraya extends JFrame {
 		panel_2.add(lblPremium);
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\HirayaPic3.png"));
+		lblNewLabel_6.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/HirayaPic3.png")));
 		lblNewLabel_6.setBounds(0, 0, 1156, 257);
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\suitablePicture2.png"));
+		lblNewLabel_7.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/suitablePicture2.png")));
 		lblNewLabel_7.setBounds(771, 559, 292, 131);
 		contentPane.add(lblNewLabel_7);
 		

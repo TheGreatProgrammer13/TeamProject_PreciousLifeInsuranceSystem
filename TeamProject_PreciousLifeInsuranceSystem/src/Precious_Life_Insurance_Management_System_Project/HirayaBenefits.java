@@ -75,14 +75,14 @@ public class HirayaBenefits extends JFrame {
 		lblGetAQuote.setBounds(824, 674, 306, 44);
 		contentPane.add(lblGetAQuote);
 		
-		JButton btnNewButton_1 = new JButton("Now");
-		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 47));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setBackground(new Color(217, 217, 0));
-		btnNewButton_1.setBounds(885, 728, 172, 56);
-		contentPane.add(btnNewButton_1);
+		JButton Hiraya = new JButton("Now");
+		Hiraya.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		Hiraya.setForeground(new Color(255, 255, 255));
+		Hiraya.setFont(new Font("Verdana", Font.BOLD, 47));
+		Hiraya.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		Hiraya.setBackground(new Color(0, 64, 128));
+		Hiraya.setBounds(885, 728, 172, 56);
+		contentPane.add(Hiraya);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 811);
@@ -142,16 +142,16 @@ public class HirayaBenefits extends JFrame {
 		panel_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1);
 		
+		JLabel lblNewLabel_6_1 = new JLabel("New label");
+		lblNewLabel_6_1.setIcon(new ImageIcon(HirayaBenefits.class.getResource("/images/HirayaPic3.png")));
+		lblNewLabel_6_1.setBounds(-10, 651, 1156, 257);
+		contentPane.add(lblNewLabel_6_1);
+		
 		JLabel lblNewLabel_4 = new JLabel("● BENEFITS");
 		lblNewLabel_4.setBounds(216, 30, 318, 72);
 		lblNewLabel_4.setForeground(new Color(235, 200, 1));
 		lblNewLabel_4.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 60));
 		contentPane.add(lblNewLabel_4);
-		
-		JLabel lblNewLabel_6 = new JLabel("");
-		lblNewLabel_6.setBounds(0, 651, 1257, 160);
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\SerenePic.png"));
-		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_3 = new JLabel("of PL");
 		lblNewLabel_3.setForeground(new Color(235, 200, 1));
@@ -165,37 +165,32 @@ public class HirayaBenefits extends JFrame {
 		lblNewLabel_5.setBounds(537, 72, 82, 18);
 		contentPane.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_3_2 = new JLabel("Secure your loved ones' future with guaranteed life");
+		JLabel lblNewLabel_3_2 = new JLabel("Protect your loved ones' future with a");
 		lblNewLabel_3_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2.setBounds(271, 129, 457, 32);
+		lblNewLabel_3_2.setBounds(271, 129, 318, 32);
 		contentPane.add(lblNewLabel_3_2);
 		
-		JLabel lblNewLabel_3_2_1 = new JLabel("insurance benefit equivalent to at least twice your ");
+		JLabel lblNewLabel_3_2_1 = new JLabel("life insurance payment of double the");
 		lblNewLabel_3_2_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
 		lblNewLabel_3_2_1.setBounds(271, 152, 457, 32);
 		contentPane.add(lblNewLabel_3_2_1);
 		
-		JLabel lblNewLabel_3_2_2 = new JLabel("plan’s Face Amount, which goes to your family in the");
+		JLabel lblNewLabel_3_2_2 = new JLabel("plan's Face Amount and protection");
 		lblNewLabel_3_2_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
 		lblNewLabel_3_2_2.setBounds(271, 178, 457, 32);
 		contentPane.add(lblNewLabel_3_2_2);
 		
-		JLabel lblNewLabel_3_2_3 = new JLabel("event of untimely demise. The funds may be used to");
+		JLabel lblNewLabel_3_2_3 = new JLabel("until age 100 or maturity.");
 		lblNewLabel_3_2_3.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
 		lblNewLabel_3_2_3.setBounds(271, 204, 457, 32);
 		contentPane.add(lblNewLabel_3_2_3);
 		
-		JLabel lblNewLabel_3_2_4 = new JLabel("support your family with day-to-day expenses and to");
-		lblNewLabel_3_2_4.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_4.setBounds(271, 229, 396, 32);
-		contentPane.add(lblNewLabel_3_2_4);
-		
-		JLabel lblNewLabel_3_2_5 = new JLabel("ensure that they may continue to attain the goals");
+		JLabel lblNewLabel_3_2_5 = new JLabel("Improve your plan by introducing riders");
 		lblNewLabel_3_2_5.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
 		lblNewLabel_3_2_5.setBounds(271, 255, 457, 32);
 		contentPane.add(lblNewLabel_3_2_5);
 		
-		JLabel lblNewLabel_3_2_6 = new JLabel("you have all set for yourselves.");
+		JLabel lblNewLabel_3_2_6 = new JLabel("or supplemental benefits that might");
 		lblNewLabel_3_2_6.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
 		lblNewLabel_3_2_6.setBounds(271, 280, 429, 32);
 		contentPane.add(lblNewLabel_3_2_6);
@@ -206,149 +201,142 @@ public class HirayaBenefits extends JFrame {
 		lblNewLabel_3_2_6_1.setBounds(271, 100, 429, 32);
 		contentPane.add(lblNewLabel_3_2_6_1);
 		
-		JLabel lblNewLabel_3_2_7 = new JLabel("You may also attach additional benefits or riders to");
+		JLabel lblNewLabel_3_2_7 = new JLabel("provide additional protection against");
 		lblNewLabel_3_2_7.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_7.setBounds(271, 325, 457, 32);
+		lblNewLabel_3_2_7.setBounds(271, 305, 457, 32);
 		contentPane.add(lblNewLabel_3_2_7);
 		
-		JLabel lblNewLabel_3_2_1_1 = new JLabel("stregthen your protection against unforeseen");
+		JLabel lblNewLabel_3_2_1_1 = new JLabel("unforeseen occurrences like accidents,");
 		lblNewLabel_3_2_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_1_1.setBounds(271, 348, 457, 32);
+		lblNewLabel_3_2_1_1.setBounds(271, 328, 457, 32);
 		contentPane.add(lblNewLabel_3_2_1_1);
 		
-		JLabel lblNewLabel_3_2_2_1 = new JLabel("events such as accidents, sickness, and impairments");
+		JLabel lblNewLabel_3_2_2_1 = new JLabel("illness, and disability.\r\n");
 		lblNewLabel_3_2_2_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_2_1.setBounds(271, 370, 457, 32);
+		lblNewLabel_3_2_2_1.setBounds(271, 350, 457, 32);
 		contentPane.add(lblNewLabel_3_2_2_1);
 		
-		JLabel lblNewLabel_3_2_6_1_1 = new JLabel("Flexible investment options");
+		JLabel lblNewLabel_3_2_6_1_1 = new JLabel("Lifetime guaranteed cash benefits");
 		lblNewLabel_3_2_6_1_1.setForeground(new Color(0, 0, 145));
 		lblNewLabel_3_2_6_1_1.setFont(new Font("Microsoft YaHei", Font.BOLD, 15));
-		lblNewLabel_3_2_6_1_1.setBounds(271, 419, 429, 32);
+		lblNewLabel_3_2_6_1_1.setBounds(271, 398, 262, 32);
 		contentPane.add(lblNewLabel_3_2_6_1_1);
 		
-		JLabel lblNewLabel_3_2_8 = new JLabel("Choose from the available investment fund solutions");
+		JLabel lblNewLabel_3_2_8 = new JLabel("Benefit from consistent lifetime");
 		lblNewLabel_3_2_8.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_8.setBounds(271, 448, 396, 32);
+		lblNewLabel_3_2_8.setBounds(271, 427, 396, 32);
 		contentPane.add(lblNewLabel_3_2_8);
 		
-		JLabel lblNewLabel_3_2_1_2 = new JLabel("to fit your unique investing goals and risk tolerance");
+		JLabel lblNewLabel_3_2_1_2 = new JLabel("guaranteed cash benefits beginning");
 		lblNewLabel_3_2_1_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_1_2.setBounds(271, 471, 396, 32);
+		lblNewLabel_3_2_1_2.setBounds(271, 450, 396, 32);
 		contentPane.add(lblNewLabel_3_2_1_2);
 		
-		JLabel lblNewLabel_3_2_6_1_2 = new JLabel("Professional fund management");
-		lblNewLabel_3_2_6_1_2.setForeground(new Color(0, 0, 145));
-		lblNewLabel_3_2_6_1_2.setFont(new Font("Microsoft YaHei", Font.BOLD, 15));
-		lblNewLabel_3_2_6_1_2.setBounds(271, 513, 396, 32);
-		contentPane.add(lblNewLabel_3_2_6_1_2);
-		
-		JLabel lblNewLabel_3_2_9 = new JLabel("Profit from PreciousLife's experience fund maangers'");
+		JLabel lblNewLabel_3_2_9 = new JLabel("with the sixth year of your plan and");
 		lblNewLabel_3_2_9.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_9.setBounds(271, 542, 396, 32);
+		lblNewLabel_3_2_9.setBounds(272, 477, 396, 32);
 		contentPane.add(lblNewLabel_3_2_9);
 		
-		JLabel lblNewLabel_3_2_1_3 = new JLabel("loyalty incentive, which is not guaranteed, is ");
+		JLabel lblNewLabel_3_2_1_3 = new JLabel("continuing every two years after that.");
 		lblNewLabel_3_2_1_3.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_1_3.setBounds(271, 565, 396, 32);
+		lblNewLabel_3_2_1_3.setBounds(272, 500, 396, 32);
 		contentPane.add(lblNewLabel_3_2_1_3);
 		
-		JLabel lblNewLabel_3_2_6_1_3 = new JLabel("Funds for future needs");
+		JLabel lblNewLabel_3_2_6_1_3 = new JLabel("Living benefits");
 		lblNewLabel_3_2_6_1_3.setForeground(new Color(0, 0, 145));
 		lblNewLabel_3_2_6_1_3.setFont(new Font("Microsoft YaHei", Font.BOLD, 15));
-		lblNewLabel_3_2_6_1_3.setBounds(689, 100, 429, 32);
+		lblNewLabel_3_2_6_1_3.setBounds(613, 100, 429, 32);
 		contentPane.add(lblNewLabel_3_2_6_1_3);
 		
-		JLabel lblNewLabel_3_2_10 = new JLabel("Save money for your child's education, a");
+		JLabel lblNewLabel_3_2_10 = new JLabel("Gain dividends from your plan that you may use to pay future");
 		lblNewLabel_3_2_10.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_10.setBounds(689, 129, 457, 32);
+		lblNewLabel_3_2_10.setBounds(613, 129, 457, 32);
 		contentPane.add(lblNewLabel_3_2_10);
 		
-		JLabel lblNewLabel_3_2_1_4 = new JLabel("comfortable retirement, or an important life");
+		JLabel lblNewLabel_3_2_1_4 = new JLabel("premiums, increase your insurance coverage, leave with");
 		lblNewLabel_3_2_1_4.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_1_4.setBounds(689, 152, 457, 32);
+		lblNewLabel_3_2_1_4.setBounds(613, 152, 457, 32);
 		contentPane.add(lblNewLabel_3_2_1_4);
 		
-		JLabel lblNewLabel_3_2_2_2 = new JLabel("event. A partial money withdrawal allows you");
+		JLabel lblNewLabel_3_2_2_2 = new JLabel("PreciousLife to accumulate, or cash out. Instead of borrowing\r\n");
 		lblNewLabel_3_2_2_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_2_2.setBounds(689, 178, 457, 32);
+		lblNewLabel_3_2_2_2.setBounds(613, 178, 494, 32);
 		contentPane.add(lblNewLabel_3_2_2_2);
 		
-		JLabel lblNewLabel_3_2_3_1 = new JLabel("to access funds in an emergency");
+		JLabel lblNewLabel_3_2_3_1 = new JLabel("money from many lenders or selling valuable assets, you can");
 		lblNewLabel_3_2_3_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_1.setBounds(689, 204, 457, 32);
+		lblNewLabel_3_2_3_1.setBounds(613, 204, 457, 32);
 		contentPane.add(lblNewLabel_3_2_3_1);
 		
-		JLabel lblNewLabel_3_2_6_1_4 = new JLabel("Manageable premium payment");
-		lblNewLabel_3_2_6_1_4.setForeground(new Color(0, 0, 145));
-		lblNewLabel_3_2_6_1_4.setFont(new Font("Microsoft YaHei", Font.BOLD, 15));
-		lblNewLabel_3_2_6_1_4.setBounds(689, 246, 429, 32);
-		contentPane.add(lblNewLabel_3_2_6_1_4);
-		
-		JLabel lblNewLabel_3_2_11 = new JLabel("Pay for minimum of five years, or opt to");
+		JLabel lblNewLabel_3_2_11 = new JLabel("receive cash in an emergency by borrowing against the cash value");
 		lblNewLabel_3_2_11.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_11.setBounds(689, 275, 457, 32);
+		lblNewLabel_3_2_11.setBounds(613, 231, 494, 32);
 		contentPane.add(lblNewLabel_3_2_11);
 		
-		JLabel lblNewLabel_3_2_1_5 = new JLabel("increase the value of your fund by making");
+		JLabel lblNewLabel_3_2_1_5 = new JLabel("of your policy.");
 		lblNewLabel_3_2_1_5.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_1_5.setBounds(689, 298, 457, 32);
+		lblNewLabel_3_2_1_5.setBounds(613, 254, 457, 32);
 		contentPane.add(lblNewLabel_3_2_1_5);
 		
-		JLabel lblNewLabel_3_2_2_3 = new JLabel("additional payments over and above your");
+		JLabel lblNewLabel_3_2_2_3 = new JLabel("Furthermore, if it is decided that the life insured is terminally sick, a");
 		lblNewLabel_3_2_2_3.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_2_3.setBounds(689, 324, 457, 32);
+		lblNewLabel_3_2_2_3.setBounds(613, 302, 457, 32);
 		contentPane.add(lblNewLabel_3_2_2_3);
 		
-		JLabel lblNewLabel_3_2_3_2 = new JLabel("regular premium");
+		JLabel lblNewLabel_3_2_3_2 = new JLabel("portion of your Face Amount may be paid in advance.");
 		lblNewLabel_3_2_3_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_2.setBounds(689, 350, 457, 32);
+		lblNewLabel_3_2_3_2.setBounds(613, 328, 457, 32);
 		contentPane.add(lblNewLabel_3_2_3_2);
 		
-		JLabel lblNewLabel_3_2_6_1_5 = new JLabel("Loyalty bonus");
+		JLabel lblNewLabel_3_2_6_1_5 = new JLabel("Manageable premium payments");
 		lblNewLabel_3_2_6_1_5.setForeground(new Color(0, 0, 145));
 		lblNewLabel_3_2_6_1_5.setFont(new Font("Microsoft YaHei", Font.BOLD, 15));
-		lblNewLabel_3_2_6_1_5.setBounds(689, 390, 429, 32);
+		lblNewLabel_3_2_6_1_5.setBounds(613, 383, 429, 32);
 		contentPane.add(lblNewLabel_3_2_6_1_5);
 		
-		JLabel lblNewLabel_3_2_12 = new JLabel("Maintain the validity of your insurance for at");
+		JLabel lblNewLabel_3_2_12 = new JLabel("Pay your premiums quarterly, semiannually, or annually. You can");
 		lblNewLabel_3_2_12.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_12.setBounds(689, 419, 457, 32);
+		lblNewLabel_3_2_12.setBounds(613, 412, 494, 32);
 		contentPane.add(lblNewLabel_3_2_12);
 		
-		JLabel lblNewLabel_3_2_1_6 = new JLabel("least 10 years to qualify for a loyalty bonus.");
+		JLabel lblNewLabel_3_2_1_6 = new JLabel("also select a guaranteed payment duration of simply five or 10");
 		lblNewLabel_3_2_1_6.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_1_6.setBounds(689, 442, 457, 32);
+		lblNewLabel_3_2_1_6.setBounds(613, 435, 510, 32);
 		contentPane.add(lblNewLabel_3_2_1_6);
 		
-		JLabel lblNewLabel_3_2_2_4 = new JLabel("The bonus might be used as an additional");
+		JLabel lblNewLabel_3_2_2_4 = new JLabel(" years.");
 		lblNewLabel_3_2_2_4.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_2_4.setBounds(689, 468, 457, 32);
+		lblNewLabel_3_2_2_4.setBounds(613, 461, 69, 32);
 		contentPane.add(lblNewLabel_3_2_2_4);
 		
-		JLabel lblNewLabel_3_2_3_3 = new JLabel("source of funds to raise your investment or");
-		lblNewLabel_3_2_3_3.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_3.setBounds(689, 494, 457, 32);
-		contentPane.add(lblNewLabel_3_2_3_3);
-		
-		JLabel lblNewLabel_3_2_4_1 = new JLabel("just to accelerate the achievement of your");
+		JLabel lblNewLabel_3_2_4_1 = new JLabel("After paying the initial quarterly membership, monthly payments");
 		lblNewLabel_3_2_4_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_4_1.setBounds(689, 519, 457, 32);
+		lblNewLabel_3_2_4_1.setBounds(613, 500, 478, 32);
 		contentPane.add(lblNewLabel_3_2_4_1);
 		
-		JLabel lblNewLabel_3_2_5_1 = new JLabel("ambitions. One of the criteria influencing the");
+		JLabel lblNewLabel_3_2_5_1 = new JLabel("via auto-debit or auto-charge are also possible.");
 		lblNewLabel_3_2_5_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_5_1.setBounds(689, 545, 457, 32);
+		lblNewLabel_3_2_5_1.setBounds(613, 526, 457, 32);
 		contentPane.add(lblNewLabel_3_2_5_1);
 		
-		JLabel lblNewLabel_3_2_6_2 = new JLabel("loyalty incentive, which is not guaranteed, is");
-		lblNewLabel_3_2_6_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_6_2.setBounds(689, 570, 429, 32);
-		contentPane.add(lblNewLabel_3_2_6_2);
+		JLabel lblNewLabel_3_2_9_1 = new JLabel("You can also leave your financial");
+		lblNewLabel_3_2_9_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
+		lblNewLabel_3_2_9_1.setBounds(271, 526, 396, 32);
+		contentPane.add(lblNewLabel_3_2_9_1);
 		
-		JLabel lblNewLabel_3_2_6_2_1 = new JLabel("the fund's average monthly balance.");
-		lblNewLabel_3_2_6_2_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_6_2_1.setBounds(689, 596, 429, 32);
-		contentPane.add(lblNewLabel_3_2_6_2_1);
+		JLabel lblNewLabel_3_2_1_3_1 = new JLabel("advantages with PreciousLife to");
+		lblNewLabel_3_2_1_3_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
+		lblNewLabel_3_2_1_3_1.setBounds(271, 549, 396, 32);
+		contentPane.add(lblNewLabel_3_2_1_3_1);
+		
+		JLabel lblNewLabel_3_2_9_1_1 = new JLabel("accumulate and be ready when you");
+		lblNewLabel_3_2_9_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
+		lblNewLabel_3_2_9_1_1.setBounds(271, 570, 396, 32);
+		contentPane.add(lblNewLabel_3_2_9_1_1);
+		
+		JLabel lblNewLabel_3_2_9_1_2 = new JLabel("need them.");
+		lblNewLabel_3_2_9_1_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
+		lblNewLabel_3_2_9_1_2.setBounds(271, 596, 396, 32);
+		contentPane.add(lblNewLabel_3_2_9_1_2);
 	}
 }

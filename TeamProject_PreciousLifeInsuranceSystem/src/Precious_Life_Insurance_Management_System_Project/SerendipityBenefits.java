@@ -77,14 +77,14 @@ public class SerendipityBenefits extends JFrame {
 		lblGetAQuote.setBounds(824, 674, 306, 44);
 		contentPane.add(lblGetAQuote);
 		
-		JButton btnNewButton_1 = new JButton("Now");
-		btnNewButton_1.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 47));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setBackground(new Color(217, 217, 0));
-		btnNewButton_1.setBounds(885, 728, 172, 56);
-		contentPane.add(btnNewButton_1);
+		JButton Serendipity = new JButton("Now");
+		Serendipity.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		Serendipity.setForeground(new Color(0, 64, 128));
+		Serendipity.setFont(new Font("Verdana", Font.BOLD, 47));
+		Serendipity.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		Serendipity.setBackground(new Color(217, 217, 0));
+		Serendipity.setBounds(885, 728, 172, 56);
+		contentPane.add(Serendipity);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 811);

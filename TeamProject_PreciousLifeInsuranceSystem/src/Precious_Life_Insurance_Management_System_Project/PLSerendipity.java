@@ -14,6 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.UIManager;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
 
 public class PLSerendipity extends JFrame {
 
@@ -48,6 +50,20 @@ public class PLSerendipity extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JButton Serendipity = new JButton("Now");
+		Serendipity.setForeground(Color.WHITE);
+		Serendipity.setFont(new Font("Verdana", Font.BOLD, 54));
+		Serendipity.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		Serendipity.setBackground(new Color(0, 64, 128));
+		Serendipity.setBounds(840, 113, 211, 64);
+		contentPane.add(Serendipity);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(792, 59, 306, 44);
+		contentPane.add(lblGetAQuote);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(148, 150, 387, 89);
@@ -293,7 +309,7 @@ public class PLSerendipity extends JFrame {
 		lblNewLabel_8_1_1_1_1.setBounds(1008, 708, 63, 32);
 		contentPane.add(lblNewLabel_8_1_1_1_1);
 		
-		JButton clickInfoSerendipity = new JButton("Click for more info!");
+		JButton clickInfoSerendipity = new JButton("Click here for more info!");
 		clickInfoSerendipity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SerendipityBenefits t = new SerendipityBenefits();
@@ -305,7 +321,7 @@ public class PLSerendipity extends JFrame {
 		clickInfoSerendipity.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
 		clickInfoSerendipity.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
 		clickInfoSerendipity.setBackground(Color.WHITE);
-		clickInfoSerendipity.setBounds(242, 461, 183, 23);
+		clickInfoSerendipity.setBounds(242, 461, 260, 23);
 		contentPane.add(clickInfoSerendipity);
 	}
 }

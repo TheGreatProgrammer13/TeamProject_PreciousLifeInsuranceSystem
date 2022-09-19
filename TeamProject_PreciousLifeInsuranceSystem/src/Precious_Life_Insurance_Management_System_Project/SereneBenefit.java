@@ -55,16 +55,16 @@ public class SereneBenefit extends JFrame {
 		JLabel lblGetAQuote = new JLabel("Get a quote");
 		lblGetAQuote.setForeground(Color.WHITE);
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(824, 674, 306, 44);
+		lblGetAQuote.setBounds(827, 662, 306, 44);
 		contentPane.add(lblGetAQuote);
 		
-		JButton btnNewButton_1 = new JButton("Now");
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 47));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
-		btnNewButton_1.setBounds(885, 728, 168, 56);
-		contentPane.add(btnNewButton_1);
+		JButton Serene = new JButton("Now");
+		Serene.setForeground(new Color(0, 64, 128));
+		Serene.setFont(new Font("Verdana", Font.BOLD, 47));
+		Serene.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		Serene.setBackground(new Color(255, 255, 255));
+		Serene.setBounds(888, 716, 168, 56);
+		contentPane.add(Serene);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 811);

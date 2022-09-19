@@ -60,13 +60,13 @@ public class PLSerene extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton_1 = new JButton(">Now!");
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setBackground(new Color(0, 64, 128));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 54));
-		btnNewButton_1.setBounds(849, 123, 234, 64);
-		contentPane.add(btnNewButton_1);
+		JButton Serene = new JButton("Now");
+		Serene.setForeground(new Color(255, 255, 255));
+		Serene.setBackground(new Color(0, 64, 128));
+		Serene.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		Serene.setFont(new Font("Verdana", Font.BOLD, 54));
+		Serene.setBounds(861, 123, 211, 64);
+		contentPane.add(Serene);
 		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
 		lblGetAQuote.setForeground(Color.WHITE);
