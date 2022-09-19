@@ -2,6 +2,11 @@ package Precious_Life_Insurance_Management_System_Project;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.AWTException;
+
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -22,6 +27,9 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.border.LineBorder;
+
+import com.mysql.jdbc.Statement;
+
 import java.awt.Rectangle;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
@@ -32,14 +40,23 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.beans.VetoableChangeListener;
 import java.beans.PropertyChangeEvent;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ContainerAdapter;
+import java.awt.event.ContainerEvent;
 
 public class LoginFrame extends JFrame {
 	
-	
 
+	
 	private JPanel contentPane;
 	private JTextField txtUsername;
 	private JPasswordField pwdPassword;
+	public static String iba;
+	
+	Connection con;
+	PreparedStatement pst;
+	ResultSet rs;
 
 	/**
 	 * Launch the application.
@@ -98,10 +115,37 @@ public class LoginFrame extends JFrame {
 				button.setForeground(new Color(205,196,125));
 			}
 		});
-		button.addActionListener(new ActionListener() {
+				button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				String email = txtUsername.getText();
+				String pass = pwdPassword.getText();
+				
+				try {
+
+					Class.forName("com.mysql.cj.jdbc.Driver");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/loginaccount", "root", "");
+					String sql="Select * from Registrations WHERE EmailAddress='"+email+"' and Password='"+pass+"'";
+					pst=con.prepareStatement(sql);
+					ResultSet rs = pst.executeQuery(sql);
+					if(rs.next()){
+						iba = rs.getString("EmailAddress").toString();
+						JOptionPane.showMessageDialog(null, "Log in successful...");
+						MainDashboard t = new MainDashboard();
+						t.show();
+						dispose();
+						
+					} else
+						JOptionPane.showMessageDialog(null, "Incorrect Username and password...");
+					con.close();
+					
+				} 	 catch (SQLException e1) {
+					Logger.getLogger(Registrations.class.getName()).log(Level.SEVERE, null, e1);
+				} catch (ClassNotFoundException e1) {
+					Logger.getLogger(Registrations.class.getName()).log(Level.SEVERE, null, e1);
+				}
 			}
-		});
+		});   
 		button.setForeground(new Color(234, 218, 128));
 
 		button.setFont(new Font("Poppins", Font.BOLD, 20));
@@ -111,7 +155,7 @@ public class LoginFrame extends JFrame {
 		Button button_1 = new Button("Create an account");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Registration t = new Registration();
+				Registrations t = new Registrations();
 				t.show();
 				dispose();
 
@@ -258,6 +302,7 @@ public class LoginFrame extends JFrame {
 		panel_1_1.add(lblNewLabel_4);
 		
 		pwdPassword = new JPasswordField();
+	
 		sl_panel_1_1.putConstraint(SpringLayout.NORTH, pwdPassword, 10, SpringLayout.NORTH, panel_1_1);
 		sl_panel_1_1.putConstraint(SpringLayout.WEST, pwdPassword, 5, SpringLayout.EAST, lblNewLabel_4);
 		sl_panel_1_1.putConstraint(SpringLayout.SOUTH, pwdPassword, -7, SpringLayout.SOUTH, lblNewLabel_4);
