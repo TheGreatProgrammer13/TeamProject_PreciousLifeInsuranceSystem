@@ -61,7 +61,7 @@ public class MainDashboard extends JFrame {
 		
 		JButton DashboardMainLogOut = new JButton("");
 		DashboardMainLogOut.setBorder(null);
-		DashboardMainLogOut.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\logoutbutton2.png"));
+		DashboardMainLogOut.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/logoutbutton2.png")));
 		DashboardMainLogOut.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -149,7 +149,7 @@ public class MainDashboard extends JFrame {
 		contentPane.add(DashboardMainAboutUsLabel);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\PSWelcome3.png"));
+		lblNewLabel.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/PSWelcome3.png")));
 		lblNewLabel.setBounds(234, 85, 507, 144);
 		contentPane.add(lblNewLabel);
 		
