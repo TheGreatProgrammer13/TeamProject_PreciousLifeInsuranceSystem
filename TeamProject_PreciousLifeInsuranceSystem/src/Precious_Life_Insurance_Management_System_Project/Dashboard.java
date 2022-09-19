@@ -183,6 +183,7 @@ public class Dashboard extends JFrame {
 				}
 			}
 		});
+
 		btnNewButton.setIcon(new ImageIcon(Dashboard.class.getResource("/images/SmallSize.png")));
 		btnNewButton.setBorder(null);
 		btnNewButton.setBackground(new Color(0, 45, 105));
