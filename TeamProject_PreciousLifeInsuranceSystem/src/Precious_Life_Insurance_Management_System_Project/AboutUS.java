@@ -44,6 +44,7 @@ public class AboutUS extends JFrame {
 	 * Create the frame.
 	 */
 	public AboutUS() {
+		setBackground(new Color(255, 255, 255));
 		setUndecorated(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 933, 588);
@@ -108,7 +109,7 @@ public class AboutUS extends JFrame {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBorder(null);
 		lblNewLabel.setIcon(new ImageIcon(AboutUS.class.getResource("/images/Life Insurance Photo3.jpg")));
-		lblNewLabel.setBounds(-147, 0, 1200, 177);
+		lblNewLabel.setBounds(-147, 0, 1066, 177);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("About Us");

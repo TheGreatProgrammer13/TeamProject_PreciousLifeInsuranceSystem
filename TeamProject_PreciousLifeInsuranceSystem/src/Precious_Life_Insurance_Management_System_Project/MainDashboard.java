@@ -60,11 +60,6 @@ public class MainDashboard extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel DashboardMainLogo = new JLabel("");
-		DashboardMainLogo.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/SmallSize.png")));
-		DashboardMainLogo.setBounds(10, 10, 63, 55);
-		panel.add(DashboardMainLogo);
-		
 		JButton DashboardMainLogOut = new JButton("LOG OUT");
 		DashboardMainLogOut.addMouseListener(new MouseAdapter() {
 			@Override
@@ -96,6 +91,13 @@ public class MainDashboard extends JFrame {
 		DashboardMainLogOut.setFont(new Font("Poppins", Font.BOLD, 10));
 		DashboardMainLogOut.setBounds(819, 21, 103, 30);
 		panel.add(DashboardMainLogOut);
+		
+		JButton btnNewButton = new JButton("");
+		btnNewButton.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/SmallSize.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 45, 105));
+		btnNewButton.setBounds(27, 10, 66, 55);
+		panel.add(btnNewButton);
 		
 		JButton DashboardMainAvailUsButton = new JButton("");
 		DashboardMainAvailUsButton.setBackground(new Color(255, 255, 255));
