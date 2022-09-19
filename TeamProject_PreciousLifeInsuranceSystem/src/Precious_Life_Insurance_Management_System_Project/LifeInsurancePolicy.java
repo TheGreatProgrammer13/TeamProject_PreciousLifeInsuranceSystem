@@ -67,8 +67,7 @@ public class LifeInsurancePolicy extends JFrame {
 				dispose();
 			}
 		});
-		Serene.setBounds(28, 247, 351, 472);
-		Serene.setBorder(null);
+		Serene.setBounds(62, 247, 317, 472);
 		Serene.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/Serene88.png")));
 		contentPane.add(Serene);
 		
@@ -82,8 +81,7 @@ public class LifeInsurancePolicy extends JFrame {
 				
 			}
 		});
-		Serendipity.setBounds(407, 247, 345, 472);
-		Serendipity.setBorder(null);
+		Serendipity.setBounds(435, 247, 317, 472);
 		Serendipity.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/Serendipity90.png")));
 		contentPane.add(Serendipity);
 		
@@ -97,8 +95,7 @@ public class LifeInsurancePolicy extends JFrame {
 				
 			}
 		});
-		Hiraya.setBounds(783, 247, 345, 472);
-		Hiraya.setBorder(null);
+		Hiraya.setBounds(795, 247, 317, 472);
 		Hiraya.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/Hiraya100.png")));
 		contentPane.add(Hiraya);
 		
