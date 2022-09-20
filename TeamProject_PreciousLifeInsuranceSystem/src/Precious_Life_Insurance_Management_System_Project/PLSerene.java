@@ -285,7 +285,7 @@ public class PLSerene extends JFrame {
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setBounds(-29, -2, 1195, 262);
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\SerenePic.png"));
+		lblNewLabel_6.setIcon(new ImageIcon(PLSerene.class.getResource("/images/SerenePic.png")));
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
