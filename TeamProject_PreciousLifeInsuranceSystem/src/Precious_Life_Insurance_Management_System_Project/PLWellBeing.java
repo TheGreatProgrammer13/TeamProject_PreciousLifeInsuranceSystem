@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.UIManager;
 
 public class PLWellBeing extends JFrame {
 
@@ -25,7 +26,7 @@ public class PLWellBeing extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PLHiraya frame = new PLHiraya();
+					PLWellBeing frame = new PLWellBeing();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -46,6 +47,33 @@ public class PLWellBeing extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(839, 68, 317, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(835, 68, 303, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton WellbeingNow = new JButton("");
+		WellbeingNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		WellbeingNow.setIcon(new ImageIcon(PLWellBeing.class.getResource("/images/NowButton1.png")));
+		WellbeingNow.setForeground(Color.WHITE);
+		WellbeingNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		WellbeingNow.setBackground(new Color(0, 64, 128));
+		WellbeingNow.setBounds(864, 121, 292, 72);
+		contentPane.add(WellbeingNow);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBorder(null);
@@ -73,11 +101,6 @@ public class PLWellBeing extends JFrame {
 		panel.setBounds(0, 0, 108, 806);
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(PLSerene.class.getResource("/images/logoPng-MIDSIZE.png")));
-		lblNewLabel_1.setBounds(-17, 10, 136, 137);
-		panel.add(lblNewLabel_1);
-		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon(PLWellBeing.class.getResource("/images/HealthLogo (1).png")));
 		lblNewLabel_2.setBounds(10, 157, 98, 86);
@@ -87,7 +110,7 @@ public class PLWellBeing extends JFrame {
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					LifeInsurancePolicy t = new LifeInsurancePolicy();
+					HealthInsurancePolicy t = new HealthInsurancePolicy();
 					t.show();
 					dispose();
 
@@ -99,6 +122,13 @@ public class PLWellBeing extends JFrame {
 		btnNewButton_4.setBackground(new Color(0, 84, 168));
 		btnNewButton_4.setBounds(25, 710, 62, 55);
 		panel.add(btnNewButton_4);
+		
+		JButton btnNewButton = new JButton("");
+		btnNewButton.setIcon(new ImageIcon(PLWellBeing.class.getResource("/images/logoPng-MIDSIZE.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 84, 168));
+		btnNewButton.setBounds(10, 22, 98, 115);
+		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(null);
@@ -222,5 +252,20 @@ public class PLWellBeing extends JFrame {
 		lblNewLabel_6.setIcon(new ImageIcon(PLWellBeing.class.getResource("/images/healthpic3.png")));
 		lblNewLabel_6.setBounds(190, 0, 988, 257);
 		contentPane.add(lblNewLabel_6);
+		
+		JButton clickInfoWellB = new JButton("Click here for more info!");
+		clickInfoWellB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PLWellBeingBenefits t = new PLWellBeingBenefits();
+				t.show();
+				dispose();
+			}
+		});
+		clickInfoWellB.setForeground(Color.GRAY);
+		clickInfoWellB.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		clickInfoWellB.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		clickInfoWellB.setBackground(Color.WHITE);
+		clickInfoWellB.setBounds(229, 455, 265, 23);
+		contentPane.add(clickInfoWellB);
 	}
 }

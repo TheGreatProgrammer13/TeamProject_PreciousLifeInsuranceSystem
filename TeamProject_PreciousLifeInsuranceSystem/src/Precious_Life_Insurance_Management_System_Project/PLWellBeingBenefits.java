@@ -25,7 +25,7 @@ public class PLWellBeingBenefits extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PLHiraya frame = new PLHiraya();
+					PLWellBeingBenefits frame = new PLWellBeingBenefits();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -51,14 +51,29 @@ public class PLWellBeingBenefits extends JFrame {
 		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
 		lblGetAQuote_1.setForeground(Color.WHITE);
 		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote_1.setBounds(841, 692, 305, 55);
+		lblGetAQuote_1.setBounds(841, 660, 305, 55);
 		contentPane.add(lblGetAQuote_1);
 		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
 		lblGetAQuote.setForeground(new Color(242, 200, 71));
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(838, 688, 293, 55);
+		lblGetAQuote.setBounds(837, 660, 293, 55);
 		contentPane.add(lblGetAQuote);
+		
+		JButton WellbeingNow_1 = new JButton("");
+		WellbeingNow_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		WellbeingNow_1.setIcon(new ImageIcon(PLWellBeingBenefits.class.getResource("/images/NowButton1.png")));
+		WellbeingNow_1.setForeground(Color.WHITE);
+		WellbeingNow_1.setFont(new Font("Verdana", Font.BOLD, 54));
+		WellbeingNow_1.setBackground(new Color(0, 64, 128));
+		WellbeingNow_1.setBounds(866, 713, 290, 72);
+		contentPane.add(WellbeingNow_1);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(144, 674, 328, 89);
@@ -95,7 +110,7 @@ public class PLWellBeingBenefits extends JFrame {
 		backbuttonHiraya.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					PLHiraya t = new PLHiraya();
+					PLWellBeing t = new PLWellBeing();
 					t.show();
 					dispose();
 
@@ -137,11 +152,6 @@ public class PLWellBeingBenefits extends JFrame {
 		panel_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1);
 		
-		JLabel lblNewLabel_6_1 = new JLabel("New label");
-		lblNewLabel_6_1.setIcon(new ImageIcon(PLWellBeingBenefits.class.getResource("/images/HirayaPic3.png")));
-		lblNewLabel_6_1.setBounds(-29, -2, 1192, 262);
-		contentPane.add(lblNewLabel_6_1);
-		
 		JLabel lblNewLabel_4 = new JLabel("● BENEFITS");
 		lblNewLabel_4.setBounds(216, 30, 318, 72);
 		lblNewLabel_4.setForeground(new Color(235, 200, 1));
@@ -157,7 +167,7 @@ public class PLWellBeingBenefits extends JFrame {
 		JLabel lblNewLabel_5 = new JLabel("WELL-BEING:");
 		lblNewLabel_5.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 20));
-		lblNewLabel_5.setBounds(537, 72, 117, 18);
+		lblNewLabel_5.setBounds(537, 72, 150, 18);
 		contentPane.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_3_2 = new JLabel("If you are still alive and are diagnosed with one of the eight covered Minor");
@@ -228,16 +238,9 @@ public class PLWellBeingBenefits extends JFrame {
 		lblNewLabel_3_2_3_1_1_1_2_1.setBounds(271, 505, 625, 32);
 		contentPane.add(lblNewLabel_3_2_3_1_1_1_2_1);
 		
-		JButton DollarNow = new JButton("");
-		DollarNow.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		DollarNow.setIcon(new ImageIcon(PLWellBeingBenefits.class.getResource("/images/healthpic1.png")));
-		DollarNow.setForeground(Color.WHITE);
-		DollarNow.setFont(new Font("Verdana", Font.BOLD, 54));
-		DollarNow.setBackground(new Color(0, 64, 128));
-		DollarNow.setBounds(181, 677, 982, 134);
-		contentPane.add(DollarNow);
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(PLWellBeingBenefits.class.getResource("/images/RetirementPicture_Stabalize.png")));
+		lblNewLabel_1.setBounds(174, 640, 982, 171);
+		contentPane.add(lblNewLabel_1);
 	}
 }
