@@ -57,6 +57,13 @@ public class PLRetirement_BrigtherLife extends JFrame {
 		contentPane.add(lblGetAQuote_1);
 		
 		JButton PLBrighterLifeNow = new JButton("");
+		PLBrighterLifeNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
 		PLBrighterLifeNow.setIcon(new ImageIcon(PLRetirement_BrigtherLife.class.getResource("/images/NowButton1.png")));
 		PLBrighterLifeNow.setForeground(Color.WHITE);
 		PLBrighterLifeNow.setFont(new Font("Verdana", Font.BOLD, 54));

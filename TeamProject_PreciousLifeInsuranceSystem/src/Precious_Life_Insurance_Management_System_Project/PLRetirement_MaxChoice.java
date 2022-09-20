@@ -63,6 +63,13 @@ public class PLRetirement_MaxChoice extends JFrame {
 		contentPane.add(lblGetAQuote);
 		
 		JButton PLMaxChoiceNow = new JButton("");
+		PLMaxChoiceNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
 		PLMaxChoiceNow.setIcon(new ImageIcon(PLRetirement_MaxChoice.class.getResource("/images/NowButton1.png")));
 		PLMaxChoiceNow.setForeground(Color.WHITE);
 		PLMaxChoiceNow.setFont(new Font("Verdana", Font.BOLD, 54));

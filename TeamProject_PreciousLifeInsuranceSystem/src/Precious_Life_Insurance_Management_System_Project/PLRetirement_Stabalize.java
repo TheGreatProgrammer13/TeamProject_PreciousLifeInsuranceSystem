@@ -56,6 +56,13 @@ public class PLRetirement_Stabalize extends JFrame {
 		contentPane.add(lblGetAQuote_1);
 		
 		JButton PLStabilizeNow = new JButton("");
+		PLStabilizeNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
 		PLStabilizeNow.setIcon(new ImageIcon(PLRetirement_Stabalize.class.getResource("/images/NowButton1.png")));
 		PLStabilizeNow.setForeground(Color.WHITE);
 		PLStabilizeNow.setFont(new Font("Verdana", Font.BOLD, 54));

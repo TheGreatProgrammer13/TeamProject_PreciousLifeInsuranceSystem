@@ -66,7 +66,7 @@ public class PLSerendipity extends JFrame {
 		JButton PLSerendipityNow = new JButton("");
 		PLSerendipityNow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				PaymentFrame t = new PaymentFrame();
 				t.show();
 				dispose();
 			}

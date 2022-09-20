@@ -67,7 +67,7 @@ public class SerendipityBenefits extends JFrame {
 		JButton BSerendipityNow = new JButton("");
 		BSerendipityNow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				PaymentFrame t = new PaymentFrame();
 				t.show();
 				dispose();
 			}

@@ -63,6 +63,13 @@ public class HirayaBenefits extends JFrame {
 		contentPane.add(lblGetAQuote);
 		
 		JButton DollarNow = new JButton("");
+		DollarNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
 		DollarNow.setIcon(new ImageIcon(HirayaBenefits.class.getResource("/images/NowButton1.png")));
 		DollarNow.setForeground(Color.WHITE);
 		DollarNow.setFont(new Font("Verdana", Font.BOLD, 54));

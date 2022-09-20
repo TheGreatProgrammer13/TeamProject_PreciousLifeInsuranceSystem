@@ -54,19 +54,26 @@ public class GSFundbenefit  extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblBUY_1 = new JLabel("BUY");
+		JLabel lblBUY_1 = new JLabel("AVAIL");
 		lblBUY_1.setForeground(new Color(255, 255, 255));
 		lblBUY_1.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY_1.setBounds(886, 79, 118, 44);
+		lblBUY_1.setBounds(886, 79, 177, 44);
 		contentPane.add(lblBUY_1);
 		
-		JLabel lblBUY = new JLabel("BUY");
+		JLabel lblBUY = new JLabel("AVAIL");
 		lblBUY.setForeground(new Color(242,200,71));
 		lblBUY.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY.setBounds(876, 79, 118, 44);
+		lblBUY.setBounds(876, 79, 198, 44);
 		contentPane.add(lblBUY);
 		
 		JButton FundNow = new JButton("");
+		FundNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
 		FundNow.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\NowButton1.png"));
 		FundNow.setForeground(new Color(255, 255, 255));
 		FundNow.setBackground(new Color(0, 64, 128));

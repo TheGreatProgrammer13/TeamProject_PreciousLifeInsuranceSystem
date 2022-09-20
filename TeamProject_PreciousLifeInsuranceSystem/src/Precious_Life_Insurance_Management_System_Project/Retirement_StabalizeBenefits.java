@@ -51,6 +51,13 @@ public class Retirement_StabalizeBenefits extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton StabilizeBnfts = new JButton("");
+		StabilizeBnfts.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
 		StabilizeBnfts.setIcon(new ImageIcon(Retirement_StabalizeBenefits.class.getResource("/images/NowButton1.png")));
 		StabilizeBnfts.setForeground(Color.WHITE);
 		StabilizeBnfts.setFont(new Font("Verdana", Font.BOLD, 54));

@@ -57,7 +57,7 @@ public class DollarBundlebenefit extends JFrame {
 		JButton DollarNow = new JButton("");
 		DollarNow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				PaymentFrame t = new PaymentFrame();
 				t.show();
 				dispose();
 			}
@@ -69,16 +69,16 @@ public class DollarBundlebenefit extends JFrame {
 		DollarNow.setBounds(866, 119, 290, 72);
 		contentPane.add(DollarNow);
 		
-		JLabel lblBUY_1 = new JLabel("BUY");
+		JLabel lblBUY_1 = new JLabel("AVAIL");
 		lblBUY_1.setForeground(Color.WHITE);
 		lblBUY_1.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY_1.setBounds(876, 75, 118, 44);
+		lblBUY_1.setBounds(877, 75, 177, 44);
 		contentPane.add(lblBUY_1);
 		
-		JLabel lblBUY = new JLabel("BUY");
+		JLabel lblBUY = new JLabel("AVAIL");
 		lblBUY.setForeground(new Color(242, 200, 71));
 		lblBUY.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY.setBounds(866, 75, 118, 44);
+		lblBUY.setBounds(866, 75, 177, 44);
 		contentPane.add(lblBUY);
 		
 		JPanel panel = new JPanel();

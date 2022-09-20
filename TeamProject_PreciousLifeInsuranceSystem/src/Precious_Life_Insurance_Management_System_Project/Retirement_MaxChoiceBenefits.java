@@ -63,6 +63,13 @@ public class Retirement_MaxChoiceBenefits extends JFrame {
 		contentPane.add(lblGetAQuote);
 		
 		JButton MaxChoiceBnft = new JButton("");
+		MaxChoiceBnft.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
 		MaxChoiceBnft.setIcon(new ImageIcon(Retirement_MaxChoiceBenefits.class.getResource("/images/NowButton1.png")));
 		MaxChoiceBnft.setForeground(Color.WHITE);
 		MaxChoiceBnft.setFont(new Font("Verdana", Font.BOLD, 54));
@@ -86,7 +93,7 @@ public class Retirement_MaxChoiceBenefits extends JFrame {
 		backbuttonSerene.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					PLRetirement_MaxChoice t = new PLRetirement_MaxChoice();
+					PaymentFrame t = new PaymentFrame();
 					t.show();
 					dispose();
 				}

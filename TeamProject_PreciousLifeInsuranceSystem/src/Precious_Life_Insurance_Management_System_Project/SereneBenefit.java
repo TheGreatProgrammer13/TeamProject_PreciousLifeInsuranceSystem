@@ -61,7 +61,7 @@ public class SereneBenefit extends JFrame {
 		JButton BSereneNow = new JButton("");
 		BSereneNow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				PaymentFrame t = new PaymentFrame();
 				t.show();
 				dispose();
 			}

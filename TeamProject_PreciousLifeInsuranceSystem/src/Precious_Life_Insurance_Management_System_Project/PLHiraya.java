@@ -66,7 +66,7 @@ public class PLHiraya extends JFrame {
 		JButton PLHirayaNow = new JButton("");
 		PLHirayaNow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				PaymentFrame t = new PaymentFrame();
 				t.show();
 				dispose();
 			}

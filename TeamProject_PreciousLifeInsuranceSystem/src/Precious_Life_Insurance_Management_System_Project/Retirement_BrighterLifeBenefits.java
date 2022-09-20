@@ -63,6 +63,13 @@ public class Retirement_BrighterLifeBenefits extends JFrame {
 		contentPane.add(lblGetAQuote);
 		
 		JButton BrighterLifeBnft = new JButton("");
+		BrighterLifeBnft.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
 		BrighterLifeBnft.setIcon(new ImageIcon(Retirement_BrighterLifeBenefits.class.getResource("/images/NowButton1.png")));
 		BrighterLifeBnft.setForeground(Color.WHITE);
 		BrighterLifeBnft.setFont(new Font("Verdana", Font.BOLD, 54));

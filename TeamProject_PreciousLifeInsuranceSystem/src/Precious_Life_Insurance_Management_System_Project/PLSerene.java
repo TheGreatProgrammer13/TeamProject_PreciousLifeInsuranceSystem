@@ -63,7 +63,7 @@ public class PLSerene extends JFrame {
 		JButton PLSereneNow = new JButton("");
 		PLSereneNow.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				PaymentFrame t = new PaymentFrame();
 				t.show();
 				dispose();
 			}

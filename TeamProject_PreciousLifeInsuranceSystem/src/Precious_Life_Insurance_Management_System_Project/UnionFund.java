@@ -54,13 +54,20 @@ public class UnionFund  extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblBUY_1 = new JLabel("BUY");
+		JLabel lblBUY_1 = new JLabel("AVAIL");
 		lblBUY_1.setForeground(Color.WHITE);
 		lblBUY_1.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY_1.setBounds(876, 71, 118, 44);
+		lblBUY_1.setBounds(876, 71, 164, 44);
 		contentPane.add(lblBUY_1);
-		
+			
 		JButton UnionNow = new JButton("");
+		UnionNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
 		UnionNow.setIcon(new ImageIcon(UnionFund.class.getResource("/images/NowButton1.png")));
 		UnionNow.setForeground(Color.WHITE);
 		UnionNow.setFont(new Font("Verdana", Font.BOLD, 54));
@@ -68,10 +75,10 @@ public class UnionFund  extends JFrame {
 		UnionNow.setBounds(866, 115, 290, 72);
 		contentPane.add(UnionNow);
 		
-		JLabel lblBUY = new JLabel("BUY");
+		JLabel lblBUY = new JLabel("AVAIL");
 		lblBUY.setForeground(new Color(242, 200, 71));
 		lblBUY.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY.setBounds(866, 71, 118, 44);
+		lblBUY.setBounds(866, 71, 164, 44);
 		contentPane.add(lblBUY);
 		
 		JPanel panel = new JPanel();
