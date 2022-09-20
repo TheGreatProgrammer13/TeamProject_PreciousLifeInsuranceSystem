@@ -13,6 +13,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.UIManager;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
 
 public class PLSerendipity extends JFrame {
 
@@ -38,13 +41,42 @@ public class PLSerendipity extends JFrame {
 	 * Create the frame.
 	 */
 	public PLSerendipity() {
+		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1170, 843);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 67, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 67, 293, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton PLSerendipityNow = new JButton("");
+		PLSerendipityNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLSerendipityNow.setIcon(new ImageIcon(PLSerendipity.class.getResource("/images/NowButton1.png")));
+		PLSerendipityNow.setForeground(Color.WHITE);
+		PLSerendipityNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLSerendipityNow.setBackground(new Color(0, 64, 128));
+		PLSerendipityNow.setBounds(866, 120, 290, 72);
+		contentPane.add(PLSerendipityNow);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(148, 150, 387, 89);
@@ -72,11 +104,6 @@ public class PLSerendipity extends JFrame {
 		panel.setBackground(new Color(0, 84, 168));
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(PLSerene.class.getResource("/images/logoPng-MIDSIZE.png")));
-		lblNewLabel_1.setBounds(-17, 10, 136, 137);
-		panel.add(lblNewLabel_1);
-		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon(PLSerene.class.getResource("/images/LifeLogo1 (1).png")));
 		lblNewLabel_2.setBounds(10, 157, 98, 86);
@@ -98,6 +125,23 @@ public class PLSerendipity extends JFrame {
 		btnNewButton_4.setBackground(new Color(0, 84, 168));
 		btnNewButton_4.setBounds(25, 710, 62, 55);
 		panel.add(btnNewButton_4);
+		
+		JButton btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				{
+					MainDashboard t = new MainDashboard();
+					t.show();
+					dispose();
+
+				}
+			}
+		});
+		btnNewButton.setIcon(new ImageIcon(PLSerendipity.class.getResource("/images/logoPng-MIDSIZE.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 84, 168));
+		btnNewButton.setBounds(10, 21, 98, 115);
+		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(107, 0, 42, 838);
@@ -237,5 +281,60 @@ public class PLSerendipity extends JFrame {
 		lblNewLabel_3_1_1.setFont(new Font("Microsoft YaHei", Font.BOLD, 22));
 		lblNewLabel_3_1_1.setBounds(561, 313, 68, 32);
 		contentPane.add(lblNewLabel_3_1_1);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\SerendipityPic2.png"));
+		lblNewLabel_6.setBounds(189, 0, 988, 257);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon(PLSerendipity.class.getResource("/images/suitablePictue.png")));
+		lblNewLabel_7.setBounds(738, 559, 360, 114);
+		contentPane.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("Moving Up");
+		lblNewLabel_8.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8.setBounds(748, 677, 86, 32);
+		contentPane.add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_8_1 = new JLabel("Preparing");
+		lblNewLabel_8_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1.setBounds(878, 677, 86, 32);
+		contentPane.add(lblNewLabel_8_1);
+		
+		JLabel lblNewLabel_8_1_1 = new JLabel("Ahead");
+		lblNewLabel_8_1_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1_1.setBounds(888, 708, 57, 32);
+		contentPane.add(lblNewLabel_8_1_1);
+		
+		JLabel lblNewLabel_8_1_1_1 = new JLabel("Leaving a");
+		lblNewLabel_8_1_1_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1_1_1.setBounds(998, 677, 86, 32);
+		contentPane.add(lblNewLabel_8_1_1_1);
+		
+		JLabel lblNewLabel_8_1_1_1_1 = new JLabel("Legacy");
+		lblNewLabel_8_1_1_1_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1_1_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1_1_1_1.setBounds(1008, 708, 63, 32);
+		contentPane.add(lblNewLabel_8_1_1_1_1);
+		
+		JButton clickInfoSerendipity = new JButton("Click here for more info!");
+		clickInfoSerendipity.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SerendipityBenefits t = new SerendipityBenefits();
+				t.show();
+				dispose();
+			}
+		});
+		clickInfoSerendipity.setForeground(Color.GRAY);
+		clickInfoSerendipity.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		clickInfoSerendipity.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		clickInfoSerendipity.setBackground(Color.WHITE);
+		clickInfoSerendipity.setBounds(242, 461, 260, 23);
+		contentPane.add(clickInfoSerendipity);
 	}
 }

@@ -27,18 +27,17 @@ import java.beans.PropertyChangeEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
+import javax.swing.JSpinner;
 
 public class Registration extends JFrame {
-
+	
 	private JPanel contentPane;
-	private JTextField txtLastNameFirst;
-	private JTextField txtEmailAddress;
-	private JTextField textField;
-	private JTextField txtMmddyyyy;
-	private JTextField textField_5;
-	private JTextField textField_1;
+	private JTextField txtLastName;
+	private JTextField txtEmailAddressReg;
+	private JTextField txtMonth;
 	private JPasswordField pwdPasswordReg;
-	private JTextField textField_2;
+	private JTextField txtFirstName;
+	private JTextField txtMiddleName;
 
 	/**
 	 * Launch the application.
@@ -69,153 +68,158 @@ public class Registration extends JFrame {
 		contentPane.setBorder(new LineBorder(new Color(0, 0, 0)));
 
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		SpringLayout sl_contentPane = new SpringLayout();
+		contentPane.setLayout(sl_contentPane);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(1, 1, 187, 614);
+		sl_contentPane.putConstraint(SpringLayout.NORTH, panel, 1, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, panel, 1, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, panel, 615, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, panel, 188, SpringLayout.WEST, contentPane);
 		panel.setBackground(new Color(0,45,105));
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel = new JLabel("Precious Life Insurance");
-		lblNewLabel.setBounds(304, 39, 341, 30);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 28));
-		contentPane.add(lblNewLabel);
+		JLabel labelPreciousLifeInsuranceReg = new JLabel("Precious Life Insurance");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, labelPreciousLifeInsuranceReg, 39, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, labelPreciousLifeInsuranceReg, 304, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, labelPreciousLifeInsuranceReg, 69, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, labelPreciousLifeInsuranceReg, 645, SpringLayout.WEST, contentPane);
+		labelPreciousLifeInsuranceReg.setFont(new Font("Poppins", Font.BOLD, 28));
+		contentPane.add(labelPreciousLifeInsuranceReg);
 		
-		JLabel lblNewLabel_1 = new JLabel("Registration Form");
-		lblNewLabel_1.setBounds(367, 93, 187, 27);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		contentPane.add(lblNewLabel_1);
+		JLabel labelRegistrationForm = new JLabel("Registration Form");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, labelRegistrationForm, 93, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, labelRegistrationForm, 367, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, labelRegistrationForm, 120, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, labelRegistrationForm, 554, SpringLayout.WEST, contentPane);
+		labelRegistrationForm.setFont(new Font("Poppins", Font.PLAIN, 22));
+		contentPane.add(labelRegistrationForm);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Name:");
-		lblNewLabel_1_1.setBounds(262, 191, 83, 27);
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		contentPane.add(lblNewLabel_1_1);
+		JLabel labelLastName = new JLabel("Last Name:");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, labelLastName, 191, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, labelLastName, 237, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, labelLastName, 218, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, labelLastName, 361, SpringLayout.WEST, contentPane);
+		labelLastName.setFont(new Font("Poppins", Font.PLAIN, 23));
+		contentPane.add(labelLastName);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Email:");
-		lblNewLabel_1_1_1.setBounds(261, 258, 72, 27);
-		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		contentPane.add(lblNewLabel_1_1_1);
+		JLabel labelEmailAddress = new JLabel("Email Address:");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, labelEmailAddress, 342, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, labelEmailAddress, 237, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, labelEmailAddress, 369, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, labelEmailAddress, 398, SpringLayout.WEST, contentPane);
+		labelEmailAddress.setFont(new Font("Poppins", Font.PLAIN, 23));
+		contentPane.add(labelEmailAddress);
 		
-		JLabel lblNewLabel_1_1_1_1 = new JLabel("Password:");
-		lblNewLabel_1_1_1_1.setBounds(262, 312, 110, 30);
-		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		contentPane.add(lblNewLabel_1_1_1_1);
+		JLabel labelPassword = new JLabel("Password:");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, labelPassword, 387, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, labelPassword, 237, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, labelPassword, 347, SpringLayout.WEST, contentPane);
+		labelPassword.setFont(new Font("Poppins", Font.PLAIN, 23));
+		contentPane.add(labelPassword);
 		
-		JLabel lblNewLabel_1_1_1_1_1 = new JLabel("Birthday:");
-		lblNewLabel_1_1_1_1_1.setBounds(262, 378, 100, 27);
-		lblNewLabel_1_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
-		contentPane.add(lblNewLabel_1_1_1_1_1);
+		JLabel labelBirthday = new JLabel("Birth of Date:");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, labelBirthday, 26, SpringLayout.SOUTH, labelPassword);
+		sl_contentPane.putConstraint(SpringLayout.WEST, labelBirthday, 239, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, labelBirthday, 470, SpringLayout.NORTH, contentPane);
+		labelBirthday.setFont(new Font("Poppins", Font.PLAIN, 23));
+		contentPane.add(labelBirthday);
 		
-		txtLastNameFirst = new JTextField();
-		txtLastNameFirst.setBounds(394, 197, 221, 22);
-		txtLastNameFirst.addFocusListener(new FocusAdapter() {
+		txtLastName = new JTextField();
+		sl_contentPane.putConstraint(SpringLayout.NORTH, txtLastName, 187, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, txtLastName, 406, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, txtLastName, 227, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, txtLastName, 656, SpringLayout.WEST, contentPane);
+		txtLastName.addFocusListener(new FocusAdapter() {
+			
+		});
+		txtLastName.setHorizontalAlignment(SwingConstants.LEFT);
+		txtLastName.setForeground(Color.GRAY);
+		txtLastName.setFont(new Font("Poppins", Font.PLAIN, 15));
+		txtLastName.setColumns(10);
+		txtLastName.setBackground(Color.WHITE);
+		contentPane.add(txtLastName);
+		
+		txtEmailAddressReg = new JTextField();
+		sl_contentPane.putConstraint(SpringLayout.NORTH, txtEmailAddressReg, 338, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, txtEmailAddressReg, 406, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, txtEmailAddressReg, 378, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, txtEmailAddressReg, 656, SpringLayout.WEST, contentPane);
+		txtEmailAddressReg.addFocusListener(new FocusAdapter() {
+			
+		});
+		txtEmailAddressReg.setForeground(Color.GRAY);
+		txtEmailAddressReg.setFont(new Font("Poppins", Font.PLAIN, 15));
+		txtEmailAddressReg.setColumns(10);
+		txtEmailAddressReg.setBackground(Color.WHITE);
+		contentPane.add(txtEmailAddressReg);
+		
+		txtMonth = new JTextField();
+		sl_contentPane.putConstraint(SpringLayout.NORTH, txtMonth, 437, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, txtMonth, 406, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, txtMonth, 477, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, txtMonth, 0, SpringLayout.EAST, txtLastName);
+		txtMonth.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(txtLastNameFirst.getText().equals("Name")) {
-					txtLastNameFirst.setText("");
+				if(txtMonth.getText().equals("Month")) {
+					txtMonth.setText("");
 				}
 				else {
-					txtLastNameFirst.selectAll();
+					txtMonth.selectAll();
 				}
 			}
 			@Override
 			public void focusLost(FocusEvent e) {
-				if(txtLastNameFirst.getText().equals(""))
-					txtLastNameFirst.setText("Name");
+				if(txtMonth.getText().equals(""))
+					txtMonth.setText("Month");
 			}
 		});
-		txtLastNameFirst.setHorizontalAlignment(SwingConstants.LEFT);
-		txtLastNameFirst.setText("Name");
-		txtLastNameFirst.setForeground(Color.GRAY);
-		txtLastNameFirst.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtLastNameFirst.setColumns(10);
-		txtLastNameFirst.setBorder(null);
-		txtLastNameFirst.setBackground(Color.WHITE);
-		contentPane.add(txtLastNameFirst);
+		txtMonth.setText("Month");
+		txtMonth.setForeground(Color.GRAY);
+		txtMonth.setFont(new Font("Poppins", Font.PLAIN, 15));
+		txtMonth.setColumns(10);
+		txtMonth.setBackground(Color.WHITE);
+		contentPane.add(txtMonth);
 		
-		txtEmailAddress = new JTextField();
-		txtEmailAddress.setBounds(394, 263, 221, 22);
-		txtEmailAddress.addFocusListener(new FocusAdapter() {
+		Button Submitbutton = new Button("Submit");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, Submitbutton, 547, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, Submitbutton, 377, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, Submitbutton, 587, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, Submitbutton, 509, SpringLayout.WEST, contentPane);
+		Submitbutton.addMouseListener(new MouseAdapter() {
 			@Override
-			public void focusGained(FocusEvent e) {
-				if(txtEmailAddress.getText().equals("Email Address")) {
-					txtEmailAddress.setText("");
-				}
-				else {
-					txtEmailAddress.selectAll();
-				}
+			public void mouseEntered(MouseEvent e) {
+				Submitbutton.setForeground(new Color(189,151,87));
+			}
+			
+			@Override
+			public void mouseExited(MouseEvent e) {
+				Submitbutton.setForeground(new Color(205,196,125));
 			}
 			@Override
-			public void focusLost(FocusEvent e) {
-				if(txtEmailAddress.getText().equals(""))
-					txtEmailAddress.setText("Email Address");
-			}
-		});
-		txtEmailAddress.setText("Email Address");
-		txtEmailAddress.setForeground(Color.GRAY);
-		txtEmailAddress.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtEmailAddress.setColumns(10);
-		txtEmailAddress.setBorder(null);
-		txtEmailAddress.setBackground(Color.WHITE);
-		contentPane.add(txtEmailAddress);
-		
-		textField = new JTextField();
-		textField.setBounds(382, 251, 250, 40);
-		textField.setText("   ");
-		textField.setColumns(10);
-		contentPane.add(textField);
-		
-		txtMmddyyyy = new JTextField();
-		txtMmddyyyy.setBounds(394, 384, 221, 22);
-		txtMmddyyyy.addFocusListener(new FocusAdapter() {
-			@Override
-			public void focusGained(FocusEvent e) {
-				if(txtMmddyyyy.getText().equals("MM/DD/YYYY")) {
-					txtMmddyyyy.setText("");
-				}
-				else {
-					txtMmddyyyy.selectAll();
-				}
+			public void mousePressed(MouseEvent e) {
+				Submitbutton.setForeground(new Color(146,102,44));
 			}
 			@Override
-			public void focusLost(FocusEvent e) {
-				if(txtMmddyyyy.getText().equals(""))
-					txtMmddyyyy.setText("MM/DD/YYYY");
+			public void mouseReleased(MouseEvent e) {
+				Submitbutton.setForeground(new Color(205,196,125));
 			}
 		});
-		txtMmddyyyy.setText("MM/DD/YYYY");
-		txtMmddyyyy.setForeground(Color.GRAY);
-		txtMmddyyyy.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtMmddyyyy.setColumns(10);
-		txtMmddyyyy.setBorder(null);
-		txtMmddyyyy.setBackground(Color.WHITE);
-		contentPane.add(txtMmddyyyy);
-		
-		textField_5 = new JTextField();
-		textField_5.setBounds(382, 373, 250, 40);
-		textField_5.setText("   ");
-		textField_5.setColumns(10);
-		contentPane.add(textField_5);
-		
-		Button button = new Button("Submit");
-		button.setBounds(382, 484, 132, 40);
-		button.addActionListener(new ActionListener() {
+		Submitbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		button.setForeground(new Color(234, 218, 128));
-		button.setFont(new Font("Dialog", Font.BOLD, 20));
-		button.setBackground(new Color(0, 45, 105));
-		contentPane.add(button);
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(384, 187, 248, 40);
-		textField_1.setText("   ");
-		textField_1.setColumns(10);
-		contentPane.add(textField_1);
+		Submitbutton.setForeground(new Color(234, 218, 128));
+		Submitbutton.setFont(new Font("Dialog", Font.BOLD, 20));
+		Submitbutton.setBackground(new Color(0, 45, 105));
+		contentPane.add(Submitbutton);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(734, 1, 187, 614);
+		sl_contentPane.putConstraint(SpringLayout.NORTH, panel_1, 1, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, panel_1, 734, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, panel_1, 615, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, panel_1, 921, SpringLayout.WEST, contentPane);
 		panel_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
@@ -248,47 +252,68 @@ public class Registration extends JFrame {
 		lblX.setBounds(155, 11, 10, 17);
 		panel_1.add(lblX);
 		lblX.setHorizontalAlignment(SwingConstants.CENTER);
-		lblX.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblX.setFont(new Font("Poppins", Font.BOLD, 14));
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setBounds(192, 5, 72, 83);
-		lblNewLabel_2.setIcon(new ImageIcon(Registration.class.getResource("/images/SmallSize.png")));
-		contentPane.add(lblNewLabel_2);
+		JLabel labelRegLogo = new JLabel("");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, labelRegLogo, 5, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, labelRegLogo, 192, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, labelRegLogo, 88, SpringLayout.NORTH, contentPane);
+		labelRegLogo.setIcon(new ImageIcon(Registration.class.getResource("/images/SmallSize.png")));
+		contentPane.add(labelRegLogo);
 		
 		pwdPasswordReg = new JPasswordField();
-		pwdPasswordReg.setBounds(394, 321, 221, 22);
+		sl_contentPane.putConstraint(SpringLayout.NORTH, pwdPasswordReg, 387, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, pwdPasswordReg, 406, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, pwdPasswordReg, 426, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, pwdPasswordReg, 656, SpringLayout.WEST, contentPane);
+		pwdPasswordReg.setFont(new Font("Poppins", Font.PLAIN, 11));
 		pwdPasswordReg.setForeground(Color.GRAY);
 		pwdPasswordReg.setSelectedTextColor(Color.WHITE);
 		pwdPasswordReg.addFocusListener(new FocusAdapter() {
 			
-			@Override
-			public void focusGained(FocusEvent e) {
-				if(pwdPasswordReg.getText().equals("Password")) {
-					pwdPasswordReg.setEchoChar('●');
-					pwdPasswordReg.setText("");
-					
-				}
-				else {
-					pwdPasswordReg.selectAll();
-				}
-			}
-			@Override
-			public void focusLost(FocusEvent e) {
-				if(pwdPasswordReg.getText().equals("")) {
-					pwdPasswordReg.setText("Password");
-					pwdPasswordReg.setEchoChar((char)0);
-					
-				}
-			}
+			
 		});
-		pwdPasswordReg.setBorder(null);
-		pwdPasswordReg.setText("  Password");
 		contentPane.add(pwdPasswordReg);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(381, 312, 251, 40);
-		textField_2.setText("   ");
-		textField_2.setColumns(10);
-		contentPane.add(textField_2);
+		JLabel FirstNameLabel = new JLabel("First Name:");
+		sl_contentPane.putConstraint(SpringLayout.NORTH, FirstNameLabel, 242, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, FirstNameLabel, 237, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, FirstNameLabel, 269, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, FirstNameLabel, 361, SpringLayout.WEST, contentPane);
+		FirstNameLabel.setFont(new Font("Dialog", Font.PLAIN, 23));
+		contentPane.add(FirstNameLabel);
+		
+		txtFirstName = new JTextField();
+		sl_contentPane.putConstraint(SpringLayout.NORTH, txtFirstName, 238, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, txtFirstName, 406, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, txtFirstName, 278, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, txtFirstName, 656, SpringLayout.WEST, contentPane);
+		txtFirstName.setHorizontalAlignment(SwingConstants.LEFT);
+		txtFirstName.setForeground(Color.GRAY);
+		txtFirstName.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txtFirstName.setColumns(10);
+		txtFirstName.setBackground(Color.WHITE);
+		contentPane.add(txtFirstName);
+		
+		JLabel MiddleNameLabel = new JLabel("Middle Name:");
+		sl_contentPane.putConstraint(SpringLayout.EAST, labelBirthday, 0, SpringLayout.EAST, MiddleNameLabel);
+		sl_contentPane.putConstraint(SpringLayout.NORTH, MiddleNameLabel, 291, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, MiddleNameLabel, 237, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, MiddleNameLabel, 318, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, MiddleNameLabel, 386, SpringLayout.WEST, contentPane);
+		MiddleNameLabel.setFont(new Font("Dialog", Font.PLAIN, 23));
+		contentPane.add(MiddleNameLabel);
+		
+		txtMiddleName = new JTextField();
+		sl_contentPane.putConstraint(SpringLayout.NORTH, txtMiddleName, 287, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.WEST, txtMiddleName, 406, SpringLayout.WEST, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.SOUTH, txtMiddleName, 327, SpringLayout.NORTH, contentPane);
+		sl_contentPane.putConstraint(SpringLayout.EAST, txtMiddleName, 656, SpringLayout.WEST, contentPane);
+		txtMiddleName.setHorizontalAlignment(SwingConstants.LEFT);
+		txtMiddleName.setForeground(Color.GRAY);
+		txtMiddleName.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txtMiddleName.setColumns(10);
+		txtMiddleName.setBackground(Color.WHITE);
+		contentPane.add(txtMiddleName);
 	}
 }

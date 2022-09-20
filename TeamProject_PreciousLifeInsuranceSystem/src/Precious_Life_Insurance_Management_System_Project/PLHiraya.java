@@ -13,6 +13,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.UIManager;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
 
 public class PLHiraya extends JFrame {
 
@@ -38,13 +41,42 @@ public class PLHiraya extends JFrame {
 	 * Create the frame.
 	 */
 	public PLHiraya() {
+		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1170, 843);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 68, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 68, 293, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton PLHirayaNow = new JButton("");
+		PLHirayaNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLHirayaNow.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/NowButton1.png")));
+		PLHirayaNow.setForeground(Color.WHITE);
+		PLHirayaNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLHirayaNow.setBackground(new Color(0, 64, 128));
+		PLHirayaNow.setBounds(866, 121, 290, 72);
+		contentPane.add(PLHirayaNow);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBorder(null);
@@ -72,14 +104,9 @@ public class PLHiraya extends JFrame {
 		panel.setBounds(0, 0, 108, 806);
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(PLSerene.class.getResource("/images/logoPng-MIDSIZE.png")));
-		lblNewLabel_1.setBounds(-17, 10, 136, 137);
-		panel.add(lblNewLabel_1);
-		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setIcon(new ImageIcon(PLSerene.class.getResource("/images/LifeLogo1 (1).png")));
-		lblNewLabel_2.setBounds(10, 157, 98, 86);
+		lblNewLabel_2.setBounds(10, 155, 98, 86);
 		panel.add(lblNewLabel_2);
 		
 		JButton btnNewButton_4 = new JButton("");
@@ -98,6 +125,20 @@ public class PLHiraya extends JFrame {
 		btnNewButton_4.setBackground(new Color(0, 84, 168));
 		btnNewButton_4.setBounds(25, 710, 62, 55);
 		panel.add(btnNewButton_4);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainDashboard t = new MainDashboard();
+				t.show();
+				dispose();
+			}
+		});
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 84, 168));
+		btnNewButton.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/logoPng-MIDSIZE.png")));
+		btnNewButton.setBounds(20, 22, 98, 115);
+		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(null);
@@ -241,5 +282,48 @@ public class PLHiraya extends JFrame {
 		lblPremium.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblPremium.setBounds(18, 0, 101, 32);
 		panel_2.add(lblPremium);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/HirayaPic3.png")));
+		lblNewLabel_6.setBounds(0, 0, 1156, 257);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/suitablePicture2.png")));
+		lblNewLabel_7.setBounds(771, 559, 292, 131);
+		contentPane.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("Moving Up");
+		lblNewLabel_8.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8.setBounds(795, 702, 86, 32);
+		contentPane.add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_8_1 = new JLabel("Preparing");
+		lblNewLabel_8_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1.setBounds(956, 702, 86, 32);
+		contentPane.add(lblNewLabel_8_1);
+		
+		JLabel lblNewLabel_8_1_1 = new JLabel("Ahead");
+		lblNewLabel_8_1_1.setForeground(new Color(0, 0, 128));
+		lblNewLabel_8_1_1.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
+		lblNewLabel_8_1_1.setBounds(966, 733, 57, 32);
+		contentPane.add(lblNewLabel_8_1_1);
+		
+		JButton clickInfoHiraya = new JButton("Click here for more info!");
+		clickInfoHiraya.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HirayaBenefits t = new HirayaBenefits();
+				t.show();
+				dispose();
+			}
+		});
+		clickInfoHiraya.setForeground(Color.GRAY);
+		clickInfoHiraya.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		clickInfoHiraya.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		clickInfoHiraya.setBackground(Color.WHITE);
+		clickInfoHiraya.setBounds(237, 463, 183, 23);
+		contentPane.add(clickInfoHiraya);
 	}
 }

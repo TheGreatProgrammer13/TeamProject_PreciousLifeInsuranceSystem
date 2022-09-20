@@ -59,6 +59,7 @@ public class LifeInsurancePolicy extends JFrame {
 		contentPane.add(lblNewLabel_3);
 		
 		JButton Serene = new JButton("New button");
+		Serene.setForeground(new Color(0, 0, 0));
 		Serene.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PLSerene t = new PLSerene();
@@ -66,8 +67,7 @@ public class LifeInsurancePolicy extends JFrame {
 				dispose();
 			}
 		});
-		Serene.setBounds(45, 247, 334, 472);
-		Serene.setBorder(null);
+		Serene.setBounds(62, 247, 317, 472);
 		Serene.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/Serene88.png")));
 		contentPane.add(Serene);
 		
@@ -81,8 +81,7 @@ public class LifeInsurancePolicy extends JFrame {
 				
 			}
 		});
-		Serendipity.setBounds(423, 247, 329, 472);
-		Serendipity.setBorder(null);
+		Serendipity.setBounds(435, 247, 317, 472);
 		Serendipity.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/Serendipity90.png")));
 		contentPane.add(Serendipity);
 		
@@ -96,8 +95,7 @@ public class LifeInsurancePolicy extends JFrame {
 				
 			}
 		});
-		Hiraya.setBounds(794, 247, 334, 472);
-		Hiraya.setBorder(null);
+		Hiraya.setBounds(795, 247, 317, 472);
 		Hiraya.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/Hiraya100.png")));
 		contentPane.add(Hiraya);
 		
@@ -108,10 +106,19 @@ public class LifeInsurancePolicy extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/logoPng-MIDSIZE.png")));
-		lblNewLabel_2.setBounds(-13, 10, 117, 132);
-		panel.add(lblNewLabel_2);
+		JButton btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainDashboard t = new MainDashboard();
+				t.show();
+				dispose();
+			}
+		});
+		btnNewButton.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/logoPng-MIDSIZE.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 84, 168));
+		btnNewButton.setBounds(29, 21, 98, 115);
+		panel.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(208, 0, 948, 163);

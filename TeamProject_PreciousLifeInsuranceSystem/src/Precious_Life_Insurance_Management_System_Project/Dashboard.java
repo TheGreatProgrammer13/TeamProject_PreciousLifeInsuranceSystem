@@ -25,12 +25,11 @@ public class Dashboard extends JFrame {
 
 	private JPanel contentPane;
 	private JButton btnNewButton_4;
-	private JLabel lblNewLabel;
 	private JPanel contentPane_1;
 	private JButton btnNewButton_5;
 	private JButton btnNewButton_6;
 	private JButton btnNewButton_7;
-	private JButton btnNewButton_8;
+	private JButton InvestmentPolicyP;
 	private JLabel lblNewLabel_1;
 	private JPanel panel;
 	private JLabel lblNewLabel_2;
@@ -40,6 +39,7 @@ public class Dashboard extends JFrame {
 	private JLabel lblNewLabel_6;
 	private final JLabel lblNewLabel_7 = new JLabel("(You can only choose one for this transaction)");
 	private JLabel lblNewLabel_8;
+	private JButton btnNewButton;
 
 	/**
 	 * Launch the application.
@@ -82,6 +82,7 @@ public class Dashboard extends JFrame {
 			}
 		});
 		
+	
 		JLabel lblX = new JLabel("X");
 		lblX.setBounds(1030, 10, 18, 28);
 		contentPane.add(lblX);
@@ -136,12 +137,6 @@ public class Dashboard extends JFrame {
 		btbEducation.setIcon(new ImageIcon(Dashboard.class.getResource("/images/3.png")));
 		contentPane.add(btbEducation);
 		
-		JButton btbInvestment = new JButton("New button");
-		btbInvestment.setBounds(663, 228, 191, 171);
-		btbInvestment.setBorder(null);
-		btbInvestment.setIcon(new ImageIcon(Dashboard.class.getResource("/images/4.png")));
-		contentPane.add(btbInvestment);
-		
 		contentPane_1 = new JPanel();
 		contentPane_1.setLayout(null);
 		contentPane_1.setFont(new Font("Poppins", Font.BOLD, 10));
@@ -168,10 +163,18 @@ public class Dashboard extends JFrame {
 		btnNewButton_7.setBounds(462, 228, 191, 171);
 		contentPane_1.add(btnNewButton_7);
 		
-		btnNewButton_8 = new JButton("New button");
-		btnNewButton_8.setBorder(null);
-		btnNewButton_8.setBounds(663, 228, 191, 171);
-		contentPane_1.add(btnNewButton_8);
+		InvestmentPolicyP = new JButton("");
+		InvestmentPolicyP.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				InvestmentPolicy t = new InvestmentPolicy();
+				t.show();
+				dispose();
+			}
+		});
+		InvestmentPolicyP.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\investtttttttttt.png"));
+		InvestmentPolicyP.setBorder(null);
+		InvestmentPolicyP.setBounds(663, 228, 173, 171);
+		contentPane_1.add(InvestmentPolicyP);
 		
 		panel = new JPanel();
 		panel.setBackground(new Color(0, 45, 105));
@@ -179,10 +182,23 @@ public class Dashboard extends JFrame {
 		contentPane_1.add(panel);
 		panel.setLayout(null);
 		
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(10, 5, 72, 79);
-		panel.add(lblNewLabel);
-		lblNewLabel.setIcon(new ImageIcon(Dashboard.class.getResource("/images/SmallSize.png")));
+		btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				{
+					MainDashboard t = new MainDashboard();
+					t.show();
+					dispose();
+
+				}
+			}
+		});
+
+		btnNewButton.setIcon(new ImageIcon(Dashboard.class.getResource("/images/SmallSize.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 45, 105));
+		btnNewButton.setBounds(10, 10, 78, 74);
+		panel.add(btnNewButton);
 		
 		lblNewLabel_1 = new JLabel("New label");
 		lblNewLabel_1.setBounds(-228, -28, 69, 66);
@@ -234,7 +250,14 @@ public class Dashboard extends JFrame {
 		btnNewButton_4.setBorder(null);
 		btnNewButton_4.setIcon(new ImageIcon(Dashboard.class.getResource("/images/backbutton.png")));
 		
-		JButton btbRetirement = new JButton("New button");
+		JButton btbRetirement = new JButton("");
+		btbRetirement.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				RetirementPolicy t = new RetirementPolicy();
+				t.show();
+				dispose();
+			}
+		});
 		btbRetirement.setIcon(new ImageIcon(Dashboard.class.getResource("/images/4.png")));
 		btbRetirement.setForeground(Color.WHITE);
 		btbRetirement.setBorder(null);

@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.SwingConstants;
 
 public class MainDashboard extends JFrame {
 
@@ -53,49 +54,48 @@ public class MainDashboard extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
+		panel.setBounds(-14, 0, 977, 75);
 		panel.setBackground(new Color(0, 45, 105));
 		panel.setForeground(new Color(0, 0, 255));
-		panel.setBounds(-14, 0, 977, 75);
+
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel DashboardMainLogo = new JLabel("");
-		DashboardMainLogo.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/SmallSize.png")));
-		DashboardMainLogo.setBounds(10, 10, 63, 55);
-		panel.add(DashboardMainLogo);
+		JButton btnNewButton = new JButton("");
+		btnNewButton.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/SmallSize.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 45, 105));
+		btnNewButton.setBounds(27, 10, 66, 55);
+		panel.add(btnNewButton);
 		
-		JButton DashboardMainLogOut = new JButton("LOG OUT");
+		JButton DashboardMainLogOut = new JButton("");
+		DashboardMainLogOut.setBorder(null);
+		DashboardMainLogOut.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/logoutbutton2.png")));
 		DashboardMainLogOut.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to Log out?","Confirmation", JOptionPane.YES_NO_OPTION) == 0 ) {
-					MainDashboard.this.dispose();
-				}
-			}
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				DashboardMainLogOut.setForeground(Color.red);
-			}
-			
-			public void mouseExited(MouseEvent e) {
-				DashboardMainLogOut.setForeground(Color.white);
-			}
-		});
-		DashboardMainLogOut.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e)
-			{
-				{
-					LoginFrame t = new LoginFrame();
-					t.show();
-					dispose();
+				int result = JOptionPane.showConfirmDialog(null,"Are you sure you want to log out?", "Swing Tester",
+			               JOptionPane.YES_NO_OPTION,
+			               JOptionPane.QUESTION_MESSAGE);
 
+		            if(result == JOptionPane.YES_OPTION){
+		            	
+		    					LoginFrame t = new LoginFrame();
+		    					t.show();
+		    					dispose();
+
+		    			
+		            }else if (result == JOptionPane.NO_OPTION){
+		              
+				   MainDashboard.this.dispose();
 				}
-				
 			}
-			
 		});
-		DashboardMainLogOut.setFont(new Font("Poppins", Font.BOLD, 10));
-		DashboardMainLogOut.setBounds(819, 21, 103, 30);
+	
+		DashboardMainLogOut.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/logoutbutton2.png")));
+		DashboardMainLogOut.setHorizontalAlignment(SwingConstants.CENTER);
+		DashboardMainLogOut.setFont(new Font("Tahoma", Font.BOLD, 14));
+		DashboardMainLogOut.setBounds(806, 10, 161, 55);
 		panel.add(DashboardMainLogOut);
 		
 		JButton DashboardMainAvailUsButton = new JButton("");
@@ -113,7 +113,7 @@ public class MainDashboard extends JFrame {
 		DashboardMainAvailUsButton.setBorder(null);
 		DashboardMainAvailUsButton.setForeground(Color.WHITE);
 		DashboardMainAvailUsButton.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/Avail.png")));
-		DashboardMainAvailUsButton.setBounds(125, 226, 284, 257);
+		DashboardMainAvailUsButton.setBounds(198, 249, 264, 244);
 		contentPane.add(DashboardMainAvailUsButton);
 		
 		JButton DashboardMainAboutUsButton = new JButton("");
@@ -131,27 +131,29 @@ public class MainDashboard extends JFrame {
 		DashboardMainAboutUsButton.setBorder(null);
 		DashboardMainAboutUsButton.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/About_Us.png")));
 		DashboardMainAboutUsButton.setForeground(Color.WHITE);
-		DashboardMainAboutUsButton.setBounds(568, 226, 274, 257);
+		DashboardMainAboutUsButton.setBounds(510, 249, 257, 244);
 		contentPane.add(DashboardMainAboutUsButton);
 		
 		JLabel DashboardMainAvailLabel = new JLabel("INSURANCE AVAILMENT");
 		DashboardMainAvailLabel.setFont(new Font("Poppins", Font.BOLD, 20));
-		DashboardMainAvailLabel.setBounds(147, 484, 284, 45);
+		DashboardMainAvailLabel.setBounds(219, 494, 264, 45);
 		contentPane.add(DashboardMainAvailLabel);
 		
 		JLabel DashboardMainAboutUsLabel = new JLabel("ABOUT US");
 		DashboardMainAboutUsLabel.setFont(new Font("Poppins", Font.BOLD, 20));
-		DashboardMainAboutUsLabel.setBounds(653, 484, 200, 45);
+		DashboardMainAboutUsLabel.setBounds(582, 494, 110, 45);
 		contentPane.add(DashboardMainAboutUsLabel);
 		
-		JLabel DashboardMainWelcomeTOLabel = new JLabel("WELCOME TO");
-		DashboardMainWelcomeTOLabel.setFont(new Font("Poppins", Font.BOLD, 30));
-		DashboardMainWelcomeTOLabel.setBounds(384, 112, 244, 35);
-		contentPane.add(DashboardMainWelcomeTOLabel);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/PSWelcome3.png")));
+		lblNewLabel.setBounds(234, 85, 507, 144);
+		contentPane.add(lblNewLabel);
 		
-		JLabel DashboardMainPreciousLifeLabel = new JLabel("PRECIOUS LIFE!");
-		DashboardMainPreciousLifeLabel.setFont(new Font("Poppins", Font.BOLD, 30));
-		DashboardMainPreciousLifeLabel.setBounds(369, 146, 244, 35);
-		contentPane.add(DashboardMainPreciousLifeLabel);
+		JPanel panel_1 = new JPanel();
+		panel_1.setLayout(null);
+		panel_1.setForeground(Color.BLUE);
+		panel_1.setBackground(new Color(0, 45, 105));
+		panel_1.setBounds(0, 591, 977, 51);
+		contentPane.add(panel_1);
 	}
 }

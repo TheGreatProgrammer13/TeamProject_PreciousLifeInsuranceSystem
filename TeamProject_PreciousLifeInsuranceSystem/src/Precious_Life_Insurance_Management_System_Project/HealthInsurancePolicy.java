@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
@@ -63,10 +65,22 @@ public class HealthInsurancePolicy extends JFrame {
 		panel.setBounds(0, 0, 127, 163);
 		contentPane.add(panel);
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon(HealthInsurancePolicy.class.getResource("/images/logoPng-MIDSIZE.png")));
-		lblNewLabel_2.setBounds(-13, 10, 117, 132);
-		panel.add(lblNewLabel_2);
+		JButton btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				{
+					MainDashboard t = new MainDashboard();
+					t.show();
+					dispose();
+
+				}
+			}
+		});
+		btnNewButton.setIcon(new ImageIcon(HealthInsurancePolicy.class.getResource("/images/logoPng-MIDSIZE.png")));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBackground(new Color(0, 84, 168));
+		btnNewButton.setBounds(19, 24, 98, 115);
+		panel.add(btnNewButton);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(null);
@@ -82,20 +96,17 @@ public class HealthInsurancePolicy extends JFrame {
 		
 		JButton Health75 = new JButton("New button");
 		Health75.setIcon(new ImageIcon(HealthInsurancePolicy.class.getResource("/images/Health75.png")));
-		Health75.setBorder(null);
-		Health75.setBounds(47, 241, 334, 472);
+		Health75.setBounds(61, 241, 334, 472);
 		contentPane.add(Health75);
 		
 		JButton Health80 = new JButton("New button");
 		Health80.setIcon(new ImageIcon(HealthInsurancePolicy.class.getResource("/images/Health80.png")));
-		Health80.setBorder(null);
-		Health80.setBounds(424, 241, 334, 472);
+		Health80.setBounds(439, 241, 320, 472);
 		contentPane.add(Health80);
 		
 		JButton HealthCritical = new JButton("New button");
 		HealthCritical.setIcon(new ImageIcon(HealthInsurancePolicy.class.getResource("/images/HealthCritical.png")));
-		HealthCritical.setBorder(null);
-		HealthCritical.setBounds(792, 241, 334, 472);
+		HealthCritical.setBounds(805, 241, 320, 472);
 		contentPane.add(HealthCritical);
 		
 		JLabel lblNewLabel = new JLabel("");
