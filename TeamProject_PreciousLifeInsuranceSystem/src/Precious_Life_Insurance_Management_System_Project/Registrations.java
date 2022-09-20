@@ -188,8 +188,10 @@ public class Registrations extends JFrame {
 							LoginFrame t = new LoginFrame();
 							t.show();
 							dispose();
+							
+							
 						
-					
+
 								
 							
 						
