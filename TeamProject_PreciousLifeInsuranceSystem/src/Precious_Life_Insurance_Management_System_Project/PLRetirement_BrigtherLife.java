@@ -85,7 +85,7 @@ public class PLRetirement_BrigtherLife extends JFrame {
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					LifeInsurancePolicy t = new LifeInsurancePolicy();
+					RetirementPolicy t = new RetirementPolicy();
 					t.show();
 					dispose();
 
@@ -128,27 +128,27 @@ public class PLRetirement_BrigtherLife extends JFrame {
 		contentPane.add(panel_1_1);
 		
 		JLabel lblNewLabel_3 = new JLabel("is a protection and savings plan is a protection ");
-		lblNewLabel_3.setBounds(623, 298, 631, 32);
+		lblNewLabel_3.setBounds(589, 296, 631, 32);
 		lblNewLabel_3.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_3_1 = new JLabel("PreciousLife Brighter Life ");
-		lblNewLabel_3_1.setBounds(263, 298, 324, 32);
+		lblNewLabel_3_1.setBounds(229, 296, 324, 32);
 		lblNewLabel_3_1.setFont(new Font("Microsoft YaHei", Font.BOLD, 22));
 		contentPane.add(lblNewLabel_3_1);
 		
 		JLabel lblNewLabel_3_2 = new JLabel("and savings plan that offers lifetime and savings plan that offers lifetime coverage.");
-		lblNewLabel_3_2.setBounds(274, 329, 880, 32);
+		lblNewLabel_3_2.setBounds(240, 327, 880, 32);
 		lblNewLabel_3_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2);
 		
 		JLabel lblNewLabel_3_2_1 = new JLabel("Additionally, it provides financial benefits that can be used as regular income");
-		lblNewLabel_3_2_1.setBounds(272, 355, 872, 32);
+		lblNewLabel_3_2_1.setBounds(238, 353, 872, 32);
 		lblNewLabel_3_2_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2_1);
 		
 		JLabel lblNewLabel_3_2_1_1 = new JLabel("in your senior years.");
-		lblNewLabel_3_2_1_1.setBounds(271, 382, 835, 32);
+		lblNewLabel_3_2_1_1.setBounds(237, 380, 835, 32);
 		lblNewLabel_3_2_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2_1_1);
 		
@@ -230,7 +230,7 @@ public class PLRetirement_BrigtherLife extends JFrame {
 		clickInfoSerendipity.setBounds(263, 536, 239, 23);
 		clickInfoSerendipity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SerendipityBenefits t = new SerendipityBenefits();
+				Retirement_BrighterLifeBenefits t = new Retirement_BrighterLifeBenefits();
 				t.show();
 				dispose();
 			}
@@ -244,7 +244,7 @@ public class PLRetirement_BrigtherLife extends JFrame {
 		JLabel lblNewLabel_3_1_1 = new JLabel("Prime");
 		lblNewLabel_3_1_1.setForeground(new Color(235, 200, 1));
 		lblNewLabel_3_1_1.setFont(new Font("Microsoft YaHei", Font.BOLD, 22));
-		lblNewLabel_3_1_1.setBounds(551, 298, 72, 32);
+		lblNewLabel_3_1_1.setBounds(517, 296, 72, 32);
 		contentPane.add(lblNewLabel_3_1_1);
 		
 		JPanel panel_2 = new JPanel();

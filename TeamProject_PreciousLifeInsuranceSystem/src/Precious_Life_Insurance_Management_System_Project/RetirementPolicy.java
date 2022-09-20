@@ -15,6 +15,8 @@ import javax.swing.border.EmptyBorder;
 
 import java.beans.VetoableChangeListener;
 import java.beans.PropertyChangeEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class RetirementPolicy extends JFrame {
 
@@ -64,20 +66,38 @@ public class RetirementPolicy extends JFrame {
 		contentPane.add(lblNewLabel_3);
 		
 		JButton StabilizeRetirement = new JButton("New button");
-		StabilizeRetirement.setBounds(45, 247, 334, 472);
-		StabilizeRetirement.setBorder(null);
+		StabilizeRetirement.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PLRetirement_Stabalize t = new PLRetirement_Stabalize();
+				t.show();
+				dispose();
+			}
+		});
+		StabilizeRetirement.setBounds(58, 247, 316, 472);
 		StabilizeRetirement.setIcon(new ImageIcon(RetirementPolicy.class.getResource("/images/retirementStabilize.png")));
 		contentPane.add(StabilizeRetirement);
 		
 		JButton BrighterRetirement = new JButton("New button");
-		BrighterRetirement.setBounds(423, 247, 329, 472);
-		BrighterRetirement.setBorder(null);
+		BrighterRetirement.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PLRetirement_BrigtherLife t = new PLRetirement_BrigtherLife();
+				t.show();
+				dispose();
+			}
+		});
+		BrighterRetirement.setBounds(435, 247, 316, 472);
 		BrighterRetirement.setIcon(new ImageIcon(RetirementPolicy.class.getResource("/images/retirementBrighter.png")));
 		contentPane.add(BrighterRetirement);
 		
 		JButton MaxChoiceRetirement = new JButton("New button");
-		MaxChoiceRetirement.setBounds(794, 247, 334, 472);
-		MaxChoiceRetirement.setBorder(null);
+		MaxChoiceRetirement.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PLRetirement_MaxChoice t = new PLRetirement_MaxChoice();
+				t.show();
+				dispose();
+			}
+		});
+		MaxChoiceRetirement.setBounds(797, 247, 316, 472);
 		MaxChoiceRetirement.setIcon(new ImageIcon(RetirementPolicy.class.getResource("/images/retirementMaxChoice.png")));
 		contentPane.add(MaxChoiceRetirement);
 		
@@ -95,7 +115,7 @@ public class RetirementPolicy extends JFrame {
 		
 		JLabel RetirementPicture = new JLabel("");
 		RetirementPicture.setBounds(209, 0, 974, 163);
-		RetirementPicture.setIcon(new ImageIcon(RetirementPolicy.class.getResource("/images/Retirement_Picture.png")));
+		RetirementPicture.setIcon(new ImageIcon(RetirementPolicy.class.getResource("/images/Retirement_Picture2.png")));
 		contentPane.add(RetirementPicture);
 		
 		JPanel panel_1 = new JPanel();
@@ -112,10 +132,17 @@ public class RetirementPolicy extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("Plans for your Retirement needs");
 		lblNewLabel_1.setBounds(419, 196, 365, 25);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblNewLabel_1.setFont(new Font("Poppins", Font.PLAIN, 25));
 		contentPane.add(lblNewLabel_1);
 		
 		JButton BackButtonRetirement = new JButton("");
+		BackButtonRetirement.addVetoableChangeListener(new VetoableChangeListener() {
+			public void vetoableChange(PropertyChangeEvent evt) {
+			}
+		});
+		
+		
+		BackButtonRetirement.setBorder(null);
 		BackButtonRetirement.setBounds(558, 739, 62, 55);
 		BackButtonRetirement.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/backbutton.png")));
 		BackButtonRetirement.addActionListener(new ActionListener() {
@@ -125,7 +152,6 @@ public class RetirementPolicy extends JFrame {
 				dispose();
 			}
 		});
-		BackButtonRetirement.setBorder(null);
 		BackButtonRetirement.setBackground(Color.WHITE);
 		contentPane.add(BackButtonRetirement);
 	}

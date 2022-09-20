@@ -85,7 +85,7 @@ public class PLRetirement_MaxChoice extends JFrame {
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					LifeInsurancePolicy t = new LifeInsurancePolicy();
+					RetirementPolicy t = new RetirementPolicy();
 					t.show();
 					dispose();
 
@@ -246,7 +246,7 @@ public class PLRetirement_MaxChoice extends JFrame {
 		clickInfoSerendipity.setBounds(263, 536, 239, 23);
 		clickInfoSerendipity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SerendipityBenefits t = new SerendipityBenefits();
+				Retirement_MaxChoiceBenefits t = new Retirement_MaxChoiceBenefits();
 				t.show();
 				dispose();
 			}

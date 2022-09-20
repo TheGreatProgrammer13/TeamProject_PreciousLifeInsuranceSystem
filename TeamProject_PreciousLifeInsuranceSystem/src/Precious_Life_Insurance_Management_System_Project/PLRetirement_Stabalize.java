@@ -84,7 +84,7 @@ public class PLRetirement_Stabalize extends JFrame {
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					LifeInsurancePolicy t = new LifeInsurancePolicy();
+					RetirementPolicy t = new RetirementPolicy();
 					t.show();
 					dispose();
 
@@ -245,7 +245,7 @@ public class PLRetirement_Stabalize extends JFrame {
 		clickInfoSerendipity.setBounds(263, 536, 239, 23);
 		clickInfoSerendipity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SerendipityBenefits t = new SerendipityBenefits();
+				Retirement_StabalizeBenefits t = new Retirement_StabalizeBenefits();
 				t.show();
 				dispose();
 			}
