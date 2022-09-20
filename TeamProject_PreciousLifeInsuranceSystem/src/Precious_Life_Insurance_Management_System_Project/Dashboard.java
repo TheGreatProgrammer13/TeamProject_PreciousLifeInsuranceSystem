@@ -82,6 +82,7 @@ public class Dashboard extends JFrame {
 			}
 		});
 		
+	
 		JLabel lblX = new JLabel("X");
 		lblX.setBounds(1030, 10, 18, 28);
 		contentPane.add(lblX);
@@ -130,6 +131,14 @@ public class Dashboard extends JFrame {
 		contentPane.add(btbEducation);
 		
 		JButton btbInvestment = new JButton("New button");
+		btbInvestment.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				InvestmentPolicy t = new InvestmentPolicy();
+				t.show();
+				dispose();
+			}
+		});
 		btbInvestment.setBounds(663, 228, 191, 171);
 		btbInvestment.setBorder(null);
 		btbInvestment.setIcon(new ImageIcon(Dashboard.class.getResource("/images/4.png")));
@@ -183,6 +192,7 @@ public class Dashboard extends JFrame {
 				}
 			}
 		});
+
 		btnNewButton.setIcon(new ImageIcon(Dashboard.class.getResource("/images/SmallSize.png")));
 		btnNewButton.setBorder(null);
 		btnNewButton.setBackground(new Color(0, 45, 105));
