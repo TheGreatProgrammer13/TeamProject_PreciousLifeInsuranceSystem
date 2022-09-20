@@ -261,7 +261,7 @@ public class PLRetirement_BrigtherLife extends JFrame {
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setIcon(new ImageIcon(PLRetirement_BrigtherLife.class.getResource("/images/Retirement_Picture.png")));
-		lblNewLabel_6.setBounds(189, 0, 988, 257);
+		lblNewLabel_6.setBounds(83, 0, 988, 257);
 		contentPane.add(lblNewLabel_6);
 	}
 
