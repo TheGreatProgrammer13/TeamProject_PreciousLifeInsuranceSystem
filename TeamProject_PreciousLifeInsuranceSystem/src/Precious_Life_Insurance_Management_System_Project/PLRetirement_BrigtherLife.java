@@ -50,6 +50,33 @@ public class PLRetirement_BrigtherLife extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 74, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JButton PLBrighterLifeNow = new JButton("");
+		PLBrighterLifeNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLBrighterLifeNow.setIcon(new ImageIcon(PLRetirement_BrigtherLife.class.getResource("/images/NowButton1.png")));
+		PLBrighterLifeNow.setForeground(Color.WHITE);
+		PLBrighterLifeNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLBrighterLifeNow.setBackground(new Color(0, 64, 128));
+		PLBrighterLifeNow.setBounds(866, 127, 290, 72);
+		contentPane.add(PLBrighterLifeNow);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 74, 293, 55);
+		contentPane.add(lblGetAQuote);
+		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(148, 150, 417, 89);
 		panel_1_1_1.setBorder(null);
@@ -138,17 +165,17 @@ public class PLRetirement_BrigtherLife extends JFrame {
 		contentPane.add(lblNewLabel_3_1);
 		
 		JLabel lblNewLabel_3_2 = new JLabel("and savings plan that offers lifetime and savings plan that offers lifetime coverage.");
-		lblNewLabel_3_2.setBounds(240, 327, 880, 32);
+		lblNewLabel_3_2.setBounds(229, 326, 880, 32);
 		lblNewLabel_3_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2);
 		
 		JLabel lblNewLabel_3_2_1 = new JLabel("Additionally, it provides financial benefits that can be used as regular income");
-		lblNewLabel_3_2_1.setBounds(238, 353, 872, 32);
+		lblNewLabel_3_2_1.setBounds(229, 352, 872, 32);
 		lblNewLabel_3_2_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2_1);
 		
 		JLabel lblNewLabel_3_2_1_1 = new JLabel("in your senior years.");
-		lblNewLabel_3_2_1_1.setBounds(237, 380, 835, 32);
+		lblNewLabel_3_2_1_1.setBounds(229, 380, 835, 32);
 		lblNewLabel_3_2_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2_1_1);
 		

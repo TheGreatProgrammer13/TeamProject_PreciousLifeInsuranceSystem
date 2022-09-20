@@ -92,7 +92,7 @@ public class PaymentFrame extends JFrame {
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					LifeInsurancePolicy t = new LifeInsurancePolicy();
+					Dashboard t = new Dashboard();
 					t.show();
 					dispose();
 

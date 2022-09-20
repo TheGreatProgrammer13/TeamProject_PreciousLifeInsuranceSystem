@@ -14,6 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.UIManager;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
 
 public class PLSerendipity extends JFrame {
 
@@ -48,6 +50,33 @@ public class PLSerendipity extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 67, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 67, 293, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton PLSerendipityNow = new JButton("");
+		PLSerendipityNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLSerendipityNow.setIcon(new ImageIcon(PLSerendipity.class.getResource("/images/NowButton1.png")));
+		PLSerendipityNow.setForeground(Color.WHITE);
+		PLSerendipityNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLSerendipityNow.setBackground(new Color(0, 64, 128));
+		PLSerendipityNow.setBounds(866, 120, 290, 72);
+		contentPane.add(PLSerendipityNow);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(148, 150, 387, 89);
@@ -293,7 +322,7 @@ public class PLSerendipity extends JFrame {
 		lblNewLabel_8_1_1_1_1.setBounds(1008, 708, 63, 32);
 		contentPane.add(lblNewLabel_8_1_1_1_1);
 		
-		JButton clickInfoSerendipity = new JButton("Click for more info!");
+		JButton clickInfoSerendipity = new JButton("Click here for more info!");
 		clickInfoSerendipity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				SerendipityBenefits t = new SerendipityBenefits();
@@ -305,7 +334,7 @@ public class PLSerendipity extends JFrame {
 		clickInfoSerendipity.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
 		clickInfoSerendipity.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
 		clickInfoSerendipity.setBackground(Color.WHITE);
-		clickInfoSerendipity.setBounds(242, 461, 183, 23);
+		clickInfoSerendipity.setBounds(242, 461, 260, 23);
 		contentPane.add(clickInfoSerendipity);
 	}
 }

@@ -14,6 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.UIManager;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
 
 public class PLHiraya extends JFrame {
 
@@ -48,6 +50,33 @@ public class PLHiraya extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(839, 68, 317, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(835, 68, 321, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton PLHirayaNow = new JButton("");
+		PLHirayaNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLHirayaNow.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/NowButton1.png")));
+		PLHirayaNow.setForeground(Color.WHITE);
+		PLHirayaNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLHirayaNow.setBackground(new Color(0, 64, 128));
+		PLHirayaNow.setBounds(864, 121, 292, 72);
+		contentPane.add(PLHirayaNow);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBorder(null);
@@ -255,12 +284,12 @@ public class PLHiraya extends JFrame {
 		panel_2.add(lblPremium);
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\HirayaPic3.png"));
+		lblNewLabel_6.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/HirayaPic3.png")));
 		lblNewLabel_6.setBounds(0, 0, 1156, 257);
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\suitablePicture2.png"));
+		lblNewLabel_7.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/suitablePicture2.png")));
 		lblNewLabel_7.setBounds(771, 559, 292, 131);
 		contentPane.add(lblNewLabel_7);
 		

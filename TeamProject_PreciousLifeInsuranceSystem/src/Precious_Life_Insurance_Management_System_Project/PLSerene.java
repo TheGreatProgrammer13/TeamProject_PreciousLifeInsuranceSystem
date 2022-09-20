@@ -60,18 +60,31 @@ public class PLSerene extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton_1 = new JButton(">Now!");
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setBackground(new Color(0, 64, 128));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 54));
-		btnNewButton_1.setBounds(849, 123, 234, 64);
-		contentPane.add(btnNewButton_1);
+		JButton PLSereneNow = new JButton("");
+		PLSereneNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLSereneNow.setIcon(new ImageIcon(PLSerene.class.getResource("/images/NowButton1.png")));
+		PLSereneNow.setForeground(Color.WHITE);
+		PLSereneNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLSereneNow.setBackground(new Color(0, 64, 128));
+		PLSereneNow.setBounds(866, 121, 290, 72);
+		contentPane.add(PLSereneNow);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 68, 305, 55);
+		contentPane.add(lblGetAQuote_1);
 		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(813, 69, 306, 44);
+		lblGetAQuote.setBounds(837, 68, 293, 55);
 		contentPane.add(lblGetAQuote);
 		
 		JPanel panel = new JPanel();
@@ -272,7 +285,7 @@ public class PLSerene extends JFrame {
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setBounds(-29, -2, 1195, 262);
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\SerenePic.png"));
+		lblNewLabel_6.setIcon(new ImageIcon(PLSerene.class.getResource("/images/SerenePic.png")));
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("");

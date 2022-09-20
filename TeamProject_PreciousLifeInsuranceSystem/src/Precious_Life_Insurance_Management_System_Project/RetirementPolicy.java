@@ -62,7 +62,7 @@ public class RetirementPolicy extends JFrame {
 		
 		JLabel lblNewLabel_3 = new JLabel("Retirement Insurance Policy");
 		lblNewLabel_3.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 50));
-		lblNewLabel_3.setBounds(373, 54, 709, 50);
+		lblNewLabel_3.setBounds(373, 54, 732, 50);
 		contentPane.add(lblNewLabel_3);
 		
 		JButton StabilizeRetirement = new JButton("New button");
@@ -138,6 +138,7 @@ public class RetirementPolicy extends JFrame {
 		JButton BackButtonRetirement = new JButton("");
 		BackButtonRetirement.addVetoableChangeListener(new VetoableChangeListener() {
 			public void vetoableChange(PropertyChangeEvent evt) {
+				
 			}
 		});
 		

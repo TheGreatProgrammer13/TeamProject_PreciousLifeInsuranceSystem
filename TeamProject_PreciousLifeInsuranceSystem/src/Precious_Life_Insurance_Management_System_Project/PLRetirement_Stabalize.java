@@ -49,6 +49,33 @@ public class PLRetirement_Stabalize extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 64, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JButton PLStabilizeNow = new JButton("");
+		PLStabilizeNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLStabilizeNow.setIcon(new ImageIcon(PLRetirement_Stabalize.class.getResource("/images/NowButton1.png")));
+		PLStabilizeNow.setForeground(Color.WHITE);
+		PLStabilizeNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLStabilizeNow.setBackground(new Color(0, 64, 128));
+		PLStabilizeNow.setBounds(866, 117, 290, 72);
+		contentPane.add(PLStabilizeNow);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 64, 293, 55);
+		contentPane.add(lblGetAQuote);
+		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(148, 150, 387, 89);
 		panel_1_1_1.setBorder(null);

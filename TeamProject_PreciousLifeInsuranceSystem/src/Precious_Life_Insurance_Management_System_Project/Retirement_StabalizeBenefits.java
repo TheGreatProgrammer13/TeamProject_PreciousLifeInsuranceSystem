@@ -50,19 +50,32 @@ public class Retirement_StabalizeBenefits extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setBounds(824, 674, 306, 44);
-		lblGetAQuote.setForeground(Color.WHITE);
-		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		contentPane.add(lblGetAQuote);
+		JButton StabilizeBnfts = new JButton("");
+		StabilizeBnfts.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		StabilizeBnfts.setIcon(new ImageIcon(Retirement_StabalizeBenefits.class.getResource("/images/NowButton1.png")));
+		StabilizeBnfts.setForeground(Color.WHITE);
+		StabilizeBnfts.setFont(new Font("Verdana", Font.BOLD, 54));
+		StabilizeBnfts.setBackground(new Color(0, 64, 128));
+		StabilizeBnfts.setBounds(866, 724, 290, 72);
+		contentPane.add(StabilizeBnfts);
 		
-		JButton btnNewButton_1 = new JButton("Now");
-		btnNewButton_1.setBounds(885, 728, 168, 56);
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 47));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
-		contentPane.add(btnNewButton_1);
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 671, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 671, 293, 55);
+		contentPane.add(lblGetAQuote);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 811);

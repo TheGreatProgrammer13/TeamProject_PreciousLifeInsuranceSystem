@@ -142,13 +142,13 @@ public class Receipt extends JFrame {
 		contentPane.add(separator);
 		
 		JLabel lblNewLabel_8_1 = new JLabel("PLAN:");
-		lblNewLabel_8_1.setBounds(221, 405, 273, 32);
+		lblNewLabel_8_1.setBounds(221, 405, 61, 32);
 		lblNewLabel_8_1.setForeground(new Color(0, 45, 105));
 		lblNewLabel_8_1.setFont(new Font("Dialog", Font.BOLD, 18));
 		contentPane.add(lblNewLabel_8_1);
 		
 		JLabel lblNewLabel_8_1_1 = new JLabel("CARD NUMBER:");
-		lblNewLabel_8_1_1.setBounds(221, 461, 273, 32);
+		lblNewLabel_8_1_1.setBounds(221, 461, 146, 32);
 		lblNewLabel_8_1_1.setForeground(new Color(0, 45, 105));
 		lblNewLabel_8_1_1.setFont(new Font("Dialog", Font.BOLD, 18));
 		contentPane.add(lblNewLabel_8_1_1);
@@ -159,7 +159,7 @@ public class Receipt extends JFrame {
 		contentPane.add(separator_1);
 		
 		JLabel lblNewLabel_8_1_1_1 = new JLabel("TOTAL AMOUNT:");
-		lblNewLabel_8_1_1_1.setBounds(221, 556, 273, 32);
+		lblNewLabel_8_1_1_1.setBounds(221, 556, 156, 32);
 		lblNewLabel_8_1_1_1.setForeground(new Color(0, 45, 105));
 		lblNewLabel_8_1_1_1.setFont(new Font("Dialog", Font.BOLD, 18));
 		contentPane.add(lblNewLabel_8_1_1_1);
@@ -169,22 +169,22 @@ public class Receipt extends JFrame {
 		separator_1_1.setForeground(new Color(0, 45, 105));
 		contentPane.add(separator_1_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
+		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setFont(new Font("Poppins", Font.PLAIN, 18));
 		lblNewLabel_2.setBounds(427, 346, 368, 36);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_2_1 = new JLabel("New label");
+		JLabel lblNewLabel_2_1 = new JLabel("");
 		lblNewLabel_2_1.setFont(new Font("Dialog", Font.PLAIN, 18));
 		lblNewLabel_2_1.setBounds(286, 401, 368, 36);
 		contentPane.add(lblNewLabel_2_1);
 		
-		JLabel lblNewLabel_2_1_1 = new JLabel("New label");
+		JLabel lblNewLabel_2_1_1 = new JLabel("");
 		lblNewLabel_2_1_1.setFont(new Font("Dialog", Font.PLAIN, 18));
 		lblNewLabel_2_1_1.setBounds(369, 457, 368, 36);
 		contentPane.add(lblNewLabel_2_1_1);
 		
-		JLabel lblNewLabel_2_1_1_1 = new JLabel("New label");
+		JLabel lblNewLabel_2_1_1_1 = new JLabel("");
 		lblNewLabel_2_1_1_1.setFont(new Font("Dialog", Font.PLAIN, 18));
 		lblNewLabel_2_1_1_1.setBounds(380, 552, 368, 36);
 		contentPane.add(lblNewLabel_2_1_1_1);

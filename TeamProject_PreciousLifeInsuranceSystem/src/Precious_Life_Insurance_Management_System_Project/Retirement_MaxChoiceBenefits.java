@@ -50,19 +50,32 @@ public class Retirement_MaxChoiceBenefits extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 660, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setBounds(824, 674, 306, 44);
-		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 660, 293, 55);
 		contentPane.add(lblGetAQuote);
 		
-		JButton btnNewButton_1 = new JButton("Now");
-		btnNewButton_1.setBounds(885, 728, 168, 56);
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 47));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
-		contentPane.add(btnNewButton_1);
+		JButton MaxChoiceBnft = new JButton("");
+		MaxChoiceBnft.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		MaxChoiceBnft.setIcon(new ImageIcon(Retirement_MaxChoiceBenefits.class.getResource("/images/NowButton1.png")));
+		MaxChoiceBnft.setForeground(Color.WHITE);
+		MaxChoiceBnft.setFont(new Font("Verdana", Font.BOLD, 54));
+		MaxChoiceBnft.setBackground(new Color(0, 64, 128));
+		MaxChoiceBnft.setBounds(866, 713, 290, 72);
+		contentPane.add(MaxChoiceBnft);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 811);
@@ -80,10 +93,9 @@ public class Retirement_MaxChoiceBenefits extends JFrame {
 		backbuttonSerene.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					PLRetirement_MaxChoice t = new PLRetirement_MaxChoice();
+					PaymentFrame t = new PaymentFrame();
 					t.show();
 					dispose();
-
 				}
 			}
 		});
