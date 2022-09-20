@@ -124,7 +124,7 @@ public class PLDreamComer extends JFrame {
 		btnNewButton_4_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					DreamComerBENEFITS t = new DreamComerBENEFITS();
+					MainDashboard t = new MainDashboard();
 					t.show();
 					dispose();
 
@@ -249,7 +249,7 @@ public class PLDreamComer extends JFrame {
 		JButton clickInfoSerendipity = new JButton("Click here for more info!");
 		clickInfoSerendipity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				DreamComerBENEFITS t = new DreamComerBENEFITS();
+				MainDashboard t = new MainDashboard();
 				t.show();
 				dispose();
 

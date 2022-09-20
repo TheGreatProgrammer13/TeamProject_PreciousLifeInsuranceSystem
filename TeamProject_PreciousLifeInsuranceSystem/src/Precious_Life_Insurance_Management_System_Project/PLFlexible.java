@@ -143,7 +143,7 @@ public class PLFlexible extends JFrame {
 		btnNewButton_4_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					FlexibleBENEFITS t = new FlexibleBENEFITS();
+					MainDashboard t = new MainDashboard();
 					t.show();
 					dispose();
 
@@ -314,7 +314,7 @@ public class PLFlexible extends JFrame {
 		JButton Flexbenefits = new JButton("Click here for more info!");
 		Flexbenefits.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				FlexibleBENEFITS t = new FlexibleBENEFITS();
+				MainDashboard t = new MainDashboard();
 				t.show();
 				dispose();
 			}
