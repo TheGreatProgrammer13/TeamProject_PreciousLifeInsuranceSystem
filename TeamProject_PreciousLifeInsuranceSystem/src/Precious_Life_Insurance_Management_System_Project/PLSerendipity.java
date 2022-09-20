@@ -51,19 +51,32 @@ public class PLSerendipity extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton Serendipity = new JButton("Now");
-		Serendipity.setForeground(Color.WHITE);
-		Serendipity.setFont(new Font("Verdana", Font.BOLD, 54));
-		Serendipity.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		Serendipity.setBackground(new Color(0, 64, 128));
-		Serendipity.setBounds(840, 113, 211, 64);
-		contentPane.add(Serendipity);
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 67, 305, 55);
+		contentPane.add(lblGetAQuote_1);
 		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(792, 59, 306, 44);
+		lblGetAQuote.setBounds(837, 67, 293, 55);
 		contentPane.add(lblGetAQuote);
+		
+		JButton PLSerendipityNow = new JButton("");
+		PLSerendipityNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				t.show();
+				dispose();
+			}
+		});
+		PLSerendipityNow.setIcon(new ImageIcon(PLSerendipity.class.getResource("/images/NowButton1.png")));
+		PLSerendipityNow.setForeground(Color.WHITE);
+		PLSerendipityNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLSerendipityNow.setBackground(new Color(0, 64, 128));
+		PLSerendipityNow.setBounds(866, 120, 290, 72);
+		contentPane.add(PLSerendipityNow);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(148, 150, 387, 89);

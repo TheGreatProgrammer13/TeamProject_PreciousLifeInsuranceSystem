@@ -106,7 +106,14 @@ public class LifeInsurancePolicy extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainDashboard t = new MainDashboard();
+				t.show();
+				dispose();
+			}
+		});
 		btnNewButton.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/logoPng-MIDSIZE.png")));
 		btnNewButton.setBorder(null);
 		btnNewButton.setBackground(new Color(0, 84, 168));

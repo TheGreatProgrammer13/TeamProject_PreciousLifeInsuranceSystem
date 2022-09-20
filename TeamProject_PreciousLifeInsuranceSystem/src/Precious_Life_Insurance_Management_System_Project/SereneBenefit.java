@@ -52,19 +52,32 @@ public class SereneBenefit extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setForeground(Color.WHITE);
-		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(827, 662, 306, 44);
-		contentPane.add(lblGetAQuote);
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 663, 305, 55);
+		contentPane.add(lblGetAQuote_1);
 		
-		JButton Serene = new JButton("Now");
-		Serene.setForeground(new Color(0, 64, 128));
-		Serene.setFont(new Font("Verdana", Font.BOLD, 47));
-		Serene.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		Serene.setBackground(new Color(255, 255, 255));
-		Serene.setBounds(888, 716, 168, 56);
-		contentPane.add(Serene);
+		JButton BSereneNow = new JButton("");
+		BSereneNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				t.show();
+				dispose();
+			}
+		});
+		BSereneNow.setIcon(new ImageIcon(SereneBenefit.class.getResource("/images/NowButton1.png")));
+		BSereneNow.setForeground(Color.WHITE);
+		BSereneNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		BSereneNow.setBackground(new Color(0, 64, 128));
+		BSereneNow.setBounds(866, 716, 290, 72);
+		contentPane.add(BSereneNow);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242,200,71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 663, 293, 55);
+		contentPane.add(lblGetAQuote);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 811);
@@ -305,51 +318,5 @@ public class SereneBenefit extends JFrame {
 		lblNewLabel_3_2_3_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
 		lblNewLabel_3_2_3_2.setBounds(689, 350, 457, 32);
 		contentPane.add(lblNewLabel_3_2_3_2);
-		
-		JLabel lblNewLabel_3_2_6_1_5 = new JLabel("Loyalty bonus");
-		lblNewLabel_3_2_6_1_5.setForeground(new Color(0, 0, 145));
-		lblNewLabel_3_2_6_1_5.setFont(new Font("Microsoft YaHei", Font.BOLD, 15));
-		lblNewLabel_3_2_6_1_5.setBounds(689, 390, 429, 32);
-		contentPane.add(lblNewLabel_3_2_6_1_5);
-		
-		JLabel lblNewLabel_3_2_12 = new JLabel("Maintain the validity of your insurance for at");
-		lblNewLabel_3_2_12.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_12.setBounds(689, 419, 457, 32);
-		contentPane.add(lblNewLabel_3_2_12);
-		
-		JLabel lblNewLabel_3_2_1_6 = new JLabel("least 10 years to qualify for a loyalty bonus.");
-		lblNewLabel_3_2_1_6.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_1_6.setBounds(689, 442, 457, 32);
-		contentPane.add(lblNewLabel_3_2_1_6);
-		
-		JLabel lblNewLabel_3_2_2_4 = new JLabel("The bonus might be used as an additional");
-		lblNewLabel_3_2_2_4.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_2_4.setBounds(689, 468, 457, 32);
-		contentPane.add(lblNewLabel_3_2_2_4);
-		
-		JLabel lblNewLabel_3_2_3_3 = new JLabel("source of funds to raise your investment or");
-		lblNewLabel_3_2_3_3.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_3.setBounds(689, 494, 457, 32);
-		contentPane.add(lblNewLabel_3_2_3_3);
-		
-		JLabel lblNewLabel_3_2_4_1 = new JLabel("just to accelerate the achievement of your");
-		lblNewLabel_3_2_4_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_4_1.setBounds(689, 519, 457, 32);
-		contentPane.add(lblNewLabel_3_2_4_1);
-		
-		JLabel lblNewLabel_3_2_5_1 = new JLabel("ambitions. One of the criteria influencing the");
-		lblNewLabel_3_2_5_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_5_1.setBounds(689, 545, 457, 32);
-		contentPane.add(lblNewLabel_3_2_5_1);
-		
-		JLabel lblNewLabel_3_2_6_2 = new JLabel("loyalty incentive, which is not guaranteed, is");
-		lblNewLabel_3_2_6_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_6_2.setBounds(689, 570, 429, 32);
-		contentPane.add(lblNewLabel_3_2_6_2);
-		
-		JLabel lblNewLabel_3_2_6_2_1 = new JLabel("the fund's average monthly balance.");
-		lblNewLabel_3_2_6_2_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_6_2_1.setBounds(689, 596, 429, 32);
-		contentPane.add(lblNewLabel_3_2_6_2_1);
 	}
 }

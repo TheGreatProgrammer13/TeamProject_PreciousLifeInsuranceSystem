@@ -50,6 +50,26 @@ public class HirayaBenefits extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 659, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 659, 293, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton DollarNow = new JButton("");
+		DollarNow.setIcon(new ImageIcon(HirayaBenefits.class.getResource("/images/NowButton1.png")));
+		DollarNow.setForeground(Color.WHITE);
+		DollarNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		DollarNow.setBackground(new Color(0, 64, 128));
+		DollarNow.setBounds(866, 712, 290, 72);
+		contentPane.add(DollarNow);
+		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(144, 674, 226, 89);
 		panel_1_1_1.setBorder(null);
@@ -68,21 +88,6 @@ public class HirayaBenefits extends JFrame {
 		panel_1_1_1.add(lblNewLabel);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
 		lblNewLabel.setForeground(new Color(255, 255, 255));
-		
-		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setForeground(Color.WHITE);
-		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(824, 674, 306, 44);
-		contentPane.add(lblGetAQuote);
-		
-		JButton Hiraya = new JButton("Now");
-		Hiraya.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-		Hiraya.setForeground(new Color(255, 255, 255));
-		Hiraya.setFont(new Font("Verdana", Font.BOLD, 47));
-		Hiraya.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		Hiraya.setBackground(new Color(0, 64, 128));
-		Hiraya.setBounds(885, 728, 172, 56);
-		contentPane.add(Hiraya);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 811);
@@ -144,7 +149,7 @@ public class HirayaBenefits extends JFrame {
 		
 		JLabel lblNewLabel_6_1 = new JLabel("New label");
 		lblNewLabel_6_1.setIcon(new ImageIcon(HirayaBenefits.class.getResource("/images/HirayaPic3.png")));
-		lblNewLabel_6_1.setBounds(-10, 651, 1156, 257);
+		lblNewLabel_6_1.setBounds(-10, 651, 1166, 257);
 		contentPane.add(lblNewLabel_6_1);
 		
 		JLabel lblNewLabel_4 = new JLabel("● BENEFITS");

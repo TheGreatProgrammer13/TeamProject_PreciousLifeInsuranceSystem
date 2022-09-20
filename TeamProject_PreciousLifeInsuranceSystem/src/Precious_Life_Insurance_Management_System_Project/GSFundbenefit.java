@@ -46,7 +46,7 @@ public class GSFundbenefit  extends JFrame {
 	public GSFundbenefit() {
 		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1170, 843);
+		setBounds(100, 100, 1170, 742);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -54,31 +54,32 @@ public class GSFundbenefit  extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel lblBUY_1 = new JLabel("BUY");
+		lblBUY_1.setForeground(new Color(255, 255, 255));
+		lblBUY_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblBUY_1.setBounds(886, 79, 118, 44);
+		contentPane.add(lblBUY_1);
+		
 		JLabel lblBUY = new JLabel("BUY");
-		lblBUY.setForeground(Color.WHITE);
+		lblBUY.setForeground(new Color(242,200,71));
 		lblBUY.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY.setBounds(813, 69, 306, 44);
+		lblBUY.setBounds(876, 79, 118, 44);
 		contentPane.add(lblBUY);
 		
-		JButton btnNewButton_1 = new JButton(">Now!");
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setBackground(new Color(0, 64, 128));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 54));
-		btnNewButton_1.setBounds(849, 123, 234, 64);
-		contentPane.add(btnNewButton_1);
+		JButton FundNow = new JButton("");
+		FundNow.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\NowButton1.png"));
+		FundNow.setForeground(new Color(255, 255, 255));
+		FundNow.setBackground(new Color(0, 64, 128));
+		FundNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		FundNow.setBounds(876, 123, 290, 72);
+		contentPane.add(FundNow);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, -2, 118, 808);
+		panel.setBounds(0, -2, 118, 707);
 		panel.setLayout(null);
 		panel.setBorder(null);
 		panel.setBackground(new Color(0, 84, 168));
 		contentPane.add(panel);
-		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/Retirement_Logo.png")));
-		lblNewLabel_2.setBounds(10, 157, 98, 86);
-		panel.add(lblNewLabel_2);
 		
 		JButton backInvestment = new JButton("");
 		backInvestment.addActionListener(new ActionListener() {
@@ -94,7 +95,7 @@ public class GSFundbenefit  extends JFrame {
 		backInvestment.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/backbutton.png")));
 		backInvestment.setBorder(null);
 		backInvestment.setBackground(new Color(0, 84, 168));
-		backInvestment.setBounds(25, 710, 62, 55);
+		backInvestment.setBounds(26, 597, 62, 55);
 		panel.add(backInvestment);
 		
 		JButton btnNewButton = new JButton("New button");
@@ -111,23 +112,28 @@ public class GSFundbenefit  extends JFrame {
 		btnNewButton.setIcon(new ImageIcon(GSFundbenefit.class.getResource("/images/logoPng-MIDSIZE.png")));
 		btnNewButton.setBorder(null);
 		btnNewButton.setBackground(new Color(0, 84, 168));
-		btnNewButton.setBounds(25, 21, 98, 115);
+		btnNewButton.setBounds(20, 21, 98, 115);
 		panel.add(btnNewButton);
 		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(GSFundbenefit.class.getResource("/images/Proj/investlogo.png")));
+		lblNewLabel_2.setBounds(10, 146, 98, 105);
+		panel.add(lblNewLabel_2);
+		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(117, -2, 42, 838);
+		panel_1.setBounds(117, -2, 42, 707);
 		panel_1.setBorder(null);
 		panel_1.setBackground(new Color(0, 64, 128));
 		contentPane.add(panel_1);
 		
 		JPanel panel_1_1 = new JPanel();
-		panel_1_1.setBounds(158, -2, 42, 838);
+		panel_1_1.setBounds(158, -2, 42, 707);
 		panel_1_1.setBorder(null);
 		panel_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1);
 		
 		JPanel panel_1_1_1 = new JPanel();
-		panel_1_1_1.setBounds(198, 155, 244, 89);
+		panel_1_1_1.setBounds(198, 155, 258, 89);
 		panel_1_1_1.setBorder(null);
 		panel_1_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1_1);
@@ -255,7 +261,7 @@ public class GSFundbenefit  extends JFrame {
 		contentPane.add(lblNewLabel_5_5_1);
 
 		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setBounds(200, 0, 948, 163);
+		lblNewLabel_7.setBounds(200, 0, 948, 260);
 		lblNewLabel_7.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/GSfundbg.png")));
 		contentPane.add(lblNewLabel_7);
 		

@@ -46,7 +46,7 @@ public class DollarBundlebenefit extends JFrame {
 	public DollarBundlebenefit() {
 		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1170, 843);
+		setBounds(100, 100, 1170, 742);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -54,18 +54,31 @@ public class DollarBundlebenefit extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton_1 = new JButton(">Now!");
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setBackground(new Color(0, 64, 128));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 54));
-		btnNewButton_1.setBounds(849, 123, 234, 64);
-		contentPane.add(btnNewButton_1);
+		JButton DollarNow = new JButton("");
+		DollarNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				t.show();
+				dispose();
+			}
+		});
+		DollarNow.setIcon(new ImageIcon(DollarBundlebenefit.class.getResource("/images/NowButton1.png")));
+		DollarNow.setForeground(Color.WHITE);
+		DollarNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		DollarNow.setBackground(new Color(0, 64, 128));
+		DollarNow.setBounds(866, 119, 290, 72);
+		contentPane.add(DollarNow);
+		
+		JLabel lblBUY_1 = new JLabel("BUY");
+		lblBUY_1.setForeground(Color.WHITE);
+		lblBUY_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblBUY_1.setBounds(876, 75, 118, 44);
+		contentPane.add(lblBUY_1);
 		
 		JLabel lblBUY = new JLabel("BUY");
-		lblBUY.setForeground(new Color(235, 200, 1));
+		lblBUY.setForeground(new Color(242, 200, 71));
 		lblBUY.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY.setBounds(813, 69, 306, 44);
+		lblBUY.setBounds(866, 75, 118, 44);
 		contentPane.add(lblBUY);
 		
 		JPanel panel = new JPanel();
@@ -74,11 +87,6 @@ public class DollarBundlebenefit extends JFrame {
 		panel.setBorder(null);
 		panel.setBackground(new Color(0, 84, 168));
 		contentPane.add(panel);
-		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon(DollarBundlebenefit.class.getResource("/images/Retirement_Logo.png")));
-		lblNewLabel_2.setBounds(10, 157, 98, 86);
-		panel.add(lblNewLabel_2);
 		
 		JButton btnNewButton_4 = new JButton("");
 		btnNewButton_4.addActionListener(new ActionListener() {
@@ -94,7 +102,7 @@ public class DollarBundlebenefit extends JFrame {
 		btnNewButton_4.setIcon(new ImageIcon(DollarBundlebenefit.class.getResource("/images/backbutton.png")));
 		btnNewButton_4.setBorder(null);
 		btnNewButton_4.setBackground(new Color(0, 84, 168));
-		btnNewButton_4.setBounds(25, 710, 62, 55);
+		btnNewButton_4.setBounds(25, 606, 62, 55);
 		panel.add(btnNewButton_4);
 		
 		JButton btnNewButton = new JButton("New button");
@@ -114,6 +122,11 @@ public class DollarBundlebenefit extends JFrame {
 		btnNewButton.setBounds(25, 21, 98, 115);
 		panel.add(btnNewButton);
 		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(DollarBundlebenefit.class.getResource("/images/Proj/investlogo.png")));
+		lblNewLabel_2.setBounds(10, 146, 103, 105);
+		panel.add(lblNewLabel_2);
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(117, -2, 42, 838);
 		panel_1.setBorder(null);
@@ -127,7 +140,7 @@ public class DollarBundlebenefit extends JFrame {
 		contentPane.add(panel_1_1);
 		
 		JPanel panel_1_1_1 = new JPanel();
-		panel_1_1_1.setBounds(198, 155, 420, 89);
+		panel_1_1_1.setBounds(200, 152, 420, 89);
 		panel_1_1_1.setBorder(null);
 		panel_1_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1_1);
@@ -255,7 +268,7 @@ public class DollarBundlebenefit extends JFrame {
 		contentPane.add(lblNewLabel_5_5_1);
 
 		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setBounds(200, 0, 948, 163);
+		lblNewLabel_7.setBounds(200, 0, 948, 260);
 		lblNewLabel_7.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/dollarbg.png")));
 		contentPane.add(lblNewLabel_7);
 		
@@ -268,7 +281,4 @@ public class DollarBundlebenefit extends JFrame {
 	
 
 	}
-
-
-
 }

@@ -46,7 +46,7 @@ public class UnionFund  extends JFrame {
 	public UnionFund() {
 		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1170, 843);
+		setBounds(100, 100, 1170, 742);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -54,18 +54,24 @@ public class UnionFund  extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton_1 = new JButton(">Now!");
-		btnNewButton_1.setForeground(new Color(0, 64, 128));
-		btnNewButton_1.setBackground(new Color(0, 64, 128));
-		btnNewButton_1.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		btnNewButton_1.setFont(new Font("Verdana", Font.BOLD, 54));
-		btnNewButton_1.setBounds(849, 123, 234, 64);
-		contentPane.add(btnNewButton_1);
+		JLabel lblBUY_1 = new JLabel("BUY");
+		lblBUY_1.setForeground(Color.WHITE);
+		lblBUY_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblBUY_1.setBounds(876, 71, 118, 44);
+		contentPane.add(lblBUY_1);
+		
+		JButton UnionNow = new JButton("");
+		UnionNow.setIcon(new ImageIcon(UnionFund.class.getResource("/images/NowButton1.png")));
+		UnionNow.setForeground(Color.WHITE);
+		UnionNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		UnionNow.setBackground(new Color(0, 64, 128));
+		UnionNow.setBounds(866, 115, 290, 72);
+		contentPane.add(UnionNow);
 		
 		JLabel lblBUY = new JLabel("BUY");
-		lblBUY.setForeground(Color.WHITE);
+		lblBUY.setForeground(new Color(242, 200, 71));
 		lblBUY.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY.setBounds(813, 69, 306, 44);
+		lblBUY.setBounds(866, 71, 118, 44);
 		contentPane.add(lblBUY);
 		
 		JPanel panel = new JPanel();
@@ -76,8 +82,8 @@ public class UnionFund  extends JFrame {
 		contentPane.add(panel);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/Retirement_Logo.png")));
-		lblNewLabel_2.setBounds(10, 157, 98, 86);
+		lblNewLabel_2.setIcon(new ImageIcon(UnionFund.class.getResource("/images/Proj/investlogo.png")));
+		lblNewLabel_2.setBounds(10, 154, 103, 105);
 		panel.add(lblNewLabel_2);
 		
 		JButton btnNewButton_4 = new JButton("");
@@ -94,7 +100,7 @@ public class UnionFund  extends JFrame {
 		btnNewButton_4.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/backbutton.png")));
 		btnNewButton_4.setBorder(null);
 		btnNewButton_4.setBackground(new Color(0, 84, 168));
-		btnNewButton_4.setBounds(25, 710, 62, 55);
+		btnNewButton_4.setBounds(22, 608, 62, 55);
 		panel.add(btnNewButton_4);
 		
 		JButton btnNewButton = new JButton("New button");
@@ -146,12 +152,12 @@ public class UnionFund  extends JFrame {
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		
 		JLabel lblNewLabel_3 = new JLabel("enables you to potentially earn modest returns from your investments.");
-		lblNewLabel_3.setBounds(370, 303, 605, 32);
+		lblNewLabel_3.setBounds(389, 303, 605, 32);
 		lblNewLabel_3.setFont(new Font("Microsoft YaHei", Font.ITALIC, 17));
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_3_2 = new JLabel("PreciousLife Union Fund"); 
-		lblNewLabel_3_2.setBounds(550, 270, 299, 32);
+		lblNewLabel_3_2.setBounds(569, 270, 299, 32);
 		lblNewLabel_3_2.setFont(new Font("Microsoft YaHei", Font.BOLD, 19));
 		contentPane.add(lblNewLabel_3_2);
 		
@@ -188,7 +194,7 @@ public class UnionFund  extends JFrame {
 		contentPane.add(lblNewLabel_3_2_1_1_1_1_5);
 		
 		JPanel panel_1_1_2 = new JPanel();
-		panel_1_1_2.setBounds(234, 420, 12, 156);
+		panel_1_1_2.setBounds(234, 444, 12, 103);
 		panel_1_1_2.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		panel_1_1_2.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1_2);
@@ -256,7 +262,7 @@ public class UnionFund  extends JFrame {
 		contentPane.add(lblNewLabel_5_5_1);
 
 		JLabel lblNewLabel_7 = new JLabel("");
-		lblNewLabel_7.setBounds(200, 0, 949, 163);
+		lblNewLabel_7.setBounds(200, 0, 949, 260);
 		lblNewLabel_7.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/Unionbg.png")));
 		contentPane.add(lblNewLabel_7);
 		

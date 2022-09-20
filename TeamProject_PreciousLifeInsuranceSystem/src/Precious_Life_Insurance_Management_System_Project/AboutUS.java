@@ -47,7 +47,7 @@ public class AboutUS extends JFrame {
 		setBackground(new Color(255, 255, 255));
 		setUndecorated(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 0, 933, 588);
+		setBounds(0, 0, 933, 605);
 		contentPane = new JPanel();
 		contentPane.setOpaque(false);
 		contentPane.setToolTipText("");

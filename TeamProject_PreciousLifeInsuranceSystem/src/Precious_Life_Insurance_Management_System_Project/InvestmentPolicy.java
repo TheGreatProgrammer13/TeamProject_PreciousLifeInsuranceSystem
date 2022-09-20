@@ -49,8 +49,8 @@ public class InvestmentPolicy  extends JFrame{
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
-		lblNewLabel_4.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/Retirement_Logo.png")));
-		lblNewLabel_4.setBounds(271, 38, 96, 91);
+		lblNewLabel_4.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/Proj/investlogo.png")));
+		lblNewLabel_4.setBounds(271, 38, 101, 91);
 		contentPane.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_3 = new JLabel("Investment Policy");
@@ -58,7 +58,7 @@ public class InvestmentPolicy  extends JFrame{
 		lblNewLabel_3.setBounds(419, 54, 527, 50);
 		contentPane.add(lblNewLabel_3);
 		
-		JButton GSFund = new JButton("New button");
+		JButton GSFund = new JButton("");
 		GSFund.setForeground(new Color(0, 0, 0));
 		GSFund.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -67,12 +67,11 @@ public class InvestmentPolicy  extends JFrame{
 				dispose();
 			}
 		});
-		GSFund.setBounds(28, 247, 351, 472);
-		GSFund.setBorder(null);
+		GSFund.setBounds(50, 247, 317, 472);
 		GSFund.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/GSFund.png")));
 		contentPane.add(GSFund);
 		
-		JButton DollarBundle = new JButton("New button");
+		JButton DollarBundle = new JButton("");
 		DollarBundle.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -82,12 +81,11 @@ public class InvestmentPolicy  extends JFrame{
 				
 			}
 		});
-		DollarBundle.setBounds(407, 247, 345, 472);
-		DollarBundle.setBorder(null);
+		DollarBundle.setBounds(420, 247, 317, 472);
 		DollarBundle.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/DollarBundle.png")));
 		contentPane.add(DollarBundle);
 		
-		JButton UnionFund = new JButton("New button");
+		JButton UnionFund = new JButton("");
 		UnionFund.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -97,8 +95,7 @@ public class InvestmentPolicy  extends JFrame{
 				
 			}
 		});
-		UnionFund.setBounds(783, 247, 345, 472);
-		UnionFund.setBorder(null);
+		UnionFund.setBounds(794, 247, 317, 472);
 		UnionFund.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/UnionFund.png")));
 		contentPane.add(UnionFund);
 		
@@ -109,7 +106,14 @@ public class InvestmentPolicy  extends JFrame{
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainDashboard t = new MainDashboard();
+				t.show();
+				dispose();
+			}
+		});
 		btnNewButton.setIcon(new ImageIcon(InvestmentPolicy.class.getResource("/images/logoPng-MIDSIZE.png")));
 		btnNewButton.setBorder(null);
 		btnNewButton.setBackground(new Color(0, 84, 168));

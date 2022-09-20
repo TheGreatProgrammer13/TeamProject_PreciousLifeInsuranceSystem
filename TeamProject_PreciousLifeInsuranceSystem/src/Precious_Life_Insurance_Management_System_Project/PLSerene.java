@@ -60,18 +60,31 @@ public class PLSerene extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton Serene = new JButton("Now");
-		Serene.setForeground(new Color(255, 255, 255));
-		Serene.setBackground(new Color(0, 64, 128));
-		Serene.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		Serene.setFont(new Font("Verdana", Font.BOLD, 54));
-		Serene.setBounds(861, 123, 211, 64);
-		contentPane.add(Serene);
+		JButton PLSereneNow = new JButton("");
+		PLSereneNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LifeInsurancePolicy t = new LifeInsurancePolicy();
+				t.show();
+				dispose();
+			}
+		});
+		PLSereneNow.setIcon(new ImageIcon(PLSerene.class.getResource("/images/NowButton1.png")));
+		PLSereneNow.setForeground(Color.WHITE);
+		PLSereneNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLSereneNow.setBackground(new Color(0, 64, 128));
+		PLSereneNow.setBounds(866, 121, 290, 72);
+		contentPane.add(PLSereneNow);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 68, 305, 55);
+		contentPane.add(lblGetAQuote_1);
 		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(813, 69, 306, 44);
+		lblGetAQuote.setBounds(837, 68, 293, 55);
 		contentPane.add(lblGetAQuote);
 		
 		JPanel panel = new JPanel();
