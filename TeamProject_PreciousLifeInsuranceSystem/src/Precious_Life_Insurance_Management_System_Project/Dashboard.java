@@ -126,6 +126,13 @@ public class Dashboard extends JFrame {
 		JButton btbEducation = new JButton("New button");
 		btbEducation.setBounds(462, 228, 191, 171);
 		btbEducation.setBorder(null);
+		btbEducation.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EducationInsurancePolicy t = new EducationInsurancePolicy();
+				t.show();
+				dispose();
+			}
+		});
 		btbEducation.setIcon(new ImageIcon(Dashboard.class.getResource("/images/3.png")));
 		contentPane.add(btbEducation);
 		
