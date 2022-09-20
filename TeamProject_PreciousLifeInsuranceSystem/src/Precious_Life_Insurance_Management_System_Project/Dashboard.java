@@ -243,7 +243,14 @@ public class Dashboard extends JFrame {
 		btnNewButton_4.setBorder(null);
 		btnNewButton_4.setIcon(new ImageIcon(Dashboard.class.getResource("/images/backbutton.png")));
 		
-		JButton btbRetirement = new JButton("New button");
+		JButton btbRetirement = new JButton("");
+		btbRetirement.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				RetirementPolicy t = new RetirementPolicy();
+				t.show();
+				dispose();
+			}
+		});
 		btbRetirement.setIcon(new ImageIcon(Dashboard.class.getResource("/images/4.png")));
 		btbRetirement.setForeground(Color.WHITE);
 		btbRetirement.setBorder(null);

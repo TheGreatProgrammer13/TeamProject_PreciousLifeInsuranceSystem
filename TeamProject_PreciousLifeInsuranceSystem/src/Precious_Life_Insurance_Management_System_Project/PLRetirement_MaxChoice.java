@@ -50,6 +50,26 @@ public class PLRetirement_MaxChoice extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 73, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 73, 293, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton PLMaxChoiceNow = new JButton("");
+		PLMaxChoiceNow.setIcon(new ImageIcon(PLRetirement_MaxChoice.class.getResource("/images/NowButton1.png")));
+		PLMaxChoiceNow.setForeground(Color.WHITE);
+		PLMaxChoiceNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLMaxChoiceNow.setBackground(new Color(0, 64, 128));
+		PLMaxChoiceNow.setBounds(866, 126, 290, 72);
+		contentPane.add(PLMaxChoiceNow);
+		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(148, 150, 417, 89);
 		panel_1_1_1.setBorder(null);
@@ -138,17 +158,17 @@ public class PLRetirement_MaxChoice extends JFrame {
 		contentPane.add(lblNewLabel_3_1);
 		
 		JLabel lblNewLabel_3_2 = new JLabel("and can assist you in saving and can assist you in saving. PL Max Choice offers ");
-		lblNewLabel_3_2.setBounds(274, 329, 880, 32);
+		lblNewLabel_3_2.setBounds(263, 328, 880, 32);
 		lblNewLabel_3_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2);
 		
 		JLabel lblNewLabel_3_2_1 = new JLabel("investment options in addition to the insurance coverage it offers, enabling your");
-		lblNewLabel_3_2_1.setBounds(272, 355, 872, 32);
+		lblNewLabel_3_2_1.setBounds(263, 355, 872, 32);
 		lblNewLabel_3_2_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2_1);
 		
 		JLabel lblNewLabel_3_2_1_1 = new JLabel("money to increase over time.");
-		lblNewLabel_3_2_1_1.setBounds(271, 382, 835, 32);
+		lblNewLabel_3_2_1_1.setBounds(263, 380, 835, 32);
 		lblNewLabel_3_2_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2_1_1);
 		
