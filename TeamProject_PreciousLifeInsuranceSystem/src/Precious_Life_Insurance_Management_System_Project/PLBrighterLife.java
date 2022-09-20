@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.UIManager;
 
 public class PLBrighterLife extends JFrame {
 
@@ -46,6 +47,33 @@ public class PLBrighterLife extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(837, 79, 317, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(833, 79, 302, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton PLBL = new JButton("");
+		PLBL.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLBL.setIcon(new ImageIcon(PLBrighterLife.class.getResource("/images/NowButton1.png")));
+		PLBL.setForeground(Color.WHITE);
+		PLBL.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLBL.setBackground(new Color(0, 64, 128));
+		PLBL.setBounds(862, 132, 292, 72);
+		contentPane.add(PLBL);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(148, 150, 402, 89);
@@ -275,18 +303,19 @@ public class PLBrighterLife extends JFrame {
 		lblNewLabel_6.setBounds(189, 0, 965, 265);
 		contentPane.add(lblNewLabel_6);
 		
-		JButton btbBright = new JButton("");
-		btbBright.setBackground(new Color(255, 255, 255));
-		btbBright.setIcon(new ImageIcon(PLDreamComer.class.getResource("/images/Click for more info!.png")));
-		btbBright.setBorder(null);
-		btbBright.setBounds(266, 462, 134, 32);
-		btbBright.addActionListener(new ActionListener() {
+		JButton BLbenefits = new JButton("Click here for more info!");
+		BLbenefits.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BrighterLifeBENEFITS t = new BrighterLifeBENEFITS();
 				t.show();
 				dispose();
 			}
 		});
-		contentPane.add(btbBright);
+		BLbenefits.setForeground(Color.GRAY);
+		BLbenefits.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		BLbenefits.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		BLbenefits.setBackground(Color.WHITE);
+		BLbenefits.setBounds(230, 455, 260, 23);
+		contentPane.add(BLbenefits);
 	}
 }

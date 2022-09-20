@@ -126,7 +126,7 @@ public class EducationInsurancePolicy extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JButton btnNewButton_4 = new JButton("");
-		btnNewButton_4.setBounds(558, 739, 62, 55);
+		btnNewButton_4.setBounds(557, 729, 62, 55);
 		btnNewButton_4.setIcon(new ImageIcon(LifeInsurancePolicy.class.getResource("/images/backbutton.png")));
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

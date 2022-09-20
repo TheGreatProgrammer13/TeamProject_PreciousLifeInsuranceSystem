@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.UIManager;
 
 public class PLDreamComer extends JFrame {
 
@@ -46,6 +47,33 @@ public class PLDreamComer extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(837, 68, 317, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(833, 68, 302, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton PLDC = new JButton("");
+		PLDC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLDC.setIcon(new ImageIcon(PLDreamComer.class.getResource("/images/NowButton1.png")));
+		PLDC.setForeground(Color.WHITE);
+		PLDC.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLDC.setBackground(new Color(0, 64, 128));
+		PLDC.setBounds(862, 121, 292, 72);
+		contentPane.add(PLDC);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 806);
@@ -96,7 +124,7 @@ public class PLDreamComer extends JFrame {
 		btnNewButton_4_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					Dashboard t = new Dashboard();
+					DreamComerBENEFITS t = new DreamComerBENEFITS();
 					t.show();
 					dispose();
 
@@ -218,18 +246,20 @@ public class PLDreamComer extends JFrame {
 		lblNewLabel_6.setBounds(189, 0, 965, 265);
 		contentPane.add(lblNewLabel_6);
 		
-		JButton btbDream = new JButton("");
-		btbDream.setBackground(new Color(255, 255, 255));
-		btbDream.setIcon(new ImageIcon(PLDreamComer.class.getResource("/images/Click for more info!.png")));
-		btbDream.setBorder(null);
-		btbDream.setBounds(266, 462, 134, 32);
-		btbDream.addActionListener(new ActionListener() {
+		JButton clickInfoSerendipity = new JButton("Click here for more info!");
+		clickInfoSerendipity.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DreamComerBENEFITS t = new DreamComerBENEFITS();
 				t.show();
 				dispose();
+
 			}
 		});
-		contentPane.add(btbDream);
+		clickInfoSerendipity.setForeground(Color.GRAY);
+		clickInfoSerendipity.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		clickInfoSerendipity.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		clickInfoSerendipity.setBackground(Color.WHITE);
+		clickInfoSerendipity.setBounds(235, 457, 260, 23);
+		contentPane.add(clickInfoSerendipity);
 	}
 }

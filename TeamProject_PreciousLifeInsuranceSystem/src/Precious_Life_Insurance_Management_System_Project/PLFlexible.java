@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.UIManager;
 
 public class PLFlexible extends JFrame {
 
@@ -46,6 +47,33 @@ public class PLFlexible extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(837, 71, 317, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(833, 71, 302, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton PLFlex = new JButton("");
+		PLFlex.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLFlex.setIcon(new ImageIcon(PLFlexible.class.getResource("/images/NowButton1.png")));
+		PLFlex.setForeground(Color.WHITE);
+		PLFlex.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLFlex.setBackground(new Color(0, 64, 128));
+		PLFlex.setBounds(862, 124, 292, 72);
+		contentPane.add(PLFlex);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setLayout(null);
@@ -115,7 +143,7 @@ public class PLFlexible extends JFrame {
 		btnNewButton_4_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					Dashboard t = new Dashboard();
+					FlexibleBENEFITS t = new FlexibleBENEFITS();
 					t.show();
 					dispose();
 
@@ -157,7 +185,7 @@ public class PLFlexible extends JFrame {
 		contentPane.add(lblNewLabel_3_2_1);
 		
 		JLabel lblNewLabel_4 = new JLabel("BENEFITS");
-		lblNewLabel_4.setBounds(263, 470, 272, 72);
+		lblNewLabel_4.setBounds(291, 470, 272, 72);
 		lblNewLabel_4.setForeground(new Color(235, 200, 1));
 		lblNewLabel_4.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 60));
 		contentPane.add(lblNewLabel_4);
@@ -283,18 +311,19 @@ public class PLFlexible extends JFrame {
 		lblNewLabel_6.setBounds(189, 0, 965, 265);
 		contentPane.add(lblNewLabel_6);
 		
-		JButton btbFlex = new JButton("");
-		btbFlex.setBackground(new Color(255, 255, 255));
-		btbFlex.setIcon(new ImageIcon(PLDreamComer.class.getResource("/images/Click for more info!.png")));
-		btbFlex.setBorder(null);
-		btbFlex.setBounds(266, 462, 134, 32);
-		btbFlex.addActionListener(new ActionListener() {
+		JButton Flexbenefits = new JButton("Click here for more info!");
+		Flexbenefits.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				FlexibleBENEFITS t = new FlexibleBENEFITS();
 				t.show();
 				dispose();
 			}
 		});
-		contentPane.add(btbFlex);
+		Flexbenefits.setForeground(Color.GRAY);
+		Flexbenefits.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		Flexbenefits.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		Flexbenefits.setBackground(Color.WHITE);
+		Flexbenefits.setBounds(230, 452, 260, 23);
+		contentPane.add(Flexbenefits);
 	}
 }

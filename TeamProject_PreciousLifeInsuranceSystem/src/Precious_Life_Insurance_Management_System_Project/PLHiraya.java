@@ -54,13 +54,13 @@ public class PLHiraya extends JFrame {
 		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
 		lblGetAQuote_1.setForeground(Color.WHITE);
 		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote_1.setBounds(841, 68, 305, 55);
+		lblGetAQuote_1.setBounds(839, 68, 317, 55);
 		contentPane.add(lblGetAQuote_1);
 		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
 		lblGetAQuote.setForeground(new Color(242, 200, 71));
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(837, 68, 293, 55);
+		lblGetAQuote.setBounds(835, 68, 321, 55);
 		contentPane.add(lblGetAQuote);
 		
 		JButton PLHirayaNow = new JButton("");
@@ -75,7 +75,7 @@ public class PLHiraya extends JFrame {
 		PLHirayaNow.setForeground(Color.WHITE);
 		PLHirayaNow.setFont(new Font("Verdana", Font.BOLD, 54));
 		PLHirayaNow.setBackground(new Color(0, 64, 128));
-		PLHirayaNow.setBounds(866, 121, 290, 72);
+		PLHirayaNow.setBounds(864, 121, 292, 72);
 		contentPane.add(PLHirayaNow);
 		
 		JPanel panel_1_1_1 = new JPanel();

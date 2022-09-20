@@ -39,13 +39,40 @@ public class DreamComerBENEFITS extends JFrame {
 	 */
 	public DreamComerBENEFITS() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1170, 843);
+		setBounds(100, 100, 1170, 772);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JButton PLFlex = new JButton("");
+		PLFlex.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLFlex.setIcon(new ImageIcon(DreamComerBENEFITS.class.getResource("/images/NowButton1.png")));
+		PLFlex.setForeground(Color.WHITE);
+		PLFlex.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLFlex.setBackground(new Color(0, 64, 128));
+		PLFlex.setBounds(862, 642, 292, 72);
+		contentPane.add(PLFlex);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(837, 589, 317, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(833, 589, 302, 55);
+		contentPane.add(lblGetAQuote);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 806);
@@ -68,7 +95,7 @@ public class DreamComerBENEFITS extends JFrame {
 		btnNewButton_4.setIcon(new ImageIcon(PLDreamComer.class.getResource("/images/backbutton.png")));
 		btnNewButton_4.setBorder(null);
 		btnNewButton_4.setBackground(new Color(0, 84, 168));
-		btnNewButton_4.setBounds(24, 673, 62, 55);
+		btnNewButton_4.setBounds(24, 608, 62, 55);
 		panel.add(btnNewButton_4);
 		
 		JButton btnNewButton_4_1 = new JButton("");
@@ -112,7 +139,7 @@ public class DreamComerBENEFITS extends JFrame {
 		contentPane.add(panel_1);
 		
 		JPanel panel_1_1 = new JPanel();
-		panel_1_1.setBounds(148, 0, 42, 838);
+		panel_1_1.setBounds(148, 0, 42, 741);
 		panel_1_1.setBorder(null);
 		panel_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1);
