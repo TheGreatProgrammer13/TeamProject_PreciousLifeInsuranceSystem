@@ -51,19 +51,32 @@ public class PLHiraya extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton Hiraya = new JButton("Now");
-		Hiraya.setForeground(Color.WHITE);
-		Hiraya.setFont(new Font("Verdana", Font.BOLD, 54));
-		Hiraya.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		Hiraya.setBackground(new Color(0, 64, 128));
-		Hiraya.setBounds(832, 117, 211, 64);
-		contentPane.add(Hiraya);
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(839, 68, 317, 55);
+		contentPane.add(lblGetAQuote_1);
 		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(784, 63, 306, 44);
+		lblGetAQuote.setBounds(835, 68, 321, 55);
 		contentPane.add(lblGetAQuote);
+		
+		JButton PLHirayaNow = new JButton("");
+		PLHirayaNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLHirayaNow.setIcon(new ImageIcon(PLHiraya.class.getResource("/images/NowButton1.png")));
+		PLHirayaNow.setForeground(Color.WHITE);
+		PLHirayaNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLHirayaNow.setBackground(new Color(0, 64, 128));
+		PLHirayaNow.setBounds(864, 121, 292, 72);
+		contentPane.add(PLHirayaNow);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBorder(null);
@@ -310,7 +323,7 @@ public class PLHiraya extends JFrame {
 		clickInfoHiraya.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
 		clickInfoHiraya.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
 		clickInfoHiraya.setBackground(Color.WHITE);
-		clickInfoHiraya.setBounds(237, 463, 183, 23);
+		clickInfoHiraya.setBounds(237, 463, 265, 23);
 		contentPane.add(clickInfoHiraya);
 	}
 }

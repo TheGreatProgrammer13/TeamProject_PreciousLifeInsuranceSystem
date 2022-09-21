@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.SwingConstants;
 
 public class MainDashboard extends JFrame {
 
@@ -53,47 +54,12 @@ public class MainDashboard extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
+		panel.setBounds(-14, 0, 977, 75);
 		panel.setBackground(new Color(0, 45, 105));
 		panel.setForeground(new Color(0, 0, 255));
-		panel.setBounds(-14, 0, 991, 75);
+
 		contentPane.add(panel);
 		panel.setLayout(null);
-		
-		JButton DashboardMainLogOut = new JButton("");
-		DashboardMainLogOut.setBorder(null);
-		DashboardMainLogOut.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/logoutbutton2.png")));
-		DashboardMainLogOut.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(JOptionPane.showConfirmDialog(null, "Are you sure you want to Log out?","Confirmation", JOptionPane.YES_NO_OPTION) == 0 ) {
-					MainDashboard.this.dispose();
-				}
-			}
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				DashboardMainLogOut.setForeground(Color.red);
-			}
-			
-			public void mouseExited(MouseEvent e) {
-				DashboardMainLogOut.setForeground(Color.white);
-			}
-		});
-		DashboardMainLogOut.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e)
-			{
-				{
-					LoginFrame t = new LoginFrame();
-					t.show();
-					dispose();
-
-				}
-				
-			}
-			
-		});
-		DashboardMainLogOut.setFont(new Font("Poppins", Font.BOLD, 10));
-		DashboardMainLogOut.setBounds(818, 10, 163, 55);
-		panel.add(DashboardMainLogOut);
 		
 		JButton btnNewButton = new JButton("");
 		btnNewButton.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/SmallSize.png")));
@@ -101,6 +67,38 @@ public class MainDashboard extends JFrame {
 		btnNewButton.setBackground(new Color(0, 45, 105));
 		btnNewButton.setBounds(27, 10, 66, 55);
 		panel.add(btnNewButton);
+		
+		JButton DashboardMainLogOut = new JButton("");
+		DashboardMainLogOut.setBorder(null);
+		DashboardMainLogOut.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/logoutbutton2.png")));
+		DashboardMainLogOut.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				int result = JOptionPane.showConfirmDialog(null,"Are you sure you want to log out?", "Swing Tester",
+			               JOptionPane.YES_NO_OPTION,
+			               JOptionPane.QUESTION_MESSAGE);
+
+		            if(result == JOptionPane.YES_OPTION){
+		            	
+		    					LoginFrame t = new LoginFrame();
+		    					t.show();
+		    					dispose();
+
+		    			
+		            }else if (result == JOptionPane.NO_OPTION){
+		              
+		            	MainDashboard t = new MainDashboard();
+    					t.show();
+    					dispose();
+				}
+			}
+		});
+	
+		DashboardMainLogOut.setIcon(new ImageIcon(MainDashboard.class.getResource("/images/logoutbutton2.png")));
+		DashboardMainLogOut.setHorizontalAlignment(SwingConstants.CENTER);
+		DashboardMainLogOut.setFont(new Font("Tahoma", Font.BOLD, 14));
+		DashboardMainLogOut.setBounds(806, 10, 161, 55);
+		panel.add(DashboardMainLogOut);
 		
 		JButton DashboardMainAvailUsButton = new JButton("");
 		DashboardMainAvailUsButton.setBackground(new Color(255, 255, 255));

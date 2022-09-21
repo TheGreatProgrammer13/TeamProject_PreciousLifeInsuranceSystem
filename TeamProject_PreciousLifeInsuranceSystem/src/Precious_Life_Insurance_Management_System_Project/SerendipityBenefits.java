@@ -52,6 +52,33 @@ public class SerendipityBenefits extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 660, 305, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(837, 660, 293, 55);
+		contentPane.add(lblGetAQuote);
+		
+		JButton BSerendipityNow = new JButton("");
+		BSerendipityNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		BSerendipityNow.setIcon(new ImageIcon(SerendipityBenefits.class.getResource("/images/NowButton1.png")));
+		BSerendipityNow.setForeground(Color.WHITE);
+		BSerendipityNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		BSerendipityNow.setBackground(new Color(0, 64, 128));
+		BSerendipityNow.setBounds(866, 713, 290, 72);
+		contentPane.add(BSerendipityNow);
+		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(144, 674, 402, 89);
 		panel_1_1_1.setBorder(null);
@@ -70,21 +97,6 @@ public class SerendipityBenefits extends JFrame {
 		panel_1_1_1.add(lblNewLabel);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
 		lblNewLabel.setForeground(new Color(255, 255, 255));
-		
-		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setForeground(Color.WHITE);
-		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(824, 674, 306, 44);
-		contentPane.add(lblGetAQuote);
-		
-		JButton Serendipity = new JButton("Now");
-		Serendipity.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-		Serendipity.setForeground(new Color(0, 64, 128));
-		Serendipity.setFont(new Font("Verdana", Font.BOLD, 47));
-		Serendipity.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		Serendipity.setBackground(new Color(217, 217, 0));
-		Serendipity.setBounds(885, 728, 172, 56);
-		contentPane.add(Serendipity);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 108, 811);
@@ -144,7 +156,7 @@ public class SerendipityBenefits extends JFrame {
 		panel_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1);
 		
-		JLabel lblNewLabel_4 = new JLabel("● BENEFITS");
+		JLabel lblNewLabel_4 = new JLabel("BENEFITS");
 		lblNewLabel_4.setBounds(216, 30, 318, 72);
 		lblNewLabel_4.setForeground(new Color(235, 200, 1));
 		lblNewLabel_4.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 60));
@@ -152,7 +164,7 @@ public class SerendipityBenefits extends JFrame {
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setBounds(0, 651, 1257, 160);
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\SerenePic.png"));
+		lblNewLabel_6.setIcon(new ImageIcon(SerendipityBenefits.class.getResource("/images/Serene.png")));
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_3 = new JLabel("of PL");

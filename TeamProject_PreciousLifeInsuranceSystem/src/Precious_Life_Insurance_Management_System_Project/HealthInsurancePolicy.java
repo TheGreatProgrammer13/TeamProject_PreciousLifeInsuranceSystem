@@ -95,21 +95,39 @@ public class HealthInsurancePolicy extends JFrame {
 		contentPane.add(panel_1_1);
 		
 		JButton Health75 = new JButton("New button");
+		Health75.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PLWellBeing t = new PLWellBeing();
+				t.show();
+				dispose();
+			}
+		});
 		Health75.setIcon(new ImageIcon(HealthInsurancePolicy.class.getResource("/images/Health75.png")));
-		Health75.setBorder(null);
-		Health75.setBounds(47, 241, 334, 472);
+		Health75.setBounds(61, 241, 334, 472);
 		contentPane.add(Health75);
 		
 		JButton Health80 = new JButton("New button");
+		Health80.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PLGuarantee t = new PLGuarantee();
+				t.show();
+				dispose();
+			}
+		});
 		Health80.setIcon(new ImageIcon(HealthInsurancePolicy.class.getResource("/images/Health80.png")));
-		Health80.setBorder(null);
-		Health80.setBounds(424, 241, 334, 472);
+		Health80.setBounds(439, 241, 320, 472);
 		contentPane.add(Health80);
 		
 		JButton HealthCritical = new JButton("New button");
+		HealthCritical.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PLElderlyCare t = new PLElderlyCare();
+				t.show();
+				dispose();
+			}
+		});
 		HealthCritical.setIcon(new ImageIcon(HealthInsurancePolicy.class.getResource("/images/HealthCritical.png")));
-		HealthCritical.setBorder(null);
-		HealthCritical.setBounds(792, 241, 334, 472);
+		HealthCritical.setBounds(805, 241, 320, 472);
 		contentPane.add(HealthCritical);
 		
 		JLabel lblNewLabel = new JLabel("");

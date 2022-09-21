@@ -51,19 +51,32 @@ public class PLSerendipity extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton Serendipity = new JButton("Now");
-		Serendipity.setForeground(Color.WHITE);
-		Serendipity.setFont(new Font("Verdana", Font.BOLD, 54));
-		Serendipity.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		Serendipity.setBackground(new Color(0, 64, 128));
-		Serendipity.setBounds(840, 113, 211, 64);
-		contentPane.add(Serendipity);
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(841, 67, 305, 55);
+		contentPane.add(lblGetAQuote_1);
 		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
-		lblGetAQuote.setForeground(Color.WHITE);
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
 		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblGetAQuote.setBounds(792, 59, 306, 44);
+		lblGetAQuote.setBounds(837, 67, 293, 55);
 		contentPane.add(lblGetAQuote);
+		
+		JButton PLSerendipityNow = new JButton("");
+		PLSerendipityNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLSerendipityNow.setIcon(new ImageIcon(PLSerendipity.class.getResource("/images/NowButton1.png")));
+		PLSerendipityNow.setForeground(Color.WHITE);
+		PLSerendipityNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLSerendipityNow.setBackground(new Color(0, 64, 128));
+		PLSerendipityNow.setBounds(866, 120, 290, 72);
+		contentPane.add(PLSerendipityNow);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBounds(148, 150, 387, 89);
@@ -215,37 +228,37 @@ public class PLSerendipity extends JFrame {
 		panel_1_1_2.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1_2);
 		
-		JLabel lblNewLabel_5 = new JLabel("●");
+		JLabel lblNewLabel_5 = new JLabel("â—�");
 		lblNewLabel_5.setBounds(263, 575, 18, 13);
 		lblNewLabel_5.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_5_1 = new JLabel("●");
+		JLabel lblNewLabel_5_1 = new JLabel("â—�");
 		lblNewLabel_5_1.setBounds(263, 608, 18, 13);
 		lblNewLabel_5_1.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5_1);
 		
-		JLabel lblNewLabel_5_2 = new JLabel("●");
+		JLabel lblNewLabel_5_2 = new JLabel("â—�");
 		lblNewLabel_5_2.setBounds(263, 638, 18, 13);
 		lblNewLabel_5_2.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5_2);
 		
-		JLabel lblNewLabel_5_3 = new JLabel("●");
+		JLabel lblNewLabel_5_3 = new JLabel("â—�");
 		lblNewLabel_5_3.setBounds(263, 671, 18, 13);
 		lblNewLabel_5_3.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5_3);
 		
-		JLabel lblNewLabel_5_4 = new JLabel("●");
+		JLabel lblNewLabel_5_4 = new JLabel("â—�");
 		lblNewLabel_5_4.setBounds(263, 702, 18, 13);
 		lblNewLabel_5_4.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5_4);
 		
-		JLabel lblNewLabel_5_5 = new JLabel("●");
+		JLabel lblNewLabel_5_5 = new JLabel("â—�");
 		lblNewLabel_5_5.setBounds(263, 733, 18, 13);
 		lblNewLabel_5_5.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -270,7 +283,7 @@ public class PLSerendipity extends JFrame {
 		contentPane.add(lblNewLabel_3_1_1);
 		
 		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\SerendipityPic2.png"));
+		lblNewLabel_6.setIcon(new ImageIcon(PLSerendipity.class.getResource("/images/Serene.png")));
 		lblNewLabel_6.setBounds(189, 0, 988, 257);
 		contentPane.add(lblNewLabel_6);
 		

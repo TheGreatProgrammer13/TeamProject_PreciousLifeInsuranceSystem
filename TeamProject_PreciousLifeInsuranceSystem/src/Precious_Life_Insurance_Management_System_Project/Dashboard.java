@@ -29,7 +29,7 @@ public class Dashboard extends JFrame {
 	private JButton btnNewButton_5;
 	private JButton btnNewButton_6;
 	private JButton btnNewButton_7;
-	private JButton btnNewButton_8;
+	private JButton InvestmentPolicyP;
 	private JLabel lblNewLabel_1;
 	private JPanel panel;
 	private JLabel lblNewLabel_2;
@@ -82,6 +82,7 @@ public class Dashboard extends JFrame {
 			}
 		});
 		
+	
 		JLabel lblX = new JLabel("X");
 		lblX.setBounds(1030, 10, 18, 28);
 		contentPane.add(lblX);
@@ -126,49 +127,58 @@ public class Dashboard extends JFrame {
 		JButton btbEducation = new JButton("New button");
 		btbEducation.setBounds(462, 228, 191, 171);
 		btbEducation.setBorder(null);
+		btbEducation.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EducationInsurancePolicy t = new EducationInsurancePolicy();
+				t.show();
+				dispose();
+			}
+		});
 		btbEducation.setIcon(new ImageIcon(Dashboard.class.getResource("/images/3.png")));
 		contentPane.add(btbEducation);
 		
-		JButton btbInvestment = new JButton("New button");
-		btbInvestment.setBounds(663, 228, 191, 171);
-		btbInvestment.setBorder(null);
-		btbInvestment.setIcon(new ImageIcon(Dashboard.class.getResource("/images/4.png")));
-		contentPane.add(btbInvestment);
-		
 		contentPane_1 = new JPanel();
-		contentPane_1.setLayout(null);
 		contentPane_1.setFont(new Font("Poppins", Font.BOLD, 10));
 		contentPane_1.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane_1.setBackground(Color.WHITE);
 		contentPane_1.setBounds(0, 0, 1070, 577);
 		contentPane.add(contentPane_1);
+		contentPane_1.setLayout(null);
 		
 		btnNewButton_5 = new JButton("New button");
+		btnNewButton_5.setBounds(60, 228, 191, 171);
 		btnNewButton_5.setForeground(Color.WHITE);
 		btnNewButton_5.setBorder(null);
 		btnNewButton_5.setBackground(Color.WHITE);
 		btnNewButton_5.setAlignmentY(0.0f);
-		btnNewButton_5.setBounds(60, 228, 191, 171);
 		contentPane_1.add(btnNewButton_5);
 		
 		btnNewButton_6 = new JButton("New button");
-		btnNewButton_6.setBorder(null);
 		btnNewButton_6.setBounds(261, 228, 191, 171);
+		btnNewButton_6.setBorder(null);
 		contentPane_1.add(btnNewButton_6);
 		
 		btnNewButton_7 = new JButton("New button");
-		btnNewButton_7.setBorder(null);
 		btnNewButton_7.setBounds(462, 228, 191, 171);
+		btnNewButton_7.setBorder(null);
 		contentPane_1.add(btnNewButton_7);
 		
-		btnNewButton_8 = new JButton("New button");
-		btnNewButton_8.setBorder(null);
-		btnNewButton_8.setBounds(663, 228, 191, 171);
-		contentPane_1.add(btnNewButton_8);
+		InvestmentPolicyP = new JButton("");
+		InvestmentPolicyP.setBounds(663, 228, 173, 171);
+		InvestmentPolicyP.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				InvestmentPolicy t = new InvestmentPolicy();
+				t.show();
+				dispose();
+			}
+		});
+		InvestmentPolicyP.setIcon(new ImageIcon(Dashboard.class.getResource("/images/investtttttttttt.png")));
+		InvestmentPolicyP.setBorder(null);
+		contentPane_1.add(InvestmentPolicyP);
 		
 		panel = new JPanel();
-		panel.setBackground(new Color(0, 45, 105));
 		panel.setBounds(0, 0, 1070, 94);
+		panel.setBackground(new Color(0, 45, 105));
 		contentPane_1.add(panel);
 		panel.setLayout(null);
 		
@@ -183,6 +193,7 @@ public class Dashboard extends JFrame {
 				}
 			}
 		});
+
 		btnNewButton.setIcon(new ImageIcon(Dashboard.class.getResource("/images/SmallSize.png")));
 		btnNewButton.setBorder(null);
 		btnNewButton.setBackground(new Color(0, 45, 105));
@@ -194,35 +205,36 @@ public class Dashboard extends JFrame {
 		contentPane_1.add(lblNewLabel_1);
 		
 		lblNewLabel_2 = new JLabel("Life");
-		lblNewLabel_2.setFont(new Font("Poppins", Font.BOLD, 30));
 		lblNewLabel_2.setBounds(112, 417, 59, 35);
+		lblNewLabel_2.setFont(new Font("Poppins", Font.BOLD, 30));
 		contentPane_1.add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("Health");
-		lblNewLabel_3.setFont(new Font("Poppins", Font.BOLD, 30));
 		lblNewLabel_3.setBounds(300, 417, 101, 35);
+		lblNewLabel_3.setFont(new Font("Poppins", Font.BOLD, 30));
 		contentPane_1.add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("Education");
-		lblNewLabel_4.setFont(new Font("Poppins", Font.BOLD, 30));
 		lblNewLabel_4.setBounds(482, 417, 155, 35);
+		lblNewLabel_4.setFont(new Font("Poppins", Font.BOLD, 30));
 		contentPane_1.add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("Investment");
-		lblNewLabel_5.setFont(new Font("Poppins", Font.BOLD, 30));
 		lblNewLabel_5.setBounds(673, 417, 169, 35);
+		lblNewLabel_5.setFont(new Font("Poppins", Font.BOLD, 30));
 		contentPane_1.add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("What type of insurance plan are you going to avail?");
-		lblNewLabel_6.setFont(new Font("Poppins", Font.BOLD, 25));
 		lblNewLabel_6.setBounds(253, 137, 611, 55);
+		lblNewLabel_6.setFont(new Font("Poppins", Font.BOLD, 25));
 		contentPane_1.add(lblNewLabel_6);
+		lblNewLabel_7.setBounds(294, 482, 537, 36);
 		lblNewLabel_7.setForeground(new Color(128, 128, 128));
 		lblNewLabel_7.setFont(new Font("Poppins", Font.BOLD, 24));
-		lblNewLabel_7.setBounds(284, 495, 585, 36);
 		contentPane_1.add(lblNewLabel_7);
 		
 		btnNewButton_4 = new JButton("");
+		btnNewButton_4.setBounds(10, 104, 62, 55);
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
@@ -233,24 +245,30 @@ public class Dashboard extends JFrame {
 				}
 			}
 		});
-		btnNewButton_4.setBounds(10, 104, 62, 55);
 		contentPane_1.add(btnNewButton_4);
 		btnNewButton_4.setBackground(new Color(255, 255, 255));
 		btnNewButton_4.setBorder(null);
 		btnNewButton_4.setIcon(new ImageIcon(Dashboard.class.getResource("/images/backbutton.png")));
 		
-		JButton btbRetirement = new JButton("New button");
+		JButton btbRetirement = new JButton("");
+		btbRetirement.setBounds(852, 228, 191, 171);
+		btbRetirement.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				RetirementPolicy t = new RetirementPolicy();
+				t.show();
+				dispose();
+			}
+		});
 		btbRetirement.setIcon(new ImageIcon(Dashboard.class.getResource("/images/4.png")));
 		btbRetirement.setForeground(Color.WHITE);
 		btbRetirement.setBorder(null);
 		btbRetirement.setBackground(Color.WHITE);
 		btbRetirement.setAlignmentY(0.0f);
-		btbRetirement.setBounds(864, 228, 191, 171);
 		contentPane_1.add(btbRetirement);
 		
 		lblNewLabel_8 = new JLabel("Retirement");
-		lblNewLabel_8.setFont(new Font("Dialog", Font.BOLD, 30));
 		lblNewLabel_8.setBounds(874, 417, 169, 35);
+		lblNewLabel_8.setFont(new Font("Dialog", Font.BOLD, 30));
 		contentPane_1.add(lblNewLabel_8);
 	}
 }
