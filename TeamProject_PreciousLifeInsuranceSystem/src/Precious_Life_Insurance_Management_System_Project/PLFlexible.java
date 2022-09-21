@@ -174,7 +174,7 @@ public class PLFlexible extends JFrame {
 		lblNewLabel_3_1.setFont(new Font("Microsoft YaHei", Font.BOLD, 22));
 		contentPane.add(lblNewLabel_3_1);
 		
-		JLabel lblNewLabel_3_2 = new JLabel("enables you to build an education fund for your child’s future. Alongside the");
+		JLabel lblNewLabel_3_2 = new JLabel("enables you to build an education fund for your childâ€™s future. Alongside the");
 		lblNewLabel_3_2.setBounds(263, 314, 840, 32);
 		lblNewLabel_3_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		contentPane.add(lblNewLabel_3_2);
@@ -232,47 +232,47 @@ public class PLFlexible extends JFrame {
 		panel_1_1_2.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1_2);
 		
-		JLabel lblNewLabel_5 = new JLabel("●\n");
+		JLabel lblNewLabel_5 = new JLabel("â—�\n");
 		lblNewLabel_5.setBounds(263, 544, 18, 13);
 		lblNewLabel_5.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_3_2_2 = new JLabel("allow your money to grow over time. This will help meet your child’s school");
+		JLabel lblNewLabel_3_2_2 = new JLabel("allow your money to grow over time. This will help meet your childâ€™s school");
 		lblNewLabel_3_2_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		lblNewLabel_3_2_2.setBounds(263, 367, 840, 32);
 		contentPane.add(lblNewLabel_3_2_2);
 		
-		JLabel lblNewLabel_3_2_2_1 = new JLabel("expenses and secure your family’s future no matter what happens.\r\n\n");
+		JLabel lblNewLabel_3_2_2_1 = new JLabel("expenses and secure your familyâ€™s future no matter what happens.\r\n\n");
 		lblNewLabel_3_2_2_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 22));
 		lblNewLabel_3_2_2_1.setBounds(314, 392, 840, 32);
 		contentPane.add(lblNewLabel_3_2_2_1);
 		
-		JLabel lblNewLabel_5_1 = new JLabel("●\n");
+		JLabel lblNewLabel_5_1 = new JLabel("â—�\n");
 		lblNewLabel_5_1.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel_5_1.setBounds(263, 576, 18, 13);
 		contentPane.add(lblNewLabel_5_1);
 		
-		JLabel lblNewLabel_5_2 = new JLabel("●\n");
+		JLabel lblNewLabel_5_2 = new JLabel("â—�\n");
 		lblNewLabel_5_2.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel_5_2.setBounds(263, 606, 18, 13);
 		contentPane.add(lblNewLabel_5_2);
 		
-		JLabel lblNewLabel_5_3 = new JLabel("●\n");
+		JLabel lblNewLabel_5_3 = new JLabel("â—�\n");
 		lblNewLabel_5_3.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel_5_3.setBounds(263, 639, 18, 13);
 		contentPane.add(lblNewLabel_5_3);
 		
-		JLabel lblNewLabel_5_4 = new JLabel("●\n");
+		JLabel lblNewLabel_5_4 = new JLabel("â—�\n");
 		lblNewLabel_5_4.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel_5_4.setBounds(263, 670, 18, 13);
 		contentPane.add(lblNewLabel_5_4);
 		
-		JLabel lblNewLabel_5_6 = new JLabel("●\n");
+		JLabel lblNewLabel_5_6 = new JLabel("â—�\n");
 		lblNewLabel_5_6.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_6.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabel_5_6.setBounds(263, 701, 18, 13);
@@ -314,7 +314,7 @@ public class PLFlexible extends JFrame {
 		JButton Flexbenefits = new JButton("Click here for more info!");
 		Flexbenefits.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MainDashboard t = new MainDashboard();
+				FlexibleBENEFITS t = new FlexibleBENEFITS();
 				t.show();
 				dispose();
 			}

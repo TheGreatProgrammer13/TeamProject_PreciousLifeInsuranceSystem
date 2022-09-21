@@ -24,12 +24,13 @@ import javax.swing.DefaultComboBoxModel;
 import java.awt.Button;
 
 public class PaymentFrame extends JFrame {
+	
+	
 
 	private JPanel contentPane;
-	private JTextField textField_2;
+	private JTextField txt_FullNamePayment;
 	private JTextField textField_4;
-	private JTextField txt_EmailAddressPayment;
-	private JTextField textField_5;
+	private JTextField txt_DateOfBirthPayment;
 
 	/**
 	 * Launch the application.
@@ -51,6 +52,8 @@ public class PaymentFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public PaymentFrame() {
+		
+		
 		setBackground(new Color(255, 255, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1170, 843);
@@ -92,7 +95,7 @@ public class PaymentFrame extends JFrame {
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					Dashboard t = new Dashboard();
+					LifeInsurancePolicy t = new LifeInsurancePolicy();
 					t.show();
 					dispose();
 
@@ -156,14 +159,14 @@ public class PaymentFrame extends JFrame {
 		lblNewLabel_8_2.setFont(new Font("Poppins", Font.BOLD, 18));
 		contentPane.add(lblNewLabel_8_2);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(292, 415, 327, 40);
-		textField_2.setHorizontalAlignment(SwingConstants.LEFT);
-		textField_2.setForeground(Color.GRAY);
-		textField_2.setFont(new Font("Dialog", Font.PLAIN, 15));
-		textField_2.setColumns(10);
-		textField_2.setBackground(Color.WHITE);
-		contentPane.add(textField_2);
+		txt_FullNamePayment = new JTextField();
+		txt_FullNamePayment.setBounds(292, 415, 327, 40);
+		txt_FullNamePayment.setHorizontalAlignment(SwingConstants.LEFT);
+		txt_FullNamePayment.setForeground(Color.GRAY);
+		txt_FullNamePayment.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txt_FullNamePayment.setColumns(10);
+		txt_FullNamePayment.setBackground(Color.WHITE);
+		contentPane.add(txt_FullNamePayment);
 		
 		JLabel lblNewLabel_8_3 = new JLabel("GENDER");
 		lblNewLabel_8_3.setBounds(696, 372, 182, 32);
@@ -186,57 +189,96 @@ public class PaymentFrame extends JFrame {
 		textField_4.setBackground(Color.WHITE);
 		contentPane.add(textField_4);
 		
+		JComboBox ComboBoxPlan = new JComboBox();
+		ComboBoxPlan.setMaximumRowCount(20);
+		ComboBoxPlan.setFont(new Font("Dialog", Font.PLAIN, 18));
+		ComboBoxPlan.setBackground(Color.WHITE);
+		ComboBoxPlan.setBounds(696, 301, 327, 40);
+		contentPane.add(ComboBoxPlan);
+		
 		JComboBox comboBox_TypeOfInsurance = new JComboBox();
+		comboBox_TypeOfInsurance.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(comboBox_TypeOfInsurance.getSelectedItem().equals("Life Insurance"))
+				{	
+					ComboBoxPlan.removeAllItems();
+					ComboBoxPlan.setSelectedItem(null);
+					ComboBoxPlan.addItem("Serene");
+					ComboBoxPlan.addItem("Serendipity");
+					ComboBoxPlan.addItem("Hiraya");
+
+					}
+				else if(comboBox_TypeOfInsurance.getSelectedItem().equals("Health Insurance")){
+					
+					ComboBoxPlan.removeAllItems();
+					ComboBoxPlan.setSelectedItem(null);
+					ComboBoxPlan.addItem("Well-being");
+					ComboBoxPlan.addItem("Guarantee");
+					ComboBoxPlan.addItem("Elderly Care");
+
+					}
+				
+				else if(comboBox_TypeOfInsurance.getSelectedItem().equals("Education Insurance")){
+					
+					ComboBoxPlan.removeAllItems();
+					ComboBoxPlan.setSelectedItem(null);
+					ComboBoxPlan.addItem("Dream Comer");
+					ComboBoxPlan.addItem("Brighter Life");
+					ComboBoxPlan.addItem("Flexible");
+					
+					}
+				else if(comboBox_TypeOfInsurance.getSelectedItem().equals("Retirement Insurance")){
+					
+					ComboBoxPlan.removeAllItems();
+					ComboBoxPlan.setSelectedItem(null);
+					ComboBoxPlan.addItem("Stabilize");
+					ComboBoxPlan.addItem("Brighter Life");
+					ComboBoxPlan.addItem("Max Choice");
+
+					}
+				else if(comboBox_TypeOfInsurance.getSelectedItem().equals("Investment Insurance")){
+					
+					
+					ComboBoxPlan.removeAllItems();
+					ComboBoxPlan.setSelectedItem(null);
+					ComboBoxPlan.addItem("GS Fund");
+					ComboBoxPlan.addItem("Dollar Bundle");
+					ComboBoxPlan.addItem("Union Fund");
+					
+
+					} 
+				
+				
+			}
+		});
+		
 		comboBox_TypeOfInsurance.setBounds(292, 301, 327, 40);
 		comboBox_TypeOfInsurance.setFont(new Font("Poppins", Font.PLAIN, 18));
 		comboBox_TypeOfInsurance.setMaximumRowCount(20);
 		comboBox_TypeOfInsurance.setBackground(Color.WHITE);
 		
-		String A = "Life Insurance - Serene"; //1
-		String B = "Life Insurance - Hiraya"; //2
-		String C = "Health Insurance - Wellbeing"; //3 
-		String D = "Health Insurance - Guarantee"; //4
-		String E = "Health Insurance - Elderly Care"; //5
-		String F = "Education Insurance - Dream Comer"; //6
-		String G = "Education Insurance - Brighter Life"; //7
-		String H = "Education Insurance - Flexible"; //8
-		String I = "Retirement Insurance - Stabilize"; //9 
-		String J = "Retirement Insurance - Brighter Life"; //10
-		String K = "Retirement Insurance - Max Choice"; //11 
-		String L = "Investment - GS fund"; //12
-		String M = "Investment - Dollar Bundle"; //13
-		String N = "Investment - Union Fund"; //14
-		String O = "Retirement Insurance - Stabilize"; //15
+
 
 		
 		
-		comboBox_TypeOfInsurance.setModel(new DefaultComboBoxModel(new String[] { A, B ,C ,D ,E, F ,G ,H ,I ,J ,K ,L ,M ,N ,O, "Life Insurance - Serene", "Life Insurance - Serendipity", "Life Insurance - Hiraya", "Health Insurance - Wellbeing", "Health Insurance - Guarantee", "Health Insurance - Elderly Care", "Education Insurance - Dream Comer", "Education Insurance - Brighter Life", "Education Insurance - Flexible", "Retirement Insurance - Stabilize", "Retirement Insurance - Brighter Life", "Retirement Insurance - Max Choice", "Investment - GS fund", "Investment - Dollar Bundle", "Investment - Union Fund"}));
+		comboBox_TypeOfInsurance.setModel(new DefaultComboBoxModel(new String[] {"Life Insurance", "Health Insurance", "Education Insurance", "Retirement Insurance", "Investment Insurance"}));
 		contentPane.add(comboBox_TypeOfInsurance);
-	
 		
-		txt_EmailAddressPayment = new JTextField();
-		txt_EmailAddressPayment.setBounds(696, 301, 327, 40);
-		txt_EmailAddressPayment.setHorizontalAlignment(SwingConstants.LEFT);
-		txt_EmailAddressPayment.setForeground(Color.GRAY);
-		txt_EmailAddressPayment.setFont(new Font("Dialog", Font.PLAIN, 15));
-		txt_EmailAddressPayment.setColumns(10);
-		txt_EmailAddressPayment.setBackground(Color.WHITE);
-		contentPane.add(txt_EmailAddressPayment);
-		
-		JLabel lblNewLabel_8_2_2 = new JLabel("EMAIL ADDRESS");
+		JLabel lblNewLabel_8_2_2 = new JLabel("PLAN");
 		lblNewLabel_8_2_2.setBounds(699, 258, 182, 32);
 		lblNewLabel_8_2_2.setForeground(new Color(0, 0, 128));
 		lblNewLabel_8_2_2.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
 		contentPane.add(lblNewLabel_8_2_2);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(292, 522, 327, 40);
-		textField_5.setHorizontalAlignment(SwingConstants.LEFT);
-		textField_5.setForeground(Color.GRAY);
-		textField_5.setFont(new Font("Dialog", Font.PLAIN, 15));
-		textField_5.setColumns(10);
-		textField_5.setBackground(Color.WHITE);
-		contentPane.add(textField_5);
+		txt_DateOfBirthPayment = new JTextField();
+		txt_DateOfBirthPayment.setBounds(292, 522, 327, 40);
+		txt_DateOfBirthPayment.setHorizontalAlignment(SwingConstants.LEFT);
+		txt_DateOfBirthPayment.setForeground(Color.GRAY);
+		txt_DateOfBirthPayment.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txt_DateOfBirthPayment.setColumns(10);
+		txt_DateOfBirthPayment.setBackground(Color.WHITE);
+		contentPane.add(txt_DateOfBirthPayment);
 		
 		JLabel lblNewLabel_8_2_3 = new JLabel("DATE OF BIRTH");
 		lblNewLabel_8_2_3.setBounds(295, 479, 182, 32);
@@ -244,13 +286,13 @@ public class PaymentFrame extends JFrame {
 		lblNewLabel_8_2_3.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 18));
 		contentPane.add(lblNewLabel_8_2_3);
 		
-		JComboBox comboBox_1_1 = new JComboBox();
-		comboBox_1_1.setBounds(696, 415, 327, 40);
-		comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {"MALE ", "FEMALE"}));
-		comboBox_1_1.setMaximumRowCount(10);
-		comboBox_1_1.setFont(new Font("Dialog", Font.PLAIN, 18));
-		comboBox_1_1.setBackground(Color.WHITE);
-		contentPane.add(comboBox_1_1);
+		JComboBox comboBox_GenderPayment = new JComboBox();
+		comboBox_GenderPayment.setBounds(696, 415, 327, 40);
+		comboBox_GenderPayment.setModel(new DefaultComboBoxModel(new String[] {"MALE ", "FEMALE"}));
+		comboBox_GenderPayment.setMaximumRowCount(10);
+		comboBox_GenderPayment.setFont(new Font("Dialog", Font.PLAIN, 18));
+		comboBox_GenderPayment.setBackground(Color.WHITE);
+		contentPane.add(comboBox_GenderPayment);
 		
 		JLabel lblNewLabel_8_1 = new JLabel("MODE OF PAYMENT");
 		lblNewLabel_8_1.setForeground(new Color(0, 0, 128));
@@ -267,10 +309,102 @@ public class PaymentFrame extends JFrame {
 		contentPane.add(comboBox_1);
 		
 		Button button = new Button("PROCEED TO PAYMENT");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(comboBox_TypeOfInsurance.getSelectedItem().equals("Life Insurance") && ComboBoxPlan.getSelectedItem().equals("Serene") ) {
+					
+					
+					Payment_Life_Serene t = new Payment_Life_Serene();
+					t.show();
+					dispose();
+						
+				}else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Life Insurance") && ComboBoxPlan.getSelectedItem().equals("Serendipity") ){
+					
+					Payment_Life_Serendipity t = new Payment_Life_Serendipity();
+					t.show();
+					dispose();
+					
+				}
+				
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Life Insurance") && ComboBoxPlan.getSelectedItem().equals("Hiraya") ) {
+					Payment_Life_Hiraya t = new Payment_Life_Hiraya();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Health Insurance") && ComboBoxPlan.getSelectedItem().equals("Well-being") ) {
+					Payment_Health_Well_being t = new Payment_Health_Well_being();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Health Insurance") && ComboBoxPlan.getSelectedItem().equals("Guarantee") ) {
+					Payment_Health_Guarantee t = new Payment_Health_Guarantee();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Health Insurance") && ComboBoxPlan.getSelectedItem().equals("Elderly Care") ) {
+					Payment_Health_Elderly_Care t = new Payment_Health_Elderly_Care();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Education Insurance") && ComboBoxPlan.getSelectedItem().equals("Dream Comer") ) {
+					Payment_Education_Dream_Comer t = new Payment_Education_Dream_Comer();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Education Insurance") && ComboBoxPlan.getSelectedItem().equals("Brighter Life") ) {
+					Payment_Education_Brighter_life t = new Payment_Education_Brighter_life();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Education Insurance") && ComboBoxPlan.getSelectedItem().equals("Flexible") ) {
+					Payment_Education_Flexible t = new Payment_Education_Flexible();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Retirement Insurance") && ComboBoxPlan.getSelectedItem().equals("Stabilize") ) {
+					Payment_Retirement_Stabilize t = new Payment_Retirement_Stabilize();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Retirement Insurance") && ComboBoxPlan.getSelectedItem().equals("Brighter Life") ) {
+					Payment_Retirement_Brighter_Life t = new Payment_Retirement_Brighter_Life();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Retirement Insurance") && ComboBoxPlan.getSelectedItem().equals("Max Choice") ) {
+					Payment_Retirement_Max_Choice t = new Payment_Retirement_Max_Choice();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Investment Insurance") && ComboBoxPlan.getSelectedItem().equals("GS Fund") ) {
+					Payment_Investment_GS_Fund t = new Payment_Investment_GS_Fund();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Investment Insurance") && ComboBoxPlan.getSelectedItem().equals("Dollar Bundle") ) {
+					Payment_Investment_Dollar_Bundle t = new Payment_Investment_Dollar_Bundle();
+					t.show();
+					dispose();
+				}
+				else if (comboBox_TypeOfInsurance.getSelectedItem().equals("Investment Insurance") && ComboBoxPlan.getSelectedItem().equals("Union Fund") ) {
+					Payment_Investment_Union_Fund t = new Payment_Investment_Union_Fund();
+					t.show();
+					dispose();
+				}  
+				}
+				
+			
+		});
 		button.setForeground(new Color(234, 218, 128));
 		button.setFont(new Font("Dialog", Font.BOLD, 20));
 		button.setBackground(new Color(0, 45, 105));
-		button.setBounds(814, 745, 260, 49);
+		button.setBounds(694, 621, 260, 49);
 		contentPane.add(button);
+		
+		
+		
+	
 	}
 }
+

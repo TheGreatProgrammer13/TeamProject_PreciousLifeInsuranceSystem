@@ -93,7 +93,7 @@ public class Retirement_MaxChoiceBenefits extends JFrame {
 		backbuttonSerene.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					PaymentFrame t = new PaymentFrame();
+					PLRetirement_MaxChoice t = new PLRetirement_MaxChoice();
 					t.show();
 					dispose();
 				}

@@ -159,7 +159,7 @@ public class HirayaBenefits extends JFrame {
 		lblNewLabel_6_1.setBounds(-10, 651, 1166, 257);
 		contentPane.add(lblNewLabel_6_1);
 		
-		JLabel lblNewLabel_4 = new JLabel("● BENEFITS");
+		JLabel lblNewLabel_4 = new JLabel("BENEFITS");
 		lblNewLabel_4.setBounds(216, 30, 318, 72);
 		lblNewLabel_4.setForeground(new Color(235, 200, 1));
 		lblNewLabel_4.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 60));

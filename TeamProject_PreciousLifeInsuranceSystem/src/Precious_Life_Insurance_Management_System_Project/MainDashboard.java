@@ -87,7 +87,9 @@ public class MainDashboard extends JFrame {
 		    			
 		            }else if (result == JOptionPane.NO_OPTION){
 		              
-				   MainDashboard.this.dispose();
+		            	MainDashboard t = new MainDashboard();
+    					t.show();
+    					dispose();
 				}
 			}
 		});

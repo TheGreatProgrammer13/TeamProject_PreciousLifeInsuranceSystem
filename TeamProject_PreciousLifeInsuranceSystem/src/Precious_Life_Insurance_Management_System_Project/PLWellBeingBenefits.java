@@ -152,7 +152,7 @@ public class PLWellBeingBenefits extends JFrame {
 		panel_1_1.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1);
 		
-		JLabel lblNewLabel_4 = new JLabel("● BENEFITS");
+		JLabel lblNewLabel_4 = new JLabel("BENEFITS");
 		lblNewLabel_4.setBounds(216, 30, 318, 72);
 		lblNewLabel_4.setForeground(new Color(235, 200, 1));
 		lblNewLabel_4.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 60));

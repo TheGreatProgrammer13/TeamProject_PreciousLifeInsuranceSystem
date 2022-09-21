@@ -156,7 +156,7 @@ public class SereneBenefit extends JFrame {
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
 		lblNewLabel.setForeground(new Color(255, 255, 255));
 		
-		JLabel lblNewLabel_4 = new JLabel("● BENEFITS");
+		JLabel lblNewLabel_4 = new JLabel("BENEFITS");
 		lblNewLabel_4.setBounds(216, 30, 318, 72);
 		lblNewLabel_4.setForeground(new Color(235, 200, 1));
 		lblNewLabel_4.setFont(new Font("Franklin Gothic Medium", Font.BOLD, 60));
@@ -164,7 +164,7 @@ public class SereneBenefit extends JFrame {
 		
 		JLabel lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setBounds(0, 651, 1257, 160);
-		lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\SerenePic.png"));
+		lblNewLabel_6.setIcon(new ImageIcon(SereneBenefit.class.getResource("/images/Serene.png")));
 		contentPane.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_3 = new JLabel("of PL");

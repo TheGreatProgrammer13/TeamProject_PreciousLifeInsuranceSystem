@@ -54,17 +54,17 @@ public class GSFundbenefit  extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblBUY_1 = new JLabel("AVAIL");
-		lblBUY_1.setForeground(new Color(255, 255, 255));
-		lblBUY_1.setFont(new Font("Tahoma", Font.BOLD, 50));
-		lblBUY_1.setBounds(886, 79, 177, 44);
-		contentPane.add(lblBUY_1);
-		
 		JLabel lblBUY = new JLabel("AVAIL");
 		lblBUY.setForeground(new Color(242,200,71));
 		lblBUY.setFont(new Font("Tahoma", Font.BOLD, 50));
 		lblBUY.setBounds(876, 79, 198, 44);
 		contentPane.add(lblBUY);
+		
+		JLabel lblBUY_1 = new JLabel("AVAIL");
+		lblBUY_1.setForeground(new Color(255, 255, 255));
+		lblBUY_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblBUY_1.setBounds(886, 79, 177, 44);
+		contentPane.add(lblBUY_1);
 		
 		JButton FundNow = new JButton("");
 		FundNow.addActionListener(new ActionListener() {
@@ -74,7 +74,7 @@ public class GSFundbenefit  extends JFrame {
 				dispose();
 			}
 		});
-		FundNow.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\NowButton1.png"));
+		FundNow.setIcon(new ImageIcon(GSFundbenefit.class.getResource("/images/NowButton1.png")));
 		FundNow.setForeground(new Color(255, 255, 255));
 		FundNow.setBackground(new Color(0, 64, 128));
 		FundNow.setFont(new Font("Verdana", Font.BOLD, 54));
@@ -211,13 +211,13 @@ public class GSFundbenefit  extends JFrame {
 		panel_1_1_2.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1_2);
 		
-		JLabel lblNewLabel_5 = new JLabel("●");
+		JLabel lblNewLabel_5 = new JLabel("â—�");
 		lblNewLabel_5.setBounds(268, 430, 18, 13);
 		lblNewLabel_5.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_5_1 = new JLabel("●");
+		JLabel lblNewLabel_5_1 = new JLabel("â—�");
 		lblNewLabel_5_1.setBounds(268, 525, 18, 13);
 		lblNewLabel_5_1.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_1.setFont(new Font("Tahoma", Font.PLAIN, 18));

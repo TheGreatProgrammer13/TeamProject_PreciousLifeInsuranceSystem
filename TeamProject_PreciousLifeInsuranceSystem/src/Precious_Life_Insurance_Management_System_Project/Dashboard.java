@@ -172,7 +172,7 @@ public class Dashboard extends JFrame {
 				dispose();
 			}
 		});
-		InvestmentPolicyP.setIcon(new ImageIcon("C:\\Users\\xander\\Downloads\\investtttttttttt.png"));
+		InvestmentPolicyP.setIcon(new ImageIcon(Dashboard.class.getResource("/images/investtttttttttt.png")));
 		InvestmentPolicyP.setBorder(null);
 		contentPane_1.add(InvestmentPolicyP);
 		

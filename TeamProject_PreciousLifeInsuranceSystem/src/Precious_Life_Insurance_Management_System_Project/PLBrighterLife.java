@@ -105,7 +105,7 @@ public class PLBrighterLife extends JFrame {
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					LifeInsurancePolicy t = new LifeInsurancePolicy();
+					EducationInsurancePolicy t = new EducationInsurancePolicy();
 					t.show();
 					dispose();
 
@@ -222,25 +222,25 @@ public class PLBrighterLife extends JFrame {
 		panel_1_1_2.setBackground(new Color(0, 45, 105));
 		contentPane.add(panel_1_1_2);
 		
-		JLabel lblNewLabel_5 = new JLabel("●");
+		JLabel lblNewLabel_5 = new JLabel("â—�");
 		lblNewLabel_5.setBounds(263, 575, 18, 13);
 		lblNewLabel_5.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_5_1 = new JLabel("●");
+		JLabel lblNewLabel_5_1 = new JLabel("â—�");
 		lblNewLabel_5_1.setBounds(263, 608, 18, 13);
 		lblNewLabel_5_1.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5_1);
 		
-		JLabel lblNewLabel_5_2 = new JLabel("●");
+		JLabel lblNewLabel_5_2 = new JLabel("â—�");
 		lblNewLabel_5_2.setBounds(263, 638, 18, 13);
 		lblNewLabel_5_2.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		contentPane.add(lblNewLabel_5_2);
 		
-		JLabel lblNewLabel_5_3 = new JLabel("●");
+		JLabel lblNewLabel_5_3 = new JLabel("â—�");
 		lblNewLabel_5_3.setBounds(263, 671, 18, 13);
 		lblNewLabel_5_3.setForeground(new Color(235, 200, 1));
 		lblNewLabel_5_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
