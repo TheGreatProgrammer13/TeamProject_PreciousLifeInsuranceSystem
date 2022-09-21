@@ -25,7 +25,7 @@ public class GuaranteeBenefits extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PLGuarantee frame = new PLGuarantee();
+					GuaranteeBenefits frame = new GuaranteeBenefits();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -53,6 +53,21 @@ public class GuaranteeBenefits extends JFrame {
 		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
 		lblGetAQuote_1.setBounds(841, 659, 305, 55);
 		contentPane.add(lblGetAQuote_1);
+		
+		JButton DollarNow_1 = new JButton("");
+		DollarNow_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		DollarNow_1.setIcon(new ImageIcon(GuaranteeBenefits.class.getResource("/images/NowButton1.png")));
+		DollarNow_1.setForeground(Color.WHITE);
+		DollarNow_1.setFont(new Font("Verdana", Font.BOLD, 54));
+		DollarNow_1.setBackground(new Color(0, 64, 128));
+		DollarNow_1.setBounds(866, 712, 290, 72);
+		contentPane.add(DollarNow_1);
 		
 		JLabel lblGetAQuote = new JLabel("Get a quote");
 		lblGetAQuote.setForeground(new Color(242, 200, 71));
@@ -158,46 +173,46 @@ public class GuaranteeBenefits extends JFrame {
 		JLabel lblNewLabel_3_2_6_1_1 = new JLabel("Critical illness coverage");
 		lblNewLabel_3_2_6_1_1.setForeground(new Color(0, 0, 145));
 		lblNewLabel_3_2_6_1_1.setFont(new Font("Microsoft YaHei", Font.BOLD, 15));
-		lblNewLabel_3_2_6_1_1.setBounds(226, 458, 429, 32);
+		lblNewLabel_3_2_6_1_1.setBounds(225, 442, 429, 32);
 		contentPane.add(lblNewLabel_3_2_6_1_1);
 		
 		JLabel lblNewLabel_3_2_6_1_2_1 = new JLabel("Critical illness coverage");
 		lblNewLabel_3_2_6_1_2_1.setForeground(new Color(0, 0, 145));
 		lblNewLabel_3_2_6_1_2_1.setFont(new Font("Microsoft YaHei", Font.BOLD, 15));
-		lblNewLabel_3_2_6_1_2_1.setBounds(701, 521, 228, 32);
+		lblNewLabel_3_2_6_1_2_1.setBounds(624, 519, 228, 32);
 		contentPane.add(lblNewLabel_3_2_6_1_2_1);
 		
 		JLabel lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1 = new JLabel("33.");
 		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1.setForeground(new Color(235, 200, 1));
 		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1.setBounds(701, 546, 22, 32);
+		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1.setBounds(624, 544, 22, 32);
 		contentPane.add(lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1);
 		
 		JLabel lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1 = new JLabel("34.");
 		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1.setForeground(new Color(235, 200, 1));
 		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1.setBounds(701, 571, 22, 32);
+		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1.setBounds(624, 569, 22, 32);
 		contentPane.add(lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1);
 		
 		JLabel lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1_1 = new JLabel("35.");
 		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1_1.setForeground(new Color(235, 200, 1));
 		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1_1.setBounds(701, 595, 22, 32);
+		lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1_1.setBounds(624, 593, 22, 32);
 		contentPane.add(lblNewLabel_3_2_4_1_8_1_1_1_1_1_1_1_1_1);
 		
 		JLabel lblNewLabel_3_2_5_1_1_3_1_1 = new JLabel("Major Organ Transplant");
 		lblNewLabel_3_2_5_1_1_3_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_5_1_1_3_1_1.setBounds(733, 546, 237, 32);
+		lblNewLabel_3_2_5_1_1_3_1_1.setBounds(656, 544, 237, 32);
 		contentPane.add(lblNewLabel_3_2_5_1_1_3_1_1);
 		
 		JLabel lblNewLabel_3_2_5_1_1_3_1_2 = new JLabel("Coronary Artery Bypass Surgery");
 		lblNewLabel_3_2_5_1_1_3_1_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_5_1_1_3_1_2.setBounds(733, 571, 237, 32);
+		lblNewLabel_3_2_5_1_1_3_1_2.setBounds(656, 569, 237, 32);
 		contentPane.add(lblNewLabel_3_2_5_1_1_3_1_2);
 		
 		JLabel lblNewLabel_3_2_5_1_1_3_1_3 = new JLabel("Surgery for Disease of the Aorta (Aortic Surgery)\r");
 		lblNewLabel_3_2_5_1_1_3_1_3.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_5_1_1_3_1_3.setBounds(733, 595, 361, 32);
+		lblNewLabel_3_2_5_1_1_3_1_3.setBounds(656, 593, 361, 32);
 		contentPane.add(lblNewLabel_3_2_5_1_1_3_1_3);
 		
 		JLabel lblNewLabel_3_2_4_2 = new JLabel("17.");
@@ -636,40 +651,37 @@ public class GuaranteeBenefits extends JFrame {
 		
 		JLabel lblNewLabel_3_2_3_1_1_2_1_1_1_2_2 = new JLabel("In the event of death other than from a");
 		lblNewLabel_3_2_3_1_1_2_1_1_1_2_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_1_1_2_1_1_1_2_2.setBounds(226, 486, 293, 32);
+		lblNewLabel_3_2_3_1_1_2_1_1_1_2_2.setBounds(225, 470, 293, 32);
 		contentPane.add(lblNewLabel_3_2_3_1_1_2_1_1_1_2_2);
 		
 		JLabel lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_2 = new JLabel("catastrophic disease, your family will receive ");
 		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_2.setBounds(226, 509, 349, 32);
+		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_2.setBounds(225, 493, 349, 32);
 		contentPane.add(lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_2);
 		
 		JLabel lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_3 = new JLabel("the cash benefit equal to your plan's Face");
 		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_3.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_3.setBounds(226, 534, 318, 32);
+		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_3.setBounds(225, 518, 318, 32);
 		contentPane.add(lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_3);
 		
 		JLabel lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_1_1 = new JLabel("Amount. After obtaining reimbursement for a ");
 		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_1_1.setBounds(226, 559, 349, 32);
+		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_1_1.setBounds(225, 543, 349, 32);
 		contentPane.add(lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_1_1);
 		
 		JLabel lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_2 = new JLabel("serious illness or death, the PL Guarantee ");
 		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_2.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_2.setBounds(226, 583, 324, 32);
+		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_2.setBounds(225, 567, 324, 32);
 		contentPane.add(lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_2);
 		
 		JLabel lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_1_1 = new JLabel("expires.");
 		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_1_1.setFont(new Font("Microsoft YaHei", Font.PLAIN, 15));
-		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_1_1.setBounds(226, 609, 228, 32);
+		lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_1_1.setBounds(225, 593, 228, 32);
 		contentPane.add(lblNewLabel_3_2_3_1_1_2_1_1_1_2_1_1_2_1_1);
 		
-		JButton DollarNow = new JButton("");
-		DollarNow.setIcon(new ImageIcon(GuaranteeBenefits.class.getResource("/images/healthGuaPic22.png")));
-		DollarNow.setForeground(Color.WHITE);
-		DollarNow.setFont(new Font("Verdana", Font.BOLD, 54));
-		DollarNow.setBackground(new Color(0, 64, 128));
-		DollarNow.setBounds(183, 659, 982, 134);
-		contentPane.add(DollarNow);
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(GuaranteeBenefits.class.getResource("/images/healthGuaPic22.png")));
+		lblNewLabel_1.setBounds(183, 635, 982, 171);
+		contentPane.add(lblNewLabel_1);
 	}
 }

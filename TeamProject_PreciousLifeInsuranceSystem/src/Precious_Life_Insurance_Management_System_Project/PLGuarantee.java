@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.UIManager;
 
 public class PLGuarantee extends JFrame {
 
@@ -25,7 +26,7 @@ public class PLGuarantee extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PLHiraya frame = new PLHiraya();
+					PLGuarantee frame = new PLGuarantee();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -47,6 +48,33 @@ public class PLGuarantee extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblGetAQuote_1 = new JLabel("Get a quote");
+		lblGetAQuote_1.setForeground(Color.WHITE);
+		lblGetAQuote_1.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote_1.setBounds(839, 68, 317, 55);
+		contentPane.add(lblGetAQuote_1);
+		
+		JButton PLHirayaNow = new JButton("");
+		PLHirayaNow.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PaymentFrame t = new PaymentFrame();
+				t.show();
+				dispose();
+			}
+		});
+		PLHirayaNow.setIcon(new ImageIcon(PLGuarantee.class.getResource("/images/NowButton1.png")));
+		PLHirayaNow.setForeground(Color.WHITE);
+		PLHirayaNow.setFont(new Font("Verdana", Font.BOLD, 54));
+		PLHirayaNow.setBackground(new Color(0, 64, 128));
+		PLHirayaNow.setBounds(864, 121, 292, 72);
+		contentPane.add(PLHirayaNow);
+		
+		JLabel lblGetAQuote = new JLabel("Get a quote");
+		lblGetAQuote.setForeground(new Color(242, 200, 71));
+		lblGetAQuote.setFont(new Font("Tahoma", Font.BOLD, 50));
+		lblGetAQuote.setBounds(835, 68, 321, 55);
+		contentPane.add(lblGetAQuote);
 		
 		JPanel panel_1_1_1 = new JPanel();
 		panel_1_1_1.setBorder(null);
@@ -88,7 +116,7 @@ public class PLGuarantee extends JFrame {
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				{
-					LifeInsurancePolicy t = new LifeInsurancePolicy();
+					GuaranteeBenefits t = new GuaranteeBenefits();
 					t.show();
 					dispose();
 
@@ -228,5 +256,20 @@ public class PLGuarantee extends JFrame {
 		lblNewLabel_6.setIcon(new ImageIcon(PLGuarantee.class.getResource("/images/healthGuaPic.png")));
 		lblNewLabel_6.setBounds(189, 0, 965, 257);
 		contentPane.add(lblNewLabel_6);
+		
+		JButton clickInfoElderly = new JButton("Click here for more info!");
+		clickInfoElderly.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GuaranteeBenefits t = new GuaranteeBenefits();
+				t.show();
+				dispose();
+			}
+		});
+		clickInfoElderly.setForeground(Color.GRAY);
+		clickInfoElderly.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 19));
+		clickInfoElderly.setBorder(UIManager.getBorder("TableHeader.cellBorder"));
+		clickInfoElderly.setBackground(Color.WHITE);
+		clickInfoElderly.setBounds(245, 458, 265, 23);
+		contentPane.add(clickInfoElderly);
 	}
 }
